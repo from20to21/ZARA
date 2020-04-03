@@ -26,9 +26,6 @@ header button{
 header h1{
     width: 25%;
 }
-.header__burger{
-    width: 25%;
-}
 .header__burger span{
     display: block;
     width: 31px;

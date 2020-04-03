@@ -43,14 +43,14 @@ section{
     align-items: baseline;
 }
 section h2{
-    font-size: 4.5rem;
+    font-size: 3.5rem;
     font-weight: bolder;
     color: #fff;
     margin-bottom: 20px;
 }
 section p{
-    font-size: 1.3rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: #fff;
     margin-bottom: 30px;
     font-weight: 100;

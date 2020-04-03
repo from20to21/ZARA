@@ -10,7 +10,7 @@ header{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    padding-top: 63px;
+    padding-top: 20px;
 }
 header button{
     background: none;
@@ -18,61 +18,69 @@ header button{
     outline-style: none;
     cursor: pointer;
 }
+header h1{
+    width: 25%;
+}
+.header__burger{
+    width: 22%;
+}
 .header__burger span{
     display: block;
-    width: 35px;
+    width: 31px;
     height: 2px;
     background: #fff;
     margin-bottom: 8px;
     box-shadow: 1px 2px 3px rgba(0,0,0,0.35);
 }
 .header__rightBox{
-    width: 14%;
     display: flex;
     justify-content: space-between;
+}
+.header__search{
+    margin-right: 8px;
 }
 section{
     width: 90%;
     margin: 0 auto;
-    height: 70%;
+    height: 80%;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
     align-items: baseline;
 }
 section h2{
-    font-size: 115px;
+    font-size: 4.5rem;
     font-weight: bolder;
     color: #fff;
-    margin-bottom: 30px;
-    text-shadow: 1px 2px 2px rgba(0,0,0,0.7);
+    margin-bottom: 20px;
 }
 section p{
-    font-size: 35px;
+    font-size: 1.3rem;
+    line-height: 2rem;
     color: #fff;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     font-weight: 100;
-    text-shadow: 1px 2px 2px rgba(0,0,0,0.7);
+    text-shadow: 1px 2px 2px rgba(163, 87, 87, 0.3);
 }
 section button{
-    width: 228px;
-    height: 65px;
+    width: 150px;
+    height: 45px;
     border-radius: 50px;
     background: #fff;
     border: none;
     outline-style: none;
     cursor: pointer;
     box-shadow: 1px 2px 2px rgba(0,0,0,0.7);
-    font-size: 30px;
-    font-weight: 100;
+    font-size: 1rem;
+    font-weight: 200;
     font-family: 'Noto Sans KR', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
+    text-transform: uppercase;
 }
 section button img{
-    padding-top: 5px;
-    margin-left: 20px;
-    width: 15px;
+    margin-left: 10px;
+    width: 8px;
 }

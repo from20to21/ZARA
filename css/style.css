@@ -1,6 +1,5 @@
 @import url('common.css');
 html,body {
-  position: fixed;
   overflow: hidden;
 }
 .wrapper{

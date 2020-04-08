@@ -7,7 +7,7 @@ html,body {
     width: 100vw;
     height: 500vh;
     overflow-y: scroll;
-    /* -webkit-overflow-scrolling: touch; */
+    -webkit-overflow-scrolling: touch;
     position:absolute;
 }
 

@@ -19,10 +19,10 @@ h1{
 }
 header{
     width: 100%;
-    height: 6%;
+    height: 6.5%;
     background: #fff;
     border: none;
-    padding: 0 1%;
+    padding: 2% 1%;
 }
 .header__search{
     padding-top: 5px;

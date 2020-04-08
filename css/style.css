@@ -9,7 +9,6 @@ html,body {
     overflow-y: scroll;
     /* -webkit-overflow-scrolling: touch; */
     background: url(../img/bg_001.jpg) no-repeat center top / cover;
-    border: 5px solid #fff;
     position:absolute;
 }
 h1{
@@ -23,6 +22,7 @@ header{
     height: 5%;
     background: #fff;
     border: none;
+    padding: 0 1%;
 }
 .header__search{
     padding-top: 5px;

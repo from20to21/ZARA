@@ -46,9 +46,9 @@ header button img{
     outline-style: none;
     background: #eeeeee;
     border-radius: 5px;
-    margin-left: 5px;
+    margin-left: 3px;
     padding-left: 10px;
-    padding-right: 5px;
+    margin-bottom: 3px;
     font-size: 0.7rem;
 }
 .header__shopping{
@@ -92,7 +92,7 @@ nav a{
     width: 25%;
     color: #434343;
     font-size: 0.9rem;
-    font-weight: 100;
+    font-weight: 200;
     text-transform: uppercase;
     display: flex;
     align-items: center;

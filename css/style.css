@@ -106,6 +106,7 @@ nav a{
     display: flex;
     justify-content: flex-start;
     margin: 30px 0;
+    position: relative;
 }
 .category button{
     border: none;
@@ -117,15 +118,24 @@ nav a{
     font-size: 0.8rem;
     color: #434343;
 }
-.category button:last-child{
+.category button:last-of-type{
     width: 35%;
+}
+.categor strong{
+
 }
 .category__selected{
     color: #333;
     font-weight: 550;
     position: relative;
     padding-bottom: 5px;
-    border-bottom: 3px solid #e5004f;
+}
+.category span{
+    width: 10px;
+    height: 3px;
+    background: #e5004f;
+    position: absolute;
+    left: 0; bottom: 0;
 }
 .new{
     margin-top: 70px;

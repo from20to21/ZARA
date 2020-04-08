@@ -9,5 +9,13 @@ $(function () {
         opacity: "1",
         top: "55%"
     }, 1000);
+
+    $('.category button').click(select);
+
+    function select() {
+        $('.category button strong').removeClass('category__selected');
+        $(this).find('strong').addClass('category__selected');
+    }
+
 });
 

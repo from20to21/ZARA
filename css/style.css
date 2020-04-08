@@ -81,27 +81,6 @@ header button img{
     text-align: center;
     opacity: 0;
 }
-/* nav{
-    width: 100%;
-    height: 8%;
-    background: #eee;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    display: flex;
-}
-nav a{
-    display: block;
-    height: 100%;
-    width: 25%;
-    color: #434343;
-    font-size: 0.9rem;
-    font-weight: 200;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 .category{
     display: flex;
     justify-content: flex-start;
@@ -121,9 +100,6 @@ nav a{
 .category button:last-of-type{
     width: 35%;
 }
-.categor strong{
-
-}
 .category__selected{
     color: #333;
     font-weight: 550;
@@ -131,11 +107,11 @@ nav a{
     padding-bottom: 5px;
 }
 .category span{
-    width: 10px;
-    height: 3px;
+    width: 50px;
+    height: 4px;
     background: #e5004f;
     position: absolute;
-    left: 0; bottom: 0;
+    left: 16.3125px; bottom: -50%;
 }
 .new{
     margin-top: 70px;
@@ -172,6 +148,86 @@ nav a{
     background: none;
     position: absolute;
     top: 90px;
+    right: -90px;
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+}
+.collection{
+    margin-top: 70px;
+    margin-left: 30%;
+    width: 70%;
+    height: 60vh;
+    background: url(../img/bg_003.jpg) no-repeat center / cover;
+    border-bottom: 5px solid #333;
+    position: relative;
+}
+.collection:after{
+    content: '';
+    width: 30px;
+    height: 5px;
+    background: #333;
+    position: absolute;
+    bottom: 5px;
+    left: -24px;
+    transform: rotate(45deg);
+}
+.collection h3{
+    width: 20%;
+    position: absolute;
+    bottom: 20px;
+    left: -100px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.collection button{
+    width: 25%;
+    height: 30px;
+    border: 2px solid #434343;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
+    position: absolute;
+    bottom: 70px;
+    left: -100px;
+    font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0.1rem;
+}
+.bestseller{
+    margin-top: 70px;
+    width: 70%;
+    height: 60vh;
+    background: url(../img/bg_004.jpg) no-repeat center / cover;
+    border-top: 5px solid #333;
+    position: relative;
+}
+.bestseller:after{
+    content: '';
+    width: 30px;
+    height: 5px;
+    background: #333;
+    position: absolute;
+    top: 5px;
+    right: -24px;
+    transform: rotate(45deg);
+}
+.bestseller h3{
+    position: absolute;
+    top: 20px;
+    right: -100px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+.bestseller button{
+    width: 25%;
+    height: 30px;
+    border: 2px solid #434343;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
+    position: absolute;
+    top: 70px;
     right: -90px;
     font-size: 0.8rem;
     font-weight: 100;

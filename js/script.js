@@ -1,12 +1,17 @@
 
 $(function () {
-    $('.nav__wrapper').fadeOut();
 
-    $('.header__burger').click(menu_fade);
-    $('.nav__exit').click(menu_fade);
+    $('h1').animate({
+        top: "40%"
+    }, 2000);
 
-    function menu_fade() {
-        $('.nav__wrapper').fadeToggle(800);
+    $('.header__search button').click(search_on);
+
+    function search_on() {
+        $('.header__search input').animate({
+            width: "50%",
+            opacity: "1"
+        }, 1000);
     }
 
 });

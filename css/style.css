@@ -8,129 +8,96 @@ html,body {
     height: 100vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    background: url(../img/bg_001.jpg) no-repeat center / cover;
+    background: url(../img/bg_001.jpg) no-repeat center bottom / cover;
+    position: relative;
+    border: 15px solid #fff;
+}
+h1{
+    width: 60%;
+    position: absolute;
+    left: 50%; top: 45%;
+    transform: translate(-50%, -50%);
 }
 header{
-    width: 90%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 30px;
-}
-header button{
-    background: none;
-    border: none;
-    outline-style: none;
-    cursor: pointer;
-}
-header h1{
-    width: 20%;
-}
-.header__burger span{
-    display: block;
-    width: 31px;
-    height: 2px;
+    width: 100%;
+    height: 6%;
     background: #fff;
-    margin-bottom: 8px;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.35);
+    padding: 0 3%;
 }
-section{
-    width: 90%;
-    margin: 0 auto;
-    height: 70%;
+.header__search{
+    padding-top: 5px;
+    float: left;
     display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: baseline;
-}
-section h2{
-    font-size: 3.5rem;
-    font-weight: bolder;
-    color: #fff;
-    margin-bottom: 20px;
-}
-section p{
-    font-size: 1rem;
-    line-height: 1.5rem;
-    color: #fff;
-    margin-bottom: 30px;
-    font-weight: 100;
-    text-shadow: 1px 2px 2px rgba(163, 87, 87, 0.3);
-}
-section button{
-    width: 150px;
-    height: 35px;
-    border-radius: 30px;
-    background: #fff;
-    border: none;
-    outline-style: none;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 100;
-    font-family: 'Noto Sans KR', sans-serif;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    color: #333;
 }
-.nav__wrapper{
-    width: 75%;
-    height: 100%;
-    background: url(../img/bg_001_blur.jpg) no-repeat center;
-    background-attachment: fixed;
-    background-size: cover;
-    position: absolute;
-    top: 0; left: 0;
-    z-index: 2;
-    box-shadow: 1px 2px 10px rgba(0,0,0,0.35);
-}
-.nav__content{
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 6.5%;
-    margin-top: 13%;
-}
-.nav__content button{
-    background: none;
+.header__search button{
     border: none;
     outline-style: none;
     cursor: pointer;
+    background: none;
+}
+header button img{
+    width: 18px;
+}
+.header__search input{
+    width: 0%;
+    height: 20px;
+    border: none;
+    outline-style: none;
+    background: #eee;
+    border-radius: 10px;
+    margin-left: 5px;
+    opacity: 0;
+    padding-left: 10px;
+    padding-right: 5px;
+    font-size: 0.7rem;
+}
+.header__shopping{
+    padding-top: 5px;
+    float: right;
+}
+.header__shopping button{
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
     position: relative;
 }
-.nav__content button span{
+.header__shopping button:first-child{
+    margin-right: 10px;
+}
+.header__shopping button:first-child:after{
+    content: '';
     display: block;
-    width: 31px;
-    height: 2px;
+    width: 5px;
+    height: 5px;
+    border-radius: 100%;
+    background: #e5004f;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.header__shopping button:first-child img{
+    width: 20px;
+}
+nav{
+    width: 100%;
+    height: 8%;
     background: #fff;
-}
-.nav__content button span:nth-of-type(1){
-    position: absolute;
-    transform: rotate(45deg);
-}
-.nav__content button span:nth-of-type(2){
-    position: absolute;
-    transform: rotate(-45deg);
-}
-.nav__menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 50%;
-    font-size: 2.5rem;
-    letter-spacing: 0.1rem;
-    margin-left: 20%;
-    margin-top:-20%;
 }
-.nav__menu a{
-    color: #fff;
-    width: max-content;
-}
-.nav__setting button{
-    font-size: 1.2rem;
-    color: #fff;
+nav a{
+    display: block;
+    height: 100%;
+    width: 25%;
+    color: #434343;
+    font-size: 0.9rem;
     font-weight: 100;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

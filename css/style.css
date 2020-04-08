@@ -76,7 +76,7 @@ header button img{
     font-size: 2rem;
     font-weight: 400;
     position: absolute;
-    left: 50%; top: 55%;
+    left: 50%; top: 60%;
     transform: translate(-50%, -50%);
     text-align: center;
     opacity: 0;

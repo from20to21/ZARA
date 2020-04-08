@@ -7,7 +7,7 @@ $(function () {
     }, 1000);
     $('h2').delay(500).animate({
         opacity: "1",
-        top: "50%"
+        top: "55%"
     }, 1000);
 });
 

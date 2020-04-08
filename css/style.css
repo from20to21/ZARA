@@ -24,7 +24,7 @@ header button{
     cursor: pointer;
 }
 header h1{
-    width: 25%;
+    width: 20%;
 }
 .header__burger span{
     display: block;
@@ -75,45 +75,62 @@ section button{
     letter-spacing: 0.1rem;
     color: #333;
 }
-.nav_wrapper{
-    width: 70%;
+.nav__wrapper{
+    width: 75%;
     height: 100%;
-    border-top-right-radius: 30px;
-    border-bottom-right-radius: 30px;
-    background: #fff;
+    background: url(../img/bg_001_blur.jpg) no-repeat center;
+    background-attachment: fixed;
+    background-size: cover;
     position: absolute;
     top: 0; left: 0;
     z-index: 2;
+    box-shadow: 1px 2px 10px rgba(0,0,0,0.35);
 }
-.nav{
-    margin-top: 30px;
-    height: 70%;
+.nav__content{
+    height: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 6.5%;
+    margin-top: 13%;
 }
-.nav button{
+.nav__content button{
     background: none;
     border: none;
     outline-style: none;
     cursor: pointer;
     position: relative;
 }
-.nav button span{
+.nav__content button span{
     display: block;
     width: 31px;
     height: 2px;
     background: #fff;
-    margin-bottom: 8px;
-    box-shadow: 1px 2px 3px rgba(0,0,0,0.35);
 }
-.nav button span:nth-of-type(1){
+.nav__content button span:nth-of-type(1){
     position: absolute;
-    top: 0;
     transform: rotate(45deg);
 }
-.nav button span:nth-of-type(2){
+.nav__content button span:nth-of-type(2){
     position: absolute;
-    top: 4px;
-    transform: rotate(315deg);
+    transform: rotate(-45deg);
+}
+.nav__menu{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 50%;
+    font-size: 2.5rem;
+    letter-spacing: 0.1rem;
+    margin-left: 20%;
+    margin-top:-20%;
+}
+.nav__menu a{
+    color: #fff;
+    width: max-content;
+}
+.nav__setting button{
+    font-size: 1.2rem;
+    color: #fff;
+    font-weight: 100;
 }

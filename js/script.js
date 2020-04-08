@@ -2,7 +2,7 @@
 $(function () {
 
     $('h1').animate({
-        top: "40%"
+        top: "45%"
     }, 2000);
 
 

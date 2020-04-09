@@ -270,7 +270,13 @@ header button img{
     text-shadow: 2px 2px 1px #434343;
     font-size: 3rem;
     font-weight: bolder;
+    transition: .5s;
+    letter-spacing: 0.8rem;
 }
+.stories .effect{
+    letter-spacing: 0rem;
+}
+
 .stories button{
     width: 25%;
     height: 25px;

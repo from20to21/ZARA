@@ -64,6 +64,9 @@ $(function () {
                     zIndex: "100"
                 });
             }
+            if (firstScroll > 1660) {
+                $('.stories h3').addClass('effect')
+            }
 
         }
         else {
@@ -107,6 +110,9 @@ $(function () {
                     top: "45px",
                     zIndex: "100"
                 });
+            }
+            if (firstScroll < 1660) {
+                $('.stories h3').removeClass('effect')
             }
         }
         lastScroll = firstScroll;

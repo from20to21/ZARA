@@ -29,7 +29,7 @@ $(function () {
         positionVisual = firstScroll * 0.5;
         positionText = firstScroll * 0.7;
         positionNew = firstScroll * (-0.1);
-        positionCollection = firstScroll * -0.2 + 200;
+        positionCollection = firstScroll * -0.2 + 250;
         positionBest = firstScroll * -0.2 + 150;
 
         if (firstScroll > lastScroll) {

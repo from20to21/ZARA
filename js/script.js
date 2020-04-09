@@ -41,7 +41,6 @@ $(function () {
             });
             $('.new').css({
                 'background-position-y': positionNew,
-                marginTop: "120px"
             });
             $('.collection').css({
                 'background-position-y': positionCollection
@@ -53,6 +52,9 @@ $(function () {
                 marginTop: positionText
             });
             if (firstScroll > 538) {
+                $('.new').css({
+                    marginTop: "120px"
+                });
                 $('.category').css({
                     position: "fixed",
                     top: "45px",
@@ -66,7 +68,6 @@ $(function () {
             })
             $('.new').css({
                 'background-position-y': positionNew,
-                marginTop: "70px"
             })
             $('.collection').css({
                 'background-position-y': positionCollection
@@ -75,6 +76,9 @@ $(function () {
                 'background-position-y': positionBest
             });
             if (firstScroll < 538) {
+                $('.new').css({
+                    marginTop: "70px"
+                })
                 $('.visual h1').css({
                     marginTop: positionText
                 })

@@ -4,7 +4,7 @@ $(function () {
     document.body.addEventListener('touchmove',
         function (event) {
             //if ($('document').height() <= $(window).height()) {
-                event.preventDefault();
+            event.preventDefault();
             //}
         }, false);
 

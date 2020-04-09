@@ -65,7 +65,7 @@ header button img{
 }
 .visual{
     height: 581px;
-    background: url(../img/bg_001.jpg) no-repeat center 80% / cover;
+    background: url(../img/bg_001.jpg) no-repeat center / cover;
     position: relative;
     display: flex;
     flex-direction: column;

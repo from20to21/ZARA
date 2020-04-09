@@ -3,18 +3,36 @@ $(function () {
 
     var firstScroll;
     var lastScroll;
-
+    var positionY;
     $(window).scroll(visualsizing);
+
+    $('.category button').click(select);
+
+
+
+    function select() {
+        $('.category button strong').removeClass('category__selected');
+        $(this).find('strong').addClass('category__selected');
+        var categoryWidth = $(this).find('strong').innerWidth();
+        var categoryOffset = $(this).find('strong').offset();
+
+        $('.category span').animate({
+            width: categoryWidth,
+            left: categoryOffset.left
+        });
+    }
 
     function visualsizing() {
         firstScroll = window.scrollY;
-        console.log(window.scrollY);
-
+        positionY = firstScroll * (0.5)
         if (firstScroll > lastScroll) {
             if (firstScroll > 0) {
                 $('.visual__white').css({
                     opacity: firstScroll * 0.002,
                 });
+                $('.visual').css({
+                    'background-position-y': positionY
+                })
             }
             if (firstScroll > 538) {
                 $('.category').css({
@@ -26,6 +44,9 @@ $(function () {
         }
         else {
             if (firstScroll < 538) {
+                $('.visual').css({
+                    'background-position-y': positionY
+                })
                 $('.visual__white').css({
                     opacity: firstScroll * 0.002,
                 });
@@ -39,18 +60,5 @@ $(function () {
         lastScroll = firstScroll;
     }
 
-    $('.category button').click(select);
-
-    function select() {
-        $('.category button strong').removeClass('category__selected');
-        $(this).find('strong').addClass('category__selected');
-        var categoryWidth = $(this).find('strong').innerWidth();
-        var categoryOffset = $(this).find('strong').offset();
-
-        $('.category span').animate({
-            width: categoryWidth,
-            left: categoryOffset.left
-        });
-    }
 });
 

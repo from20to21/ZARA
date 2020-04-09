@@ -6,7 +6,7 @@ $(function () {
     var positionY;
     var positionText;
 
-    $(window).scroll(visualsizing);
+    $(window).scroll(parallax);
 
     $('.category button').click(select);
 
@@ -24,7 +24,7 @@ $(function () {
         });
     }
 
-    function visualsizing() {
+    function parallax() {
         firstScroll = window.scrollY;
         positionVisual = firstScroll * 0.5;
         positionText = firstScroll * 0.7;

@@ -3,12 +3,22 @@ $(function () {
 
     $('h1').animate({
         opacity: "1",
-        top: "40%"
+        top: "45%"
     }, 1000);
     $('h2').delay(500).animate({
         opacity: "1",
-        top: "55%"
+        top: "60%"
     }, 1000);
+
+    $('.aside__search button').click(search);
+
+    function search() {
+        $('.aside_search input').animate({
+            opacity: "1",
+            width: ""
+        })
+    }
+
 
     $('.category button').click(select);
 
@@ -19,8 +29,8 @@ $(function () {
         var categoryOffset = $(this).find('strong').offset();
 
         $('.category span').animate({
-            width : categoryWidth,
-            left : categoryOffset.left
+            width: categoryWidth,
+            left: categoryOffset.left
         });
     }
 

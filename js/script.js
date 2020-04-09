@@ -4,6 +4,8 @@ $(function () {
     var firstScroll;
     var lastScroll;
     var positionY;
+    var positionText;
+
     $(window).scroll(visualsizing);
 
     $('.category button').click(select);
@@ -24,7 +26,9 @@ $(function () {
 
     function visualsizing() {
         firstScroll = window.scrollY;
-        positionY = firstScroll * (0.5)
+        positionY = firstScroll * 0.5
+        positionText = firstScroll * 0.7
+
         if (firstScroll > lastScroll) {
             if (firstScroll > 0) {
                 $('.visual__white').css({
@@ -32,6 +36,9 @@ $(function () {
                 });
                 $('.visual').css({
                     'background-position-y': positionY
+                })
+                $('.visual h1').css({
+                    marginTop: positionText
                 })
             }
             if (firstScroll > 538) {
@@ -44,6 +51,9 @@ $(function () {
         }
         else {
             if (firstScroll < 538) {
+                $('.visual h1').css({
+                    marginTop: positionText
+                })
                 $('.visual').css({
                     'background-position-y': positionY
                 })

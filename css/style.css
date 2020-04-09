@@ -37,7 +37,8 @@ header button img{
     margin-left: 3px;
     padding-left: 10px;
     margin-bottom: 3px;
-    font-size: 0.7rem;
+    font-size: 1rem;
+    transform: scale(0.7);
 }
 .header__shopping{
     padding-top: 5px;

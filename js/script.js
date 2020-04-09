@@ -1,10 +1,10 @@
 
 $(function () {
 
-    var firstScroll;
-    var lastScroll;
-    var positionY;
-    var positionText;
+    var firstScroll, lastScroll,
+        positionVisual, positionText,
+        positionNew, positionCollection,
+        positionBest;
 
     $(window).scroll(parallax);
 
@@ -31,7 +31,7 @@ $(function () {
         positionNew = firstScroll * (-0.1);
         positionCollection = firstScroll * -0.2 + 250;
         positionBest = firstScroll * -0.2 + 200;
-
+        console.log(window.scrollY)
         if (firstScroll > lastScroll) {
             $('.visual__white').css({
                 opacity: firstScroll * 0.002,
@@ -63,6 +63,9 @@ $(function () {
                     top: "0",
                     zIndex: "100"
                 });
+            }
+            if (firstScroll > 1862) {
+                window.scrollTo(0, 1862);
             }
         }
         else {

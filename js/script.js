@@ -64,9 +64,7 @@ $(function () {
                     zIndex: "100"
                 });
             }
-            if (firstScroll > 1862) {
-                window.scrollTo(0, 1862);
-            }
+
         }
         else {
             $('.visual').css({

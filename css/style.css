@@ -5,10 +5,10 @@ body{
 }
 header{
     width: 100%;
-    height: 40px;
+    height: 45px;
     background: #fff;
     border: none;
-    padding: 1% 1%;
+    padding: 5px 10px;
     box-shadow : 2px 2px 5px #999;
     position: fixed;
     z-index: 100;
@@ -69,7 +69,7 @@ nav{
     background: #fff;
     display: flex;
     position: fixed;
-    top: 40px;
+    top: 45px;
     z-index: 99;
     box-shadow : 2px 2px 5px #999;
 }

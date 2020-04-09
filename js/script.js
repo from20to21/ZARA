@@ -30,7 +30,7 @@ $(function () {
         positionText = firstScroll * 0.7;
         positionNew = firstScroll * (-0.1);
         positionCollection = firstScroll * -0.2 + 250;
-        positionBest = firstScroll * -0.2 + 250;
+        positionBest = firstScroll * -0.2 + 200;
 
         if (firstScroll > lastScroll) {
             $('.visual__white').css({

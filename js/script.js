@@ -1,6 +1,13 @@
 
 $(function () {
 
+    document.body.addEventListener('touchmove',
+        function (event) {
+            if ($(document).height() <= $(window).height()) {
+                event.preventDefault();
+            }
+        }, false);
+
     var firstScroll, lastScroll,
         positionVisual, positionText,
         positionNew, positionCollection,

@@ -26,8 +26,10 @@ $(function () {
 
     function visualsizing() {
         firstScroll = window.scrollY;
-        positionY = firstScroll * 0.5
-        positionText = firstScroll * 0.7
+        positionVisual = firstScroll * 0.5;
+        positionText = firstScroll * 0.7;
+        positionNew = firstScroll * (-0.1);
+        positionCollection = firstScroll * 0.01;
 
         if (firstScroll > lastScroll) {
             if (firstScroll > 0) {
@@ -35,7 +37,13 @@ $(function () {
                     opacity: firstScroll * 0.002,
                 });
                 $('.visual').css({
-                    'background-position-y': positionY
+                    'background-position-y': positionVisual
+                })
+                $('.new').css({
+                    'background-position-y': positionNew
+                })
+                $('.collection').css({
+                    'background-position-y': positionCollection
                 })
                 $('.visual h1').css({
                     marginTop: positionText
@@ -55,7 +63,13 @@ $(function () {
                     marginTop: positionText
                 })
                 $('.visual').css({
-                    'background-position-y': positionY
+                    'background-position-y': positionVisual
+                })
+                $('.new').css({
+                    'background-position-y': positionNew
+                })
+                $('.collection').css({
+                    'background-position-y': positionCollection
                 })
                 $('.visual__white').css({
                     opacity: firstScroll * 0.002,

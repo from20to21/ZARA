@@ -8,31 +8,32 @@ $(function () {
 
     function visualsizing() {
         firstScroll = window.scrollY;
-        console.log(firstScroll);
+        console.log(window.scrollY);
+
         if (firstScroll > lastScroll) {
-            if (firstScroll > 350) {
-                $('.visual__white').animate({
-                    opacity: 1
-                }, 2000)
+            if (firstScroll > 0) {
+                $('.visual__white').css({
+                    opacity: firstScroll * 0.002,
+                });
             }
             if (firstScroll > 538) {
                 $('.category').css({
                     position: "fixed",
                     top: "45px",
                     zIndex: "100"
-                })
+                });
             }
         }
         else {
-            if (window.scrollY < 538) {
-                $('.visual__white').animate({
-                    opacity: 0
-                }, 1000)
+            if (firstScroll < 538) {
+                $('.visual__white').css({
+                    opacity: firstScroll * 0.002,
+                });
                 $('.category').css({
                     position: "relative",
                     top: "0",
                     zIndex: "100"
-                })
+                });
             }
         }
         lastScroll = firstScroll;

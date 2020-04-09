@@ -24,7 +24,7 @@ $(function () {
             }
         }
         else {
-            if (firstScroll < 538) {
+            if (window.scrollY < 538) {
                 $('.visual__white').animate({
                     opacity: 0
                 }, 1000)

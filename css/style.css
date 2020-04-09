@@ -8,8 +8,8 @@ body {
 .wrap{
     /* width: 100vw;
     height: 100vh;
-    overflow-y: scroll;
-    -webkit-overflow-scrolling: touch; */
+    overflow-y: scroll; */
+    -webkit-overflow-scrolling: touch;
     position: relative;
 }
 header{

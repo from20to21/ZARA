@@ -52,12 +52,15 @@ $(function () {
                 marginTop: positionText
             });
             if (firstScroll > 538) {
+                $('header').css({
+                    display: "none"
+                });
                 $('.new').css({
                     marginTop: "120px"
                 });
                 $('.category').css({
                     position: "fixed",
-                    top: "45px",
+                    top: "0",
                     zIndex: "100"
                 });
             }
@@ -65,30 +68,42 @@ $(function () {
         else {
             $('.visual').css({
                 'background-position-y': positionVisual
-            })
+            });
             $('.new').css({
                 'background-position-y': positionNew,
-            })
+            });
             $('.collection').css({
                 'background-position-y': positionCollection
-            })
+            });
             $('.bestseller').css({
                 'background-position-y': positionBest
             });
             if (firstScroll < 538) {
+                $('header').css({
+                    display: "block"
+                });
                 $('.new').css({
                     marginTop: "70px"
-                })
+                });
                 $('.visual h1').css({
                     marginTop: positionText
-                })
-
+                });
                 $('.visual__white').css({
                     opacity: firstScroll * 0.002,
                 });
                 $('.category').css({
                     position: "relative",
                     top: "0",
+                    zIndex: "100"
+                });
+            }
+            else {
+                $('header').css({
+                    display: "block"
+                });
+                $('.category').css({
+                    position: "fixed",
+                    top: "45px",
                     zIndex: "100"
                 });
             }

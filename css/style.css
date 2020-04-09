@@ -66,7 +66,7 @@ header button img{
 
 .visual{
     height: 85vh;
-    background: url(../img/bg_001.jpg) no-repeat center 80% / cover;
+    background: url(../img/bg_001.jpg) no-repeat center 80% / 85vh;
     background-attachment: fixed;
     position: relative;
 }

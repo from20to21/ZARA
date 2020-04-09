@@ -28,8 +28,9 @@ $(function () {
         firstScroll = window.scrollY;
         positionVisual = firstScroll * 0.5;
         positionText = firstScroll * 0.7;
-        positionNew = firstScroll * (-0.1);
-        positionCollection = firstScroll * 0.01;
+        positionNew = firstScroll * (-0.2) + 80;
+        positionCollection = firstScroll * -0.2 + 220;
+        positionBest = firstScroll * -0.2 + 300;
 
         if (firstScroll > lastScroll) {
             if (firstScroll > 0) {
@@ -38,16 +39,19 @@ $(function () {
                 });
                 $('.visual').css({
                     'background-position-y': positionVisual
-                })
+                });
                 $('.new').css({
                     'background-position-y': positionNew
-                })
+                });
                 $('.collection').css({
                     'background-position-y': positionCollection
-                })
+                });
+                $('.bestseller').css({
+                    'background-position-y': positionBest
+                });
                 $('.visual h1').css({
                     marginTop: positionText
-                })
+                });
             }
             if (firstScroll > 538) {
                 $('.category').css({
@@ -71,6 +75,9 @@ $(function () {
                 $('.collection').css({
                     'background-position-y': positionCollection
                 })
+                $('.bestseller').css({
+                    'background-position-y': positionBest
+                });
                 $('.visual__white').css({
                     opacity: firstScroll * 0.002,
                 });

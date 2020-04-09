@@ -3,9 +3,9 @@ $(function () {
 
     document.body.addEventListener('touchmove',
         function (event) {
-            if ($(document).height() <= $(window).height()) {
+            //if ($('document').height() <= $(window).height()) {
                 event.preventDefault();
-            }
+            //}
         }, false);
 
     var firstScroll, lastScroll,

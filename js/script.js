@@ -41,7 +41,8 @@ $(function () {
                     'background-position-y': positionVisual
                 });
                 $('.new').css({
-                    'background-position-y': positionNew
+                    'background-position-y': positionNew,
+                    marginTop: "120px"
                 });
                 $('.collection').css({
                     'background-position-y': positionCollection
@@ -70,7 +71,8 @@ $(function () {
                     'background-position-y': positionVisual
                 })
                 $('.new').css({
-                    'background-position-y': positionNew
+                    'background-position-y': positionNew,
+                    marginTop: "70px"
                 })
                 $('.collection').css({
                     'background-position-y': positionCollection

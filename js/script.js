@@ -30,7 +30,7 @@ $(function () {
         positionText = firstScroll * 0.7;
         positionNew = firstScroll * (-0.1);
         positionCollection = firstScroll * -0.2 + 350;
-        positionBest = firstScroll * -0.2 + 220;
+        positionBest = firstScroll * -0.2 + 250;
 
         if (firstScroll > lastScroll) {
             $('.visual__white').css({
@@ -64,7 +64,7 @@ $(function () {
                     zIndex: "100"
                 });
             }
-            if (firstScroll > 1860) {
+            if (firstScroll > 1960) {
                 $('.stories h3').addClass('effect')
             }
 
@@ -111,7 +111,7 @@ $(function () {
                     zIndex: "100"
                 });
             }
-            if (firstScroll < 1860) {
+            if (firstScroll < 1960) {
                 $('.stories h3').removeClass('effect')
             }
         }

@@ -29,8 +29,8 @@ $(function () {
         positionVisual = firstScroll * 0.5;
         positionText = firstScroll * 0.7;
         positionNew = firstScroll * (-0.1);
-        positionCollection = firstScroll * -0.2 + 280;
-        positionBest = firstScroll * -0.2 + 200;
+        positionCollection = firstScroll * -0.2 + 350;
+        positionBest = firstScroll * -0.2 + 270;
 
         if (firstScroll > lastScroll) {
             $('.visual__white').css({
@@ -64,7 +64,7 @@ $(function () {
                     zIndex: "100"
                 });
             }
-            if (firstScroll > 1660) {
+            if (firstScroll > 1960) {
                 $('.stories h3').addClass('effect')
             }
 
@@ -111,7 +111,7 @@ $(function () {
                     zIndex: "100"
                 });
             }
-            if (firstScroll < 1660) {
+            if (firstScroll < 1960) {
                 $('.stories h3').removeClass('effect')
             }
         }

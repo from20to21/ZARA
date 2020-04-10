@@ -118,7 +118,7 @@ header button img{
     height: 450px;
     background: #eee;
     border-bottom: 1px solid #ddd;
-    padding-top: 80px;
+    padding-top: 85px;
 }
 .woman h3{
     text-align: center;
@@ -147,7 +147,7 @@ header button img{
     align-items: center;
     color: #666;
     font-size: 0.8rem;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
@@ -180,7 +180,7 @@ header button img{
     float: left;
     margin: 2% 0;
     width: 33.333%;
-    height: 80px;
+    height: 85px;
 }
 .man li a{
     width: 100%;
@@ -191,7 +191,7 @@ header button img{
     align-items: center;
     color: #666;
     font-size: 0.8rem;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
 }
@@ -234,14 +234,15 @@ header button img{
     justify-content: center;
     align-items: center;
     color: #666;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 400;
     letter-spacing: 0.08rem;
     text-transform: uppercase;
 }
 .kids li a p{
+    margin-top: 5px;
     font-size: 0.7rem;
-    font-weight: 100;
+    font-weight: 300;
     letter-spacing: 0.03    rem;
 }
 nav{

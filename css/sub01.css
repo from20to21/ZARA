@@ -63,7 +63,7 @@ header button img{
     top: 0;
     right: 3px;
 }
-.banner{
+/* .banner{
     height: 400px;
     background: url(../img/cat_001.jpg) no-repeat center / cover;
     position: relative;
@@ -112,7 +112,7 @@ header button img{
    border-radius: 3px;
    position: absolute;
    left:0; bottom: 0;
-}
+} */
 
 
 nav{

@@ -134,9 +134,9 @@ header button img{
 }
 .woman li{
     float: left;
-  margin: 2% 0;
-    width: 30%;
-    height: 100px;
+    margin: 2% 0;
+    width: 33.333%;
+    height: 80px;
 }
 .woman li a{
     width: 100%;
@@ -155,6 +155,7 @@ header button img{
     width:40px;
     margin-bottom: 5px;
     opacity: 0.5;
+    transition: .5s;
 }
 .man{
     width: 100%;
@@ -178,8 +179,8 @@ header button img{
 .man li{
     float: left;
     margin: 2% 0;
-    width: 30%;
-    height: 100px;
+    width: 33.333%;
+    height: 80px;
 }
 .man li a{
     width: 100%;

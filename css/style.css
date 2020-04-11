@@ -195,7 +195,7 @@ header button img{
 }
 .new__wrapper{
     width: 93%;
-    height: 180px;
+    height: 220px;
     margin: 0 auto;
     position: relative;
     overflow: auto;
@@ -213,6 +213,7 @@ header button img{
     width: 150px;
     height: 150px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 .new__item button{
     width: 30px;
@@ -232,6 +233,12 @@ header button img{
     height: 20px;
     filter: grayscale(1);
     opacity: 0.3;
+}
+.new__item strong{
+    position: absolute;
+    bottom: -20%; left: 0;
+    font-size: 0.8rem;
+    font-weight: 550;
 }
 .new__itemWrapper .item01 {
     margin-left: 0;

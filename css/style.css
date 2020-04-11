@@ -349,7 +349,7 @@ header button img{
 }
 .collection__wrapper{
     width: 93%;
-    height: 180px;
+    height: 220px;
     margin: 0 auto;
     position: relative;
     overflow: auto;
@@ -367,6 +367,7 @@ header button img{
     width: 150px;
     height: 150px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 .collection__item button{
     width: 30px;
@@ -386,6 +387,22 @@ header button img{
     height: 20px;
     filter: grayscale(1);
     opacity: 0.3;
+}
+.collection__item strong{
+    width: 150px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -20%; left: 0;
+    font-size: 0.8rem;
+    font-weight: 550;
+}
+.collection__item p{
+    position: absolute;
+    bottom: -32%; left: 0;
+    font-size: 0.8rem;
+    font-weight: 100;
 }
 .collection__itemWrapper .item01 {
     margin-left: 0;

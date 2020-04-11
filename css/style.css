@@ -240,6 +240,12 @@ header button img{
     font-size: 0.8rem;
     font-weight: 550;
 }
+.new__item p{
+    position: absolute;
+    bottom: -32%; left: 0;
+    font-size: 0.8rem;
+    font-weight: 100;
+}
 .new__itemWrapper .item01 {
     margin-left: 0;
     background: url(../img/new_001.jpg) no-repeat center /cover;

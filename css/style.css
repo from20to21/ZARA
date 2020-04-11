@@ -235,6 +235,10 @@ header button img{
     opacity: 0.3;
 }
 .new__item strong{
+    width: 150px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
     position: absolute;
     bottom: -20%; left: 0;
     font-size: 0.8rem;

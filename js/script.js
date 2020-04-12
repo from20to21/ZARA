@@ -10,7 +10,11 @@ $(function () {
 
     $('.category button').click(select);
 
+    $('.heart').click(like);
 
+    function like() {
+        $(this).find('img').toggleClass('pink');
+    }
 
     function select() {
         $('.category button strong').removeClass('category__selected');

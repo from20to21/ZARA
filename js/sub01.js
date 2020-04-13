@@ -11,9 +11,9 @@ $(function () {
             $('.category').next().removeClass('pop');
             $(this).next().toggleClass('pop');
         }
-        var category_offset = $(this).offset();
+        var category_offset = $(this).offset().top - 50;
         $('html,body').animate({
-            scrollTop: category_offset.top
+            scrollTop: category_offset
         }, 500)
     }
 });

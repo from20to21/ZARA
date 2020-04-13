@@ -5,13 +5,14 @@ $(function () {
     $('.back').click(back);
 
 
+
     function change() {
         $('.category').addClass('change');
         $(this).toggleClass('change');
         $(this).addClass('selected');
 
         $('header').animate({
-            top: "-45px"
+            top: "-55px"
         }, 300);
         $('.back').animate({
             opacity: "1",

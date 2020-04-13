@@ -2,27 +2,28 @@
 $(function () {
 
     $('.category').click(change);
+    $('.back').click(back);
+
 
     function change() {
-
         $('.category').addClass('change');
         $(this).toggleClass('change');
         $(this).addClass('selected');
 
         $('header').animate({
             top: "-45px"
-        }, 300)
+        }, 300);
         $('.back').animate({
             opacity: "1",
             visibility: "visible"
-        }, 300)
-        // var category_offset = $(this).offset().top - 50;
-        // $('html,body').animate({
-        //     scrollTop: category_offset
-        // }, 500)
+        }, 300);
+        $(this).next().css({
+            display: "block"
+        })
+        $(this).next().next().css({
+            display: "block"
+        })
     }
-
-    $('.back').click(back);
 
     function back() {
         $(this).hasClass('selected');
@@ -31,11 +32,17 @@ $(function () {
 
         $('header').animate({
             top: "0"
-        }, 300)
+        }, 300);
         $('.back').animate({
             opacity: "0",
             visibility: "hidden"
-        }, 300)
+        }, 300);
+        $('.category__wrapper strong').css({
+            display: "none"
+        })
+        $('.category__box').css({
+            display: "none"
+        })
     }
 });
 

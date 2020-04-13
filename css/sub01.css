@@ -151,18 +151,52 @@ header button img{
     text-align: center;
     font-size: 1rem;
     font-weight: 440;
+    letter-spacing: 0.1rem;
+    display: none;
 }
-.what{
+.category__box{
     width: 100%;
-    height: 300px;
+    height: 40vh;
+    display: none;
     background: #eee;
 }
-/* .category__box{
-    width: 100%;
-    height: 95vh;
-    margin-top: 10px;
-} */
-
+.category__box ul{
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 3%;
+}
+.category__box ul:after{
+    content: '';
+    clear: both;
+}
+.category__box ul li{
+    float: left; 
+    width:33.33333%;
+    height: 70px;
+}
+.category__box ul li a{
+    display: block;
+    width: 90%;
+    height: 78%;
+    background: #fff;
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 0.05rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.category__box.kids ul li a{
+    flex-direction: column;
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+}
+.category__box.kids ul li a p{
+    margin-top: 5px;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+}
 /* .woman{
     width: 100%;
     height: 450px;

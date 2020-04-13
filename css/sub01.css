@@ -147,51 +147,42 @@ header button img{
     font-size: 1.5rem;
     padding-left: 10px;
     padding-bottom: 10px;
-    color: #fff;
+    color: #333;
     font-weight: 550;
     letter-spacing: 0.1rem;
     background: #eee;
+    border: 1px solid #ddd;
 }
 .category__woman__detail a:nth-of-type(1){
     height:18%;
     width: 33.3333%;
-    background: url(../img/detail_woman/jacket.jpg) no-repeat center / cover;
 }
 .category__woman__detail a:nth-of-type(2){
     height:18%;
     width: 33.3333%;
-    background: url(../img/detail_woman/dress.jpg) no-repeat center / cover;
 }
 .category__woman__detail a:nth-of-type(3){
     height:18%;
     width: 33.3333%;
-    background: url(../img/detail_woman/knit.jpg) no-repeat center / cover;
 }
 .category__woman__detail a:nth-of-type(4){
     height:19%;
-    color: #333;
-    background: url(../img/detail_woman/shirts.jpg) no-repeat center / cover;
 }
 .category__woman__detail a:nth-of-type(5){
     height:19%;
     color: #333;
-    background: url(../img/detail_woman/tshirts.jpg) no-repeat center / cover;
 }
 .category__woman__detail a:nth-of-type(6){
     height:15%;
-    background: url(../img/detail_woman/pants.jpg) no-repeat center / cover;
 }
 .category__woman__detail a:nth-of-type(7){
     height:15%;
-    background: url(../img/detail_woman/skirt.jpg) no-repeat center / cover;
 }
 .category__woman__detail a:nth-of-type(8){
     height:15%;
-    background: url(../img/detail_woman/shoes.jpg) no-repeat center / cover;
 }
 .category__woman__detail a:nth-of-type(9){
     height:15%;
-    background: url(../img/detail_woman/bag.jpg) no-repeat center / cover;
 }
 /* .woman{
     width: 100%;

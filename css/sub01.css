@@ -159,6 +159,18 @@ header button img{
 .category__woman__detail a:nth-of-type(3){
     width: 33.3333%;
 }
+.category__woman__detail a:nth-of-type(4){
+    height:20%
+}
+.category__woman__detail a:nth-of-type(5){
+    height:20%
+}
+.category__woman__detail a:nth-of-type(6){
+    height:15%
+}
+.category__woman__detail a:nth-of-type(7){
+    height:15%
+}
 .category__woman__detail a:nth-of-type(8){
     height:15%
 }

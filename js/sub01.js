@@ -19,10 +19,13 @@ $(function () {
         }, 300);
         $(this).next().css({
             display: "block"
-        })
+        });
         $(this).next().next().css({
             display: "block"
-        })
+        });
+        $('nav').animate({
+            bottom: "-45px"
+        }, 300);
     }
 
     function back() {
@@ -39,10 +42,13 @@ $(function () {
         }, 300);
         $('.category__wrapper strong').css({
             display: "none"
-        })
+        });
         $('.category__box').css({
             display: "none"
-        })
+        });
+        $('nav').animate({
+            bottom: "0"
+        }, 300);
     }
 });
 

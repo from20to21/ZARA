@@ -105,7 +105,7 @@ header button img{
 .category.selected{
     width: 100%;
     border-radius: 0;
-    height: 150px;
+    height: 100px;
     margin-top: 45px;
 }
 .category h2{

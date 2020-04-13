@@ -64,6 +64,10 @@ header button img{
     top: 0;
     right: 3px;
 }
+.category__wrapper{
+    overflow:hidden;
+    position:relative;
+    font-size:0;}
 .category{
     width: 95%;
     height:230px;
@@ -73,13 +77,13 @@ header button img{
     outline-width: none;
     text-align: center;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-    transition: .5s;
+    transition: 1s;
     position: relative;
-    left: 50%;
+    left: 50%;top:0;
     transform: translateX(-50%);
 }
 .category__woman{
-    margin-top: 50px;
+    margin-top: 45px;
     background: url(../img/cat/cat_woman.jpg) no-repeat center / cover;
 }
 .category__man{
@@ -90,13 +94,17 @@ header button img{
 }
 .category.change{
     height: 0;
-    visibility: hidden;
     opacity: 0;
+    margin: 0 auto;
+    box-shadow:0 0 0 0;
+    top:0;
+    overflow:hidden;
 }
 .category.selected{
     width: 100%;
     border-radius: 0;
     height: 150px;
+    margin-top: 45px;
 }
 .category h2{
     width: 60%;

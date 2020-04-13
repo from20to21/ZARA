@@ -67,10 +67,12 @@ header button img{
 .category__wrapper{
     overflow:hidden;
     position:relative;
-    font-size:0;}
+    font-size:0;
+    height: 95vh;
+}
 .category{
     width: 95%;
-    height:230px;
+    height:28%;
     margin: 10px 0;
     border-radius: 15px;
     border:none;

@@ -10,18 +10,10 @@ $(function () {
 
     $('.category button').click(select);
 
+    $('.heart').click(heart);
 
-
-    function select() {
-        $('.category button strong').removeClass('category__selected');
-        $(this).find('strong').addClass('category__selected');
-        var categoryWidth = $(this).find('strong').innerWidth();
-        var categoryOffset = $(this).find('strong').offset();
-
-        $('.category span').animate({
-            width: categoryWidth,
-            left: categoryOffset.left
-        });
+    function heart() {
+        $(this).addClass('selected');
     }
 
     function parallax() {
@@ -116,6 +108,18 @@ $(function () {
             }
         }
         lastScroll = firstScroll;
+    }
+
+    function select() {
+        $('.category button strong').removeClass('category__selected');
+        $(this).find('strong').addClass('category__selected');
+        var categoryWidth = $(this).find('strong').innerWidth();
+        var categoryOffset = $(this).find('strong').offset();
+
+        $('.category span').animate({
+            width: categoryWidth,
+            left: categoryOffset.left
+        });
     }
 
 });

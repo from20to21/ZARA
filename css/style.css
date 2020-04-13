@@ -135,6 +135,30 @@ header button img{
     position: absolute;
     left: 21.9125px; bottom: 0;
 }
+.heart{
+    width: 30px;
+    height: 30px;
+    border: none;
+    outline-style: none;
+    background: none;
+    cursor: pointer;
+    margin-top: 6px;
+    margin-left: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.heart img{
+    width: 20px;
+    height: 20px;
+    filter: grayscale(1);
+    opacity: 0.3;
+    transition: .2s;
+}
+.heart .pink{
+    filter: grayscale(0);
+    opacity: 1;
+}
 .new{
     margin-top: 70px;
     width: 70%;
@@ -215,25 +239,7 @@ header button img{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     position: relative;
 }
-.new__item button{
-    width: 30px;
-    height: 30px;
-    border: none;
-    outline-style: none;
-    background: none;
-    cursor: pointer;
-    margin-top: 6px;
-    margin-left: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.new__item button img{
-    width: 20px;
-    height: 20px;
-    filter: grayscale(1);
-    opacity: 0.3;
-}
+
 .new__item strong{
     width: 150px;
     overflow:hidden;
@@ -262,10 +268,6 @@ header button img{
 }
 .new__itemWrapper .item04 {
     background: url(../img/new_004.jpg) no-repeat center /cover;
-}
-.new__itemWrapper .item01 button img{
-    filter: grayscale(0);
-    opacity: 1;
 }
 .item__indicator{
     display: block;
@@ -328,7 +330,6 @@ header button img{
     font-size: 0.8rem;
     font-weight: 550;
 }
-
 .collection__text{
     margin-top: 30px;
     display: flex;
@@ -369,25 +370,6 @@ header button img{
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     position: relative;
 }
-.collection__item button{
-    width: 30px;
-    height: 30px;
-    border: none;
-    outline-style: none;
-    background: none;
-    cursor: pointer;
-    margin-top: 6px;
-    margin-left: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.collection__item button img{
-    width: 20px;
-    height: 20px;
-    filter: grayscale(1);
-    opacity: 0.3;
-}
 .collection__item strong{
     width: 150px;
     overflow:hidden;
@@ -417,7 +399,6 @@ header button img{
 .collection__itemWrapper .item04 {
     background: url(../img/col_004.jpg) no-repeat center /cover;
 }
-
 .item__indicator{
     display: block;
     width: 90%;
@@ -436,8 +417,6 @@ header button img{
    position: absolute;
    left:0; bottom: 0;
 }
-
-
 
 .bestseller{
     margin-top: 100px;
@@ -478,7 +457,6 @@ header button img{
     font-size: 0.8rem;
     font-weight: 550;
 }
-
 .bestseller__text{
     margin-top: -110px;
     display: flex;
@@ -518,25 +496,6 @@ header button img{
     height: 150px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     position: relative;
-}
-.bestseller__item button{
-    width: 30px;
-    height: 30px;
-    border: none;
-    outline-style: none;
-    background: none;
-    cursor: pointer;
-    margin-top: 6px;
-    margin-left: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.bestseller__item button img{
-    width: 20px;
-    height: 20px;
-    filter: grayscale(1);
-    opacity: 0.3;
 }
 .bestseller__item strong{
     width: 150px;
@@ -586,9 +545,6 @@ header button img{
    position: absolute;
    left:0; bottom: 0;
 }
-
-
-
 
 .stories{
     margin-top: 150px;

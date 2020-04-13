@@ -129,7 +129,7 @@ header button img{
 .category.selected{
     width: 100%;
     border-radius: 0;
-    height: 400px;
+    height: 300px;
     margin-top: 0px;
     box-shadow:none;
     margin-bottom: 0;
@@ -151,6 +151,11 @@ header button img{
     text-align: center;
     font-size: 1rem;
     font-weight: 440;
+}
+.what{
+    width: 100%;
+    height: 300px;
+    background: #eee;
 }
 /* .category__box{
     width: 100%;

@@ -148,7 +148,8 @@ header button img{
     color: #333;
     font-weight: 100;
     letter-spacing: 0.1rem;
-    border: 1px solid #eee;
+    background: #eee;
+    border: 1px solid #ddd;
 }
 .category__woman__detail a:nth-of-type(1){
     width: 33.3333%;

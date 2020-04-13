@@ -108,7 +108,7 @@ header button img{
     transition: height .5s, opacity 0.3s;
 }
 .category__box.pop{
-    height: 290px;
+    height: 330px;
     opacity: 1;
     transition: height .5s, opacity 1s;
 }
@@ -121,7 +121,9 @@ header button img{
 }
 .category__box li a{
     color: #333;
+    font-size: 1.3rem;
     font-weight: 100;
+    letter-spacing: 0.1rem;
 }
 .kids{
     margin-bottom:100px;

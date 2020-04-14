@@ -17,23 +17,33 @@ $(function () {
     $('.bestseller__wrapper').scroll(indicator);
 
     var bln = true;
+    var sc = 0;
 
     function indicator() {
         firstScroll = $(this).scrollLeft();
-        var sc = $(this).scrollLeft() + 15;
         $(this).next().find('span').css({
             width: sc
         });
+
+        $(this).scrollLeft(sc);
+
         if (bln) {
             bln = false;
             if (firstScroll > lastScroll) {
-                $(this).animate({ scrollLeft: sc }, 400);
+                sc += 160;
                 setTimeout(function () {
                     bln = true;
                 }, 400);
             }
-            firstScroll = lastScroll;
+            else {
+                sc -= 160;
+                setTimeout(function () {
+                    bln = true;
+                }, 400);
+            }
         }
+
+        lastScroll = firstScroll;
     }
 
     function parallax() {

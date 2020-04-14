@@ -7,33 +7,26 @@ $(function () {
         positionBest;
 
     $(window).scroll(parallax);
+
     $('.category button').click(select);
+
     $('.heart').click(like);
+
     $('.new__wrapper').scroll(indicator);
     $('.collection__wrapper').scroll(indicator);
     $('.bestseller__wrapper').scroll(indicator);
 
+    var bln = true;
+
     function indicator() {
-        var scrollLeft = $(this).scrollLeft();
+        var sc = $(this).scrollLeft();
         $(this).next().find('span').css({
-            width: scrollLeft
+            width: sc
         });
-    }
-
-    function like() {
-        $(this).find('img').toggleClass('pink');
-    }
-
-    function select() {
-        $('.category button strong').removeClass('category__selected');
-        $(this).find('strong').addClass('category__selected');
-        var categoryWidth = $(this).find('strong').innerWidth();
-        var categoryOffset = $(this).find('strong').offset();
-
-        $('.category span').animate({
-            width: categoryWidth,
-            left: categoryOffset.left
-        });
+        if (bln) {
+            bln = false;
+            $('this').animate({ scrollLeft: sc }, 400);
+        }
     }
 
     function parallax() {
@@ -129,5 +122,24 @@ $(function () {
         }
         lastScroll = firstScroll;
     }
+
+    function select() {
+        $('.category button strong').removeClass('category__selected');
+        $(this).find('strong').addClass('category__selected');
+        var categoryWidth = $(this).find('strong').innerWidth();
+        var categoryOffset = $(this).find('strong').offset();
+
+        $('.category span').animate({
+            width: categoryWidth,
+            left: categoryOffset.left
+        });
+    }
+
+    function like() {
+        $(this).find('img').toggleClass('pink');
+    }
+
+
+
 });
 

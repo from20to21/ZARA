@@ -33,13 +33,13 @@ $(function () {
                 sc += 160;
                 setTimeout(function () {
                     bln = true;
-                }, 400);
+                }, 800);
             }
             else {
                 sc -= 160;
                 setTimeout(function () {
                     bln = true;
-                }, 400);
+                }, 800);
             }
         }
 

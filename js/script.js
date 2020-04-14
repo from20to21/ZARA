@@ -15,36 +15,36 @@ $(function () {
     $('.new__wrapper').scroll(indicator);
     $('.collection__wrapper').scroll(indicator);
     $('.bestseller__wrapper').scroll(indicator);
-
-    var bln = true;
-    var sc = 0;
+    // var bln = true;
+    // var sc = 0;
 
     function indicator() {
-        firstScroll = $(this).scrollLeft();
+        sc = $(this).scrollLeft();
         $(this).next().find('span').css({
             width: sc
         });
-
-        $(this).scrollLeft(sc);
-
-        if (bln) {
-            bln = false;
-            if (firstScroll > lastScroll) {
-                sc += 160;
-                setTimeout(function () {
-                    bln = true;
-                }, 800);
-            }
-            else {
-                sc -= 160;
-                setTimeout(function () {
-                    bln = true;
-                }, 800);
-            }
-        }
-
-        lastScroll = firstScroll;
     }
+
+    //     $(this).scrollLeft(sc);
+
+    //     if (bln) {
+    //         bln = false;
+    //         if (firstScroll > lastScroll) {
+    //             sc += 160;
+    //             setTimeout(function () {
+    //                 bln = true;
+    //             }, 800);
+    //         }
+    //         else {
+    //             sc -= 160;
+    //             setTimeout(function () {
+    //                 bln = true;
+    //             }, 800);
+    //         }
+    //     }
+
+    //     lastScroll = firstScroll;
+    // }
 
     function parallax() {
         firstScroll = window.scrollY;

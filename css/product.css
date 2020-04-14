@@ -209,9 +209,8 @@ header {
 .new__wrapper {
   width: 93%;
   height: 300px;
-  margin: 30px auto;
+  margin: 30px auto 0;
   position: relative; }
-
 .new__itemWrapper {
   width: 100%;
   display: flex;
@@ -224,7 +223,6 @@ header {
     background: url(../img/product/jacket/002.jpg) no-repeat center/cover; }
   .new__itemWrapper .item03 {
     background: url(../img/product/jacket/003.jpg) no-repeat center/cover; }
-
 .new__item {
   margin-left: 5px;
   width: 100%;
@@ -250,6 +248,27 @@ header {
     position: absolute;
     bottom: -32%;
     left: 0;
+    font-size: 0.8rem;
+    font-weight: 100; }
+
+.banner {
+  width: 100%;
+  height: 300px;
+  background: url(../img/product/jacket/banner001.jpg) no-repeat center/cover;
+  margin-bottom: 100px;
+  position: relative; }
+  .banner strong {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.8rem;
+    font-weight: 550; }
+  .banner p {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
     font-size: 0.8rem;
     font-weight: 100; }
 

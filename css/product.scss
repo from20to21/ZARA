@@ -162,52 +162,75 @@ header{
     }
 }
 
-.new__wrapper{
-    width: 93%;
-    height: 300px;
-    margin: 30px auto;
-    position: relative;
-}
-.new__itemWrapper{
-    width: 100%;
-    display: flex;
-    position: absolute;
-    top: 0;
-    & .item01 {
-        margin-left: 0;
-        background: url(../img/product/jacket/001.jpg) no-repeat center / cover;
+.new{
+    &__wrapper{
+        width: 93%;
+        height: 300px;
+        margin: 30px auto 0;
+        position: relative;
     }
-    & .item02 {
-        background: url(../img/product/jacket/002.jpg) no-repeat center /cover;
-    }
-    & .item03 {
-        background: url(../img/product/jacket/003.jpg) no-repeat center /cover;
-    }
-}
-.new__item{
-    margin-left: 5px;
-    width: 100%;
-    height: 160px;
-    position: relative;
-    & em{
-        position: absolute;
-        bottom: -12%; left: 0;
-        font-size: 0.8rem;
-        font-weight: 100;
-    }
-    & strong{
+    &__itemWrapper{
         width: 100%;
-        overflow:hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
+        display: flex;
         position: absolute;
-        bottom: -22%; left: 0;
+        top: 0;
+        & .item01 {
+            margin-left: 0;
+            background: url(../img/product/jacket/001.jpg) no-repeat center / cover;
+        }
+        & .item02 {
+            background: url(../img/product/jacket/002.jpg) no-repeat center /cover;
+        }
+        & .item03 {
+            background: url(../img/product/jacket/003.jpg) no-repeat center /cover;
+        }
+    }
+    &__item{
+        margin-left: 5px;
+        width: 100%;
+        height: 160px;
+        position: relative;
+        & em{
+            position: absolute;
+            bottom: -12%; left: 0;
+            font-size: 0.8rem;
+            font-weight: 100;
+        }
+        & strong{
+            width: 100%;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            position: absolute;
+            bottom: -22%; left: 0;
+            font-size: 0.8rem;
+            font-weight: 550;
+        }
+        & p{
+            position: absolute;
+            bottom: -32%; left: 0;
+            font-size: 0.8rem;
+            font-weight: 100;
+        }
+    }
+}
+.banner{
+    width: 100%;
+    height: 300px;
+    background: url(../img/product/jacket/banner001.jpg) no-repeat center / cover;
+    margin-bottom: 100px;
+    position: relative;
+    & strong{
+        position: absolute;
+        bottom: -20px; left: 50%;
+        transform: translateX(-50%);
         font-size: 0.8rem;
         font-weight: 550;
     }
     & p{
         position: absolute;
-        bottom: -32%; left: 0;
+        bottom: -40px; left: 50%;
+        transform: translateX(-50%);
         font-size: 0.8rem;
         font-weight: 100;
     }

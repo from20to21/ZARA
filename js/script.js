@@ -25,7 +25,7 @@ $(function () {
         });
         if (bln) {
             bln = false;
-            $('this').animate({ scrollLeft: sc }, 400);
+            $(this).animate({ scrollLeft: sc }, 400);
         }
     }
 

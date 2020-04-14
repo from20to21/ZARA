@@ -14,7 +14,7 @@ $(function () {
     $('.bestseller__wrapper').scroll(indicator);
 
     function indicator() {
-        var scrollLeft = $(this).scrollLeft() + 117;
+        var scrollLeft = $(this).scrollLeft();
         $(this).next().find('span').css({
             width: scrollLeft
         });

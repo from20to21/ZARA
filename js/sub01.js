@@ -12,7 +12,7 @@ $(function () {
         $(this).addClass('selected');
 
         $('header').animate({
-            top: "-55px"
+            top: "-45px"
         }, 300);
         $('.back').animate({
             opacity: "1",

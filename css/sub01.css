@@ -109,7 +109,7 @@ header button img{
     transform: translateX(-50%);
 }
 .category__woman{
-    margin-top: 55px;
+    margin-top: 45px;
     background: url(../img/cat/cat_woman.jpg) no-repeat center / cover;
 }
 .category__man{

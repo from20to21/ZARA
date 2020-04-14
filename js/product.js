@@ -1,13 +1,14 @@
 
 $(function () {
 
+    $('.visual h2').animate({
+        opacity: "1",
+        bottom: "20px"
+    }, 1500);
+
     $('.category button').click(select);
 
     $('.heart').click(like);
-
-    function like() {
-        $(this).find('img').toggleClass('pink');
-    }
 
     function select() {
         $('.category button strong').removeClass('category__selected');
@@ -21,5 +22,8 @@ $(function () {
         });
     }
 
+    function like() {
+        $(this).find('img').toggleClass('pink');
+    }
 });
 

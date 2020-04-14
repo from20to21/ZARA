@@ -169,6 +169,7 @@ header{
     position: relative;
 }
 .new__itemWrapper{
+    width: 100%;
     display: flex;
     position: absolute;
     top: 0;
@@ -184,24 +185,23 @@ header{
     }
 }
 .new__item{
-    margin-left: 15px;
-    width: 115px;
+    margin-left: 5px;
+    width: 100%;
     height: 160px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     position: relative;
     & em{
         position: absolute;
-        bottom: -15%; left: 0;
+        bottom: -12%; left: 0;
         font-size: 0.8rem;
         font-weight: 100;
     }
     & strong{
-        width: 115px;
+        width: 100%;
         overflow:hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
         position: absolute;
-        bottom: -23%; left: 0;
+        bottom: -22%; left: 0;
         font-size: 0.8rem;
         font-weight: 550;
     }

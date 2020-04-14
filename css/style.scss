@@ -62,7 +62,7 @@ header{
             background: none;
             position: relative;
             margin-right: 10px;
-            &::first-child:after{
+            &:first-child:after{
                 content: '';
                 display: block;
                 width: 5px;

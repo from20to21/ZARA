@@ -114,7 +114,7 @@ header {
     background: none;
     position: relative;
     margin-right: 10px; }
-    .header__shopping button::first-child:after {
+    .header__shopping button:first-child:after {
       content: '';
       display: block;
       width: 5px;

@@ -7,10 +7,18 @@ $(function () {
         positionBest;
 
     $(window).scroll(parallax);
-
     $('.category button').click(select);
-
     $('.heart').click(like);
+    $('.new__wrapper').scroll(indicator);
+    $('.collection__wrapper').scroll(indicator);
+    $('.bestseller__wrapper').scroll(indicator);
+
+    function indicator() {
+        var scrollLeft = $(this).scrollLeft() + 117;
+        $(this).next().find('span').css({
+            width: scrollLeft
+        });
+    }
 
     function like() {
         $(this).find('img').toggleClass('pink');

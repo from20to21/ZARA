@@ -514,8 +514,7 @@ header{
     border-radius: 3px;
     background: rgba(0,0,0,0.2); 
     position: relative;
-    &:after{
-        content: '';
+    & span{
         width: 10%;
         height: 100%;
         background: rgba(0,0,0,0.5); 

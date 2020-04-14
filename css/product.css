@@ -177,11 +177,11 @@ header {
     position: relative;
     padding-bottom: 5px; }
   .category span {
-    width: 58px;
+    width: 28px;
     height: 2px;
     background: #e5004f;
     position: absolute;
-    left: 13px;
+    left: 28px;
     bottom: 0; }
 
 .heart {

@@ -1,7 +1,7 @@
 
 $(function () {
 
-    var firstScroll, lastScroll,
+    var firstScroll, lastScroll = 0,
         positionVisual, positionText,
         positionNew, positionCollection,
         positionBest;
@@ -19,13 +19,20 @@ $(function () {
     var bln = true;
 
     function indicator() {
-        var sc = $(this).scrollLeft();
+        firstScroll = $(this).scrollLeft();
+        var sc = $(this).scrollLeft() + 15;
         $(this).next().find('span').css({
             width: sc
         });
         if (bln) {
             bln = false;
-            $(this).animate({ scrollLeft: sc }, 400);
+            if (firstScroll > lastScroll) {
+                $(this).animate({ scrollLeft: sc }, 400);
+                setTimeout(function () {
+                    bln = true;
+                }, 400);
+            }
+            firstScroll = lastScroll;
         }
     }
 

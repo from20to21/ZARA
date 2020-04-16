@@ -4,7 +4,7 @@ $(function () {
     var firstScroll, lastScroll = 0,
         positionVisual, positionText,
         positionNew, positionCollection,
-        positionBest;
+        positionBest, num;
 
     $(window).scroll(parallax);
 
@@ -12,13 +12,18 @@ $(function () {
 
     $('.heart').click(like);
 
-    $('.new__wrapper').scroll(indicator);
-    $('.collection__wrapper').scroll(indicator);
-    $('.bestseller__wrapper').scroll(indicator);
+
+
+    $('.new__itemWrapper').draggable({
+        axis: "x"
+    });
+    $('.new__itemWrapper').bind("drag", indicator);
 
     function indicator() {
+        num = $(this).find('div').length;
         sc = $(this).scrollLeft();
-        $(this).next().find('span').css({
+        console.log($(this).pageX);
+        $(this).parent().next().find('span').css({
             width: sc
         });
     }

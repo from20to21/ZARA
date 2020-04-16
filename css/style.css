@@ -259,9 +259,7 @@ header {
     height: 220px;
     margin: 0 auto;
     position: relative;
-    overflow: auto; }
-    .new__wrapper::-webkit-scrollbar {
-      display: none; }
+    overflow: hidden; }
   .new__itemWrapper {
     display: flex;
     position: absolute;

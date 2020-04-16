@@ -208,8 +208,8 @@ header {
     opacity: 1; }
 
 .new__wrapper {
-  width: 93%;
-  height: 400px;
+  width: 100%;
+  height: 300px;
   margin: 30px auto 0;
   position: relative; }
 .new__itemWrapper {
@@ -222,58 +222,83 @@ header {
     background: url(../img/product/jacket/001.jpg) no-repeat center/cover; }
   .new__itemWrapper .item02 {
     background: url(../img/product/jacket/002.jpg) no-repeat center/cover; }
-  .new__itemWrapper .item03 {
-    background: url(../img/product/jacket/003.jpg) no-repeat center/cover; }
 .new__item {
-  margin-left: 5px;
+  margin-left: 2px;
   width: 100%;
-  height: 250px;
+  height: 200px;
   position: relative; }
-  .new__item em {
-    position: absolute;
-    bottom: -12%;
-    left: 0;
+.new__text {
+  width: 100%;
+  position: absolute;
+  bottom: -28%;
+  left: 5%; }
+  .new__text em {
     font-size: 0.8rem;
-    font-weight: 100; }
-  .new__item strong {
-    width: 100%;
+    font-weight: 550; }
+  .new__text strong {
+    display: block;
+    width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    position: absolute;
-    bottom: -22%;
-    left: 0;
     font-size: 0.8rem;
-    font-weight: 550; }
-  .new__item p {
-    position: absolute;
-    bottom: -32%;
-    left: 0;
+    font-weight: 300;
+    margin: 5px 0; }
+  .new__text p {
     font-size: 0.8rem;
     font-weight: 100; }
+.new__item.item01 .new__text p.sale {
+  font-size: 0.8rem;
+  font-weight: 100;
+  text-decoration: line-through; }
+  .new__item.item01 .new__text p.sale:after {
+    content: '25.99 USD';
+    display: inline-block;
+    margin-left: 5px;
+    color: red;
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-decoration: none; }
 
 .banner {
   width: 100%;
-  height: 300px;
+  height: 200px;
   background: url(../img/product/jacket/banner001.jpg) no-repeat center/cover;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
   position: relative; }
-  .banner strong {
-    position: absolute;
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8rem;
-    font-weight: 550; }
-  .banner p {
-    position: absolute;
-    bottom: -40px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 0.8rem;
-    font-weight: 100; }
   .banner button {
     padding-top: 10px; }
+  .banner__text {
+    width: 100%;
+    position: absolute;
+    bottom: -28%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; }
+    .banner__text em {
+      font-size: 0.8rem;
+      font-weight: 550; }
+    .banner__text strong {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 300;
+      margin: 5px 0; }
+    .banner__text p {
+      font-size: 0.8rem;
+      font-weight: 100;
+      text-decoration: line-through; }
+    .banner__text p.sale {
+      font-size: 0.8rem;
+      font-weight: 100;
+      text-decoration: line-through; }
+      .banner__text p.sale:after {
+        content: '19.99 USD';
+        display: inline-block;
+        margin-left: 5px;
+        color: red;
+        font-size: 0.8rem;
+        font-weight: 300;
+        text-decoration: none; }
 
 nav {
   width: 100%;

@@ -1,7 +1,7 @@
 
 $(function () {
 
-    $('.visual h2').animate({
+    $('.visual h2').delay(500).animate({
         opacity: "1",
         bottom: "20px"
     }, 1500);

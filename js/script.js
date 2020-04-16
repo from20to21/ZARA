@@ -17,6 +17,26 @@ $(function () {
         start: function (e) { firstDrag = e.pageX },
         stop: indicator
     });
+    // var dX = 0;
+    // $('.collection__itemWrapper').draggable({
+    //     axis: "x",
+    //     scroll: false,
+    //     start: function (e) { firstDrag = e.pageX },
+    //     drag: function (e) {
+    //         dX = Math.abs(firstDrag - e.pageX);
+    //         if (dx > 50) {
+    //             e.preventDefault();
+    //         }
+    //     },
+    //     stop: function (e) {
+    //         console.log(dX)
+    //         if (dX > 100) {
+    //             indicator;
+    //         } else {
+    //             e.preventDefault();
+    //         }
+    //     }
+    // });
     $('.collection__itemWrapper').draggable({
         axis: "x",
         start: function (e) { firstDrag = e.pageX },

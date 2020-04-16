@@ -17,10 +17,19 @@ $(function () {
         start: function (e) { firstDrag = e.pageX },
         stop: indicator
     });
+    $('.collection__itemWrapper').draggable({
+        axis: "x",
+        start: function (e) { firstDrag = e.pageX },
+        stop: indicator
+    });
+    $('.bestseller__itemWrapper').draggable({
+        axis: "x",
+        start: function (e) { firstDrag = e.pageX },
+        stop: indicator
+    });
 
     function indicator(e) {
         var max = $(this).find('.item').length - 1;
-        console.log(max);
         lastDrag = e.pageX;
         if (firstDrag > lastDrag) {
             if (num < max) {

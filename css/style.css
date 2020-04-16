@@ -265,7 +265,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    transition: .5s; }
+    transition: .2s; }
     .new__itemWrapper .item01 {
       margin-left: 0;
       background: url(../img/main/new_001.jpg) no-repeat center/cover; }

@@ -22,7 +22,6 @@ $(function () {
 
     function indicator(e) {
         lastDrag = e.pageX;
-
         if (firstDrag > lastDrag) {
             num++;
             $(this).css({

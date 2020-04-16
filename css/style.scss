@@ -258,38 +258,37 @@ header{
         height: 150px;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
         position: relative;
+        &__text{
+            width :100%;
+            position: absolute;
+            bottom: -40%; left:0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            & em{
+                font-size: 0.8rem;
+                font-weight: 550;
+            }
+            & strong{
+                display:block;
+                width: 100%;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.8rem;
+                font-weight: 300;
+                margin: 5px 0;
+            }
+            & p{
+                font-size: 0.8rem;
+                font-weight: 100;
+            }
+        }
     }
-    &__text{
-        width :100%;
-        position: absolute;
-        bottom: -40%; left:0;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        & em{
-            font-size: 0.8rem;
-            font-weight: 550;
-        }
-        & strong{
-            display:block;
-            width: 100%;
-            overflow:hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 0.8rem;
-            font-weight: 300;
-            margin: 5px 0;
-        }
-        & p{
-            font-size: 0.8rem;
-            font-weight: 100;
-        }
-    }
-
 }
 
 .collection{
-    margin-top: -50px;
+    margin-bottom: 50px;
     margin-left: 30%;
     width: 70%;
     height: 60vh;
@@ -351,15 +350,13 @@ header{
         height: 220px;
         margin: 0 auto;
         position: relative;
-        overflow: auto;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+        overflow: hidden;
     }
     &__itemWrapper{
         display: flex;
         position: absolute;
-        top: 0;
+        top: 0; left:0;
+        transition: .2s;
         & .item01 {
             margin-left: 0;
             background: url(../img/col_001.jpg) no-repeat center /cover;
@@ -380,30 +377,42 @@ header{
         height: 150px;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
         position: relative;
-        & strong{
-            width: 150px;
-            overflow:hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+        &__text{
+            width :100%;
             position: absolute;
-            bottom: -20%; left: 0;
-            font-size: 0.8rem;
-            font-weight: 550;
-        }
-        & p{
-            position: absolute;
-            bottom: -32%; left: 0;
-            font-size: 0.8rem;
-            font-weight: 100;
+            bottom: -40%; left:0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            & em{
+                font-size: 0.8rem;
+                font-weight: 550;
+            }
+            & strong{
+                display:block;
+                width: 100%;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.8rem;
+                font-weight: 300;
+                margin: 5px 0;
+            }
+            & p{
+                font-size: 0.8rem;
+                font-weight: 100;
+            }
         }
     }
+
 }
 
 
 
 
+
 .bestseller{
-    margin-top: 100px;
+    margin-top: 50px;
     width: 70%;
     height: 60vh;
     background: url(../img/bg_004.jpg) no-repeat center / cover;
@@ -462,17 +471,16 @@ header{
         width: 93%;
         height: 220px;
         margin: 0 auto;
+        margin-top: -50px;
         position: relative;
-        overflow: auto;
-        &::-webkit-scrollbar{
-            display: none;
-        }
+        overflow: hidden;
     }
     
     &__itemWrapper{
         display: flex;
         position: absolute;
-        top: 0;
+        top: 0; left:0;
+        transition: .2s;
         & .item01 {
             margin-left: 0;
             background: url(../img/best_001.jpg) no-repeat center /cover;
@@ -493,21 +501,31 @@ header{
         height: 150px;
         box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
         position: relative;
-        & strong{
-            width: 150px;
-            overflow:hidden;
-            text-overflow: ellipsis;
-            white-space: nowrap;
+        &__text{
+            width :100%;
             position: absolute;
-            bottom: -20%; left: 0;
-            font-size: 0.8rem;
-            font-weight: 550;
-        }
-        & p{
-            position: absolute;
-            bottom: -32%; left: 0;
-            font-size: 0.8rem;
-            font-weight: 100;
+            bottom: -40%; left:0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            & em{
+                font-size: 0.8rem;
+                font-weight: 550;
+            }
+            & strong{
+                display:block;
+                width: 100%;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.8rem;
+                font-weight: 300;
+                margin: 5px 0;
+            }
+            & p{
+                font-size: 0.8rem;
+                font-weight: 100;
+            }
         }
     }
 }

@@ -4,7 +4,7 @@ $(function () {
     var firstScroll, lastScroll,
         positionVisual, positionText,
         positionNew, positionCollection,
-        positionBest, num = 0;
+        positionBest;
 
     $(window).scroll(parallax);
 
@@ -12,11 +12,7 @@ $(function () {
 
     $('.heart').click(like);
 
-    $('.new__itemWrapper').draggable({
-        axis: "x",
-        start: function (e) { firstDrag = e.pageX },
-        stop: indicator
-    });
+
     // var dX = 0;
     // $('.collection__itemWrapper').draggable({
     //     axis: "x",
@@ -37,11 +33,110 @@ $(function () {
     //         }
     //     }
     // });
+
+    function drag1(){
+        var num=0;
+    $('.new__itemWrapper').draggable({
+        axis: "x",
+        start: function (e) { firstDrag = e.pageX },
+        stop: indicator
+    });
+    function indicator(e) {
+        var max = $(this).find('.item').length - 2;
+        lastDrag = e.pageX;
+        if (firstDrag > lastDrag) {
+            if (num < max) {
+                num++;
+                $(this).css({
+                    left: -160 * num
+                })
+                $(this).parent().next().find('span').css({
+                    width: 25 * (num + 1) + "%"
+                });
+            }
+            else {
+                $(this).css({
+                    left: -160 * num
+                })
+                $(this).parent().next().find('span').css({
+                    width: 25 * (num + 1) + "%"
+                });
+            }
+        }
+        else {
+            if (num > 0) {
+                num--;
+                $(this).css({
+                    left: -160 * num
+                })
+                $(this).parent().next().find('span').css({
+                    width: 25 * (num + 1) + "%"
+                });
+            }
+            else {
+                $(this).css({
+                    left: -160 * num
+                })
+                $(this).parent().next().find('span').css({
+                    width: 25 * (num + 1) + "%"
+                });
+            }
+        }
+    }
+}
+function drag2(){
+    var num=0;
     $('.collection__itemWrapper').draggable({
         axis: "x",
         start: function (e) { firstDrag = e.pageX },
         stop: indicator
     });
+
+function indicator(e) {
+    var max = $(this).find('.item').length - 2;
+    lastDrag = e.pageX;
+    if (firstDrag > lastDrag) {
+        if (num < max) {
+            num++;
+            $(this).css({
+                left: -160 * num
+            })
+            $(this).parent().next().find('span').css({
+                width: 25 * (num + 1) + "%"
+            });
+        }
+        else {
+            $(this).css({
+                left: -160 * num
+            })
+            $(this).parent().next().find('span').css({
+                width: 25 * (num + 1) + "%"
+            });
+        }
+    }
+    else {
+        if (num > 0) {
+            num--;
+            $(this).css({
+                left: -160 * num
+            })
+            $(this).parent().next().find('span').css({
+                width: 25 * (num + 1) + "%"
+            });
+        }
+        else {
+            $(this).css({
+                left: -160 * num
+            })
+            $(this).parent().next().find('span').css({
+                width: 25 * (num + 1) + "%"
+            });
+        }
+    }
+}
+}
+    function drag3(){
+        var num=0;
     $('.bestseller__itemWrapper').draggable({
         axis: "x",
         start: function (e) { firstDrag = e.pageX },
@@ -90,8 +185,10 @@ $(function () {
             }
         }
     }
-
-
+}
+drag1();
+drag2();
+drag3();
 
     function parallax() {
         firstScroll = window.scrollY;

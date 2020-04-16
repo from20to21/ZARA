@@ -4,7 +4,7 @@ $(function () {
     var firstScroll, lastScroll = 0,
         positionVisual, positionText,
         positionNew, positionCollection,
-        positionBest, num, bln = true;
+        positionBest, num = 1, bln = true;
 
     $(window).scroll(parallax);
 
@@ -15,37 +15,42 @@ $(function () {
 
 
     $('.new__itemWrapper').draggable({
-        axis: "x"
+        axis: "x",
+        start: function (e) { firstDrag = e.pageX },
+        stop: indicator
     });
-    $('.new__itemWrapper').bind("drag", indicator);
 
-    function indicator() {
-        num = $(this).find('div').length;
-        sc = $(this).scrollLeft();
-        console.log(sc);
-        $(this).parent().next().find('span').css({
-            width: sc
-        });
-
-        $(this).scrollLeft(sc);
+    function indicator(e) {
+        lastDrag = e.pageX;
 
         if (bln) {
             bln = false;
-            if (firstScroll > lastScroll) {
-                sc += 160;
+            console.log(bln);
+            if (firstDrag > lastDrag) {
+                $(this).css({
+                    left: -160 * num
+                })
+                num++;
                 setTimeout(function () {
                     bln = true;
                 }, 800);
+                $(this).parent().next().find('span').css({
+                    width: 25 * num + "%"
+                });
             }
             else {
-                sc -= 160;
+                num--;
+                $(this).css({
+                    left: -160 * num
+                })
                 setTimeout(function () {
                     bln = true;
                 }, 800);
+                $(this).parent().next().find('span').css({
+                    width: 25 * num + "%"
+                });
             }
         }
-
-        lastScroll = firstScroll;
     }
 
 

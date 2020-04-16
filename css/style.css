@@ -263,36 +263,44 @@ header {
   .new__itemWrapper {
     display: flex;
     position: absolute;
-    top: 0; }
+    top: 0;
+    left: 0; }
     .new__itemWrapper .item01 {
       margin-left: 0;
-      background: url(../img/new_001.jpg) no-repeat center/cover; }
+      background: url(../img/main/new_001.jpg) no-repeat center/cover; }
     .new__itemWrapper .item02 {
-      background: url(../img/new_002.jpg) no-repeat center/cover; }
+      background: url(../img/main/new_002.jpg) no-repeat center/cover; }
     .new__itemWrapper .item03 {
-      background: url(../img/new_003.jpg) no-repeat center/cover; }
+      background: url(../img/main/new_003.jpg) no-repeat center/cover; }
     .new__itemWrapper .item04 {
-      background: url(../img/new_004.jpg) no-repeat center/cover; }
+      background: url(../img/main/new_004.jpg) no-repeat center/cover; }
   .new__item {
     margin-left: 15px;
     width: 150px;
     height: 150px;
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
     position: relative; }
-    .new__item strong {
-      width: 150px;
+  .new__text {
+    width: 100%;
+    position: absolute;
+    bottom: -40%;
+    left: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column; }
+    .new__text em {
+      font-size: 0.8rem;
+      font-weight: 550; }
+    .new__text strong {
+      display: block;
+      width: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       white-space: nowrap;
-      position: absolute;
-      bottom: -20%;
-      left: 0;
       font-size: 0.8rem;
-      font-weight: 550; }
-    .new__item p {
-      position: absolute;
-      bottom: -32%;
-      left: 0;
+      font-weight: 300;
+      margin: 5px 0; }
+    .new__text p {
       font-size: 0.8rem;
       font-weight: 100; }
 

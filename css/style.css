@@ -275,7 +275,7 @@ header {
       background: url(../img/main/new_003.jpg) no-repeat center/cover; }
     .new__itemWrapper .item04 {
       background: url(../img/main/new_004.jpg) no-repeat center/cover; }
-    .new__itemWrapper .item04 {
+    .new__itemWrapper .item05 {
       background: url(../img/main/new_005.jpg) no-repeat center/cover; }
   .new__item {
     margin-left: 15px;
@@ -380,6 +380,8 @@ header {
       background: url(../img/col_003.jpg) no-repeat center/cover; }
     .collection__itemWrapper .item04 {
       background: url(../img/col_004.jpg) no-repeat center/cover; }
+    .collection__itemWrapper .item05 {
+      background: url(../img/col_005.jpg) no-repeat center/cover; }
   .collection__item {
     margin-left: 15px;
     width: 150px;
@@ -481,6 +483,8 @@ header {
       background: url(../img/best_003.jpg) no-repeat center/cover; }
     .bestseller__itemWrapper .item04 {
       background: url(../img/best_004.jpg) no-repeat center/cover; }
+    .bestseller__itemWrapper .item05 {
+      background: url(../img/best_005.jpg) no-repeat center/cover; }
   .bestseller__item {
     margin-left: 15px;
     width: 150px;
@@ -510,6 +514,18 @@ header {
       .bestseller__item__text p {
         font-size: 0.8rem;
         font-weight: 100; }
+  .bestseller__item.item05 .bestseller__item__text p.sale {
+    font-size: 0.8rem;
+    font-weight: 100;
+    text-decoration: line-through; }
+    .bestseller__item.item05 .bestseller__item__text p.sale:after {
+      content: '25.99 USD';
+      display: inline-block;
+      margin-left: 5px;
+      color: red;
+      font-size: 0.8rem;
+      font-weight: 300;
+      text-decoration: none; }
 
 .item__indicator {
   display: block;

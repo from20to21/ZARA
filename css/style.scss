@@ -251,7 +251,7 @@ header{
         & .item04 {
             background: url(../img/main/new_004.jpg) no-repeat center /cover;
         }
-        & .item04 {
+        & .item05 {
             background: url(../img/main/new_005.jpg) no-repeat center /cover;
         }
     }
@@ -372,6 +372,9 @@ header{
         }
         & .item04 {
             background: url(../img/col_004.jpg) no-repeat center /cover;
+        }
+        & .item05 {
+            background: url(../img/col_005.jpg) no-repeat center /cover;
         }
     }
     &__item{
@@ -496,6 +499,9 @@ header{
         & .item04 {
             background: url(../img/best_004.jpg) no-repeat center /cover;
         }
+        & .item05 {
+            background: url(../img/best_005.jpg) no-repeat center /cover;
+        }
     }
     &__item{
         margin-left: 15px;
@@ -528,6 +534,20 @@ header{
                 font-size: 0.8rem;
                 font-weight: 100;
             }
+        }
+    }
+    &__item.item05 .bestseller__item__text p.sale{
+        font-size: 0.8rem;
+        font-weight: 100;
+        text-decoration: line-through;
+        &:after{
+            content:'25.99 USD';
+            display:inline-block;
+            margin-left: 5px;
+            color: red;
+            font-size: 0.8rem;
+            font-weight: 300;
+            text-decoration: none;
         }
     }
 }

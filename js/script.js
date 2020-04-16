@@ -1,18 +1,16 @@
 
 $(function () {
 
-    var firstScroll, lastScroll = 0,
+    var firstScroll, lastScroll,
         positionVisual, positionText,
         positionNew, positionCollection,
-        positionBest, num = 0, bln = true;
+        positionBest, num = 0;
 
     $(window).scroll(parallax);
 
     $('.category button').click(select);
 
     $('.heart').click(like);
-
-
 
     $('.new__itemWrapper').draggable({
         axis: "x",
@@ -21,24 +19,46 @@ $(function () {
     });
 
     function indicator(e) {
+        var max = $(this).find('.item').length - 1;
+        console.log(max);
         lastDrag = e.pageX;
         if (firstDrag > lastDrag) {
-            num++;
-            $(this).css({
-                left: -160 * num
-            })
-            $(this).parent().next().find('span').css({
-                width: 25 * (num + 1) + "%"
-            });
+            if (num < max) {
+                num++;
+                $(this).css({
+                    left: -160 * num
+                })
+                $(this).parent().next().find('span').css({
+                    width: 25 * (num + 1) + "%"
+                });
+            }
+            else {
+                $(this).css({
+                    left: -160 * num
+                })
+                $(this).parent().next().find('span').css({
+                    width: 25 * (num + 1) + "%"
+                });
+            }
         }
         else {
-            num--;
-            $(this).css({
-                left: -160 * num
-            })
-            $(this).parent().next().find('span').css({
-                width: 25 * (num + 1) + "%"
-            });
+            if (num > 0) {
+                num--;
+                $(this).css({
+                    left: -160 * num
+                })
+                $(this).parent().next().find('span').css({
+                    width: 25 * (num + 1) + "%"
+                });
+            }
+            else {
+                $(this).css({
+                    left: -160 * num
+                })
+                $(this).parent().next().find('span').css({
+                    width: 25 * (num + 1) + "%"
+                });
+            }
         }
     }
 

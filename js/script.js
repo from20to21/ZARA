@@ -29,7 +29,7 @@ $(function () {
     });
 
     function indicator(e) {
-        var max = $(this).find('.item').length - 1;
+        var max = $(this).find('.item').length - 3;
         lastDrag = e.pageX;
         if (firstDrag > lastDrag) {
             if (num < max) {

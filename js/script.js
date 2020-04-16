@@ -4,7 +4,7 @@ $(function () {
     var firstScroll, lastScroll = 0,
         positionVisual, positionText,
         positionNew, positionCollection,
-        positionBest, num;
+        positionBest, num, bln = true;
 
     $(window).scroll(parallax);
 
@@ -22,32 +22,33 @@ $(function () {
     function indicator() {
         num = $(this).find('div').length;
         sc = $(this).scrollLeft();
-        console.log($(this).pageX);
+        console.log(sc);
         $(this).parent().next().find('span').css({
             width: sc
         });
+
+        $(this).scrollLeft(sc);
+
+        if (bln) {
+            bln = false;
+            if (firstScroll > lastScroll) {
+                sc += 160;
+                setTimeout(function () {
+                    bln = true;
+                }, 800);
+            }
+            else {
+                sc -= 160;
+                setTimeout(function () {
+                    bln = true;
+                }, 800);
+            }
+        }
+
+        lastScroll = firstScroll;
     }
 
-    //     $(this).scrollLeft(sc);
 
-    //     if (bln) {
-    //         bln = false;
-    //         if (firstScroll > lastScroll) {
-    //             sc += 160;
-    //             setTimeout(function () {
-    //                 bln = true;
-    //             }, 800);
-    //         }
-    //         else {
-    //             sc -= 160;
-    //             setTimeout(function () {
-    //                 bln = true;
-    //             }, 800);
-    //         }
-    //     }
-
-    //     lastScroll = firstScroll;
-    // }
 
     function parallax() {
         firstScroll = window.scrollY;

@@ -231,7 +231,8 @@ header {
   width: 100%;
   position: absolute;
   bottom: -28%;
-  left: 5%; }
+  left: 5%;
+  overflow: hidden; }
   .new__text em {
     font-size: 0.8rem;
     font-weight: 550; }

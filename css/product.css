@@ -207,60 +207,76 @@ header {
     filter: grayscale(0);
     opacity: 1; }
 
-.new__wrapper {
+.item {
   width: 100%;
   height: 300px;
   margin: 30px auto 0;
   position: relative; }
-.new__itemWrapper {
-  width: 100%;
-  display: flex;
-  position: absolute;
-  top: 0; }
-  .new__itemWrapper .item01 {
-    margin-left: 0;
-    background: url(../img/product/jacket/001.jpg) no-repeat center/cover; }
-  .new__itemWrapper .item02 {
-    background: url(../img/product/jacket/002.jpg) no-repeat center/cover; }
-.new__item {
-  margin-left: 2px;
-  width: 100%;
-  height: 200px;
-  position: relative; }
-.new__text {
-  width: 100%;
-  position: absolute;
-  bottom: -28%;
-  left: 0;
-  padding-left: 10px;
-  overflow: hidden; }
-  .new__text em {
+  .item__Wrapper {
+    width: 100%;
+    display: flex;
+    position: absolute;
+    top: 0; }
+    .item__Wrapper .item01 {
+      margin-left: 0;
+      background: url(../img/product/jacket/001.jpg) no-repeat center/cover; }
+    .item__Wrapper .item02 {
+      background: url(../img/product/jacket/002.jpg) no-repeat center/cover; }
+    .item__Wrapper .item03 {
+      background: url(../img/product/jacket/003.jpg) no-repeat center/cover; }
+    .item__Wrapper .item04 {
+      background: url(../img/product/jacket/004.jpg) no-repeat center/cover; }
+  .item__box {
+    margin-left: 2px;
+    width: 100%;
+    height: 200px;
+    position: relative; }
+  .item__text {
+    width: 100%;
+    position: absolute;
+    bottom: -28%;
+    left: 0;
+    padding-left: 10px;
+    overflow: hidden; }
+    .item__text em {
+      font-size: 0.8rem;
+      font-weight: 550; }
+    .item__text strong {
+      display: block;
+      width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 0.8rem;
+      font-weight: 300;
+      margin: 5px 0; }
+    .item__text p {
+      font-size: 0.8rem;
+      font-weight: 100; }
+  .item__item.item01 .new__text p.sale {
     font-size: 0.8rem;
-    font-weight: 550; }
-  .new__text strong {
-    display: block;
-    width: 90%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    font-weight: 100;
+    text-decoration: line-through; }
+    .item__item.item01 .new__text p.sale:after {
+      content: '25.99 USD';
+      display: inline-block;
+      margin-left: 5px;
+      color: red;
+      font-size: 0.8rem;
+      font-weight: 300;
+      text-decoration: none; }
+  .item__item.item03 .new__text p.sale {
     font-size: 0.8rem;
-    font-weight: 300;
-    margin: 5px 0; }
-  .new__text p {
-    font-size: 0.8rem;
-    font-weight: 100; }
-.new__item.item01 .new__text p.sale {
-  font-size: 0.8rem;
-  font-weight: 100;
-  text-decoration: line-through; }
-  .new__item.item01 .new__text p.sale:after {
-    content: '25.99 USD';
-    display: inline-block;
-    margin-left: 5px;
-    color: red;
-    font-size: 0.8rem;
-    font-weight: 300;
-    text-decoration: none; }
+    font-weight: 100;
+    text-decoration: line-through; }
+    .item__item.item03 .new__text p.sale:after {
+      content: '25.99 USD';
+      display: inline-block;
+      margin-left: 5px;
+      color: red;
+      font-size: 0.8rem;
+      font-weight: 300;
+      text-decoration: none; }
 
 .banner {
   width: 100%;

@@ -29,7 +29,7 @@ $(function () {
                 left: -160 * num
             })
             $(this).parent().next().find('span').css({
-                width: 25 * num + "%"
+                width: 25 * (num + 1) + "%"
             });
         }
         else {
@@ -38,7 +38,7 @@ $(function () {
                 left: -160 * num
             })
             $(this).parent().next().find('span').css({
-                width: 25 * num + "%"
+                width: 25 * (num + 1) + "%"
             });
         }
     }

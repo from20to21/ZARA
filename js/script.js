@@ -70,9 +70,6 @@ $(function () {
 
     function indicator(e, firstDrag, $this) {
 
-
-        console.log(e);
-
         var max = $this.find('.item').length - 2;
         var lastDrag = e.pageX;
 

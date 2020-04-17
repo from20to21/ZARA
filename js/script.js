@@ -79,9 +79,6 @@ $(function () {
         $('html').addClass("search");
         $('.wrap').addClass("search");
 
-        $(this).animate({
-            marginLeft: "80px"
-        }, 800);
         $('.search__close').css({
             display: "block"
         }, 500);
@@ -113,9 +110,7 @@ $(function () {
     function close() {
         $('html').removeClass("search");
         $('.wrap').removeClass("search");
-        $('.header__search').animate({
-            marginLeft: "10px"
-        }, 800);
+
         $('.search__close').css({
             display: "none"
         }, 500);

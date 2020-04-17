@@ -97,12 +97,13 @@ header {
   .header__search input {
     opacity: 0;
     display: none;
-    height: 30px;
+    width: 300px;
+    height: 35px;
     border: none;
     outline-style: none;
     background: #eeeeee;
     border-radius: 10px;
-    margin-left: -15px;
+    margin-left: -30px;
     padding-left: 10px;
     margin-bottom: 3px;
     font-size: 1rem;
@@ -145,7 +146,7 @@ header {
   width: 100%;
   flex-direction: column;
   text-align: left;
-  padding-top: 10px; }
+  padding-top: 30px; }
   .search__keyword h3 {
     color: #333;
     font-size: 1.4rem;

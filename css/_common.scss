@@ -167,7 +167,7 @@ header{
     }    
    }
    &__category{
-     padding-left: 10px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
        & button{
@@ -176,7 +176,7 @@ header{
         cursor: pointer;
         background: none;
         width: 40%;
-        height: 30px;
+        height: 35px;
         font-size: 1rem;
         display: flex;
         justify-content: center;
@@ -188,7 +188,7 @@ header{
           height: 2px;
           background: #333;
           position: absolute;
-          left: 50%; bottom: 0;
+          left: 50%; bottom: -10px;
           transform: translateX(-50%);
         }
         & img{
@@ -198,7 +198,7 @@ header{
       }
       & p{
         width: 40%;
-        height: 30px;
+        height: 35px;
         font-size: 1rem;
         justify-content: center;
         align-items: center;

@@ -161,7 +161,7 @@ header {
     cursor: pointer;
     background: none;
     width: 40%;
-    height: 30px;
+    height: 35px;
     font-size: 1rem;
     display: flex;
     justify-content: center;
@@ -174,14 +174,14 @@ header {
       background: #333;
       position: absolute;
       left: 50%;
-      bottom: 0;
+      bottom: -10px;
       transform: translateX(-50%); }
     .search__category button img {
       width: 10px;
       margin-left: 10px; }
   .search__category p {
     width: 40%;
-    height: 30px;
+    height: 35px;
     font-size: 1rem;
     justify-content: center;
     align-items: center;

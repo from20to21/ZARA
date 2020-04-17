@@ -32,7 +32,7 @@ $(function () {
         });
         $(this).parent().find('p').animate({
             opacity: 0
-        }, 500);
+        });
     }
 
     function open() {
@@ -54,7 +54,7 @@ $(function () {
             }, 500);
             $(this).parent().find('p').animate({
                 opacity: 0
-            }, 500);
+            });
         }
     }
 

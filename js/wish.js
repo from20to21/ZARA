@@ -12,6 +12,27 @@ $(function () {
     $('.search__gender p').click(cat_change);
     $('.search__category p').click(cat_change);
 
+    $('.minus').click(minus);
+    $('.plus').click(plus);
+    var num = 1;
+
+    function minus(){
+        if(num == 1){
+            num = 1;
+        }else{
+            num--;
+        }
+        $(this).parent().find('button').text(num);
+    }
+    function plus(){
+        num++;
+        $(this).parent().find('button').text(num);
+    }
+
+
+
+
+
     function cat_change() {
         bln = true;
         var target = $(this).text();

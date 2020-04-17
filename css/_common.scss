@@ -182,13 +182,14 @@ header{
         justify-content: center;
         align-items: center;
         position: relative;
+        margin-bottom: 10px;
         &:after{
           content: '';
-          width: 70%;
+          width: 65%;
           height: 2px;
           background: #333;
           position: absolute;
-          left: 50%; bottom: 0;
+          left: 50%; bottom: -3px;
           transform: translateX(-50%);
         }
         & img{

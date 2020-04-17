@@ -4,7 +4,7 @@ $(function () {
     var firstScroll, lastScroll,
         positionVisual, positionText,
         positionNew, positionCollection,
-        positionBest;
+        positionBest, bln = true;
 
     $(window).scroll(parallax);
 
@@ -21,11 +21,10 @@ $(function () {
     $('.search__category p').click(cat_change);
 
     function cat_change() {
-        var btnText = $('.search__category button').text()
         var target = $(this).text();
 
         $('.search__category button').html(target + '<img src="img/download.png" alt="">');
-        $(this).text(btnText);
+
         $('.search__category p').css({
             display: "none",
             transform: "translate(-5%, -50px)"
@@ -36,13 +35,26 @@ $(function () {
     }
 
     function open() {
-        $('.search__category p').css({
-            display: "flex",
-            transform: "translate(-5%, 0)"
-        }, 500);
-        $('.search__category p').animate({
-            opacity: 1
-        });
+        if (bln) {
+            bln = false
+            $('.search__category p').css({
+                display: "flex",
+                transform: "translate(-5%, 0)"
+            }, 500);
+            $('.search__category p').animate({
+                opacity: 1
+            });
+        }
+        else {
+            bln = true;
+            $('.search__category p').css({
+                display: "none",
+                transform: "translate(-5%, -50px)"
+            }, 500);
+            $('.search__category p').animate({
+                opacity: 0
+            });
+        }
     }
 
     function search() {

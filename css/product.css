@@ -395,11 +395,11 @@ html, body {
     .item__text p {
       font-size: 0.8rem;
       font-weight: 100; }
-  .item__item.item01 .new__text p.sale {
+  .item__box.item01 .item__text p.sale {
     font-size: 0.8rem;
     font-weight: 100;
     text-decoration: line-through; }
-    .item__item.item01 .new__text p.sale:after {
+    .item__box.item01 .item__text p.sale:after {
       content: '25.99 USD';
       display: inline-block;
       margin-left: 5px;
@@ -407,11 +407,11 @@ html, body {
       font-size: 0.8rem;
       font-weight: 300;
       text-decoration: none; }
-  .item__item.item03 .new__text p.sale {
+  .item__box.item03 .item__text p.sale {
     font-size: 0.8rem;
     font-weight: 100;
     text-decoration: line-through; }
-    .item__item.item03 .new__text p.sale:after {
+    .item__box.item03 .item__text p.sale:after {
       content: '25.99 USD';
       display: inline-block;
       margin-left: 5px;

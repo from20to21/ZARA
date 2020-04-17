@@ -150,6 +150,19 @@ header {
     font-size: 1.4rem;
     font-weight: 550;
     margin-bottom: 20px; }
+  .header__keyword select {
+    width: 30%;
+    height: 30px;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding-left: 8%;
+    outline-style: none; }
+    .header__keyword select::-ms-expand {
+      display: none; }
+    .header__keyword select option {
+      border: none; }
 .header__tag {
   display: flex;
   margin-left: -10px;

@@ -163,6 +163,22 @@ header{
       font-weight: 550;
       margin-bottom: 20px;
     }
+    & select{
+      width: 30%;
+      height: 30px;
+      border: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      padding-left: 8%;
+      outline-style: none;
+      &::-ms-expand {
+        display: none;
+      }
+      & option{
+      border:none;
+      }
+    }
   }
   &__tag{
     display: flex;

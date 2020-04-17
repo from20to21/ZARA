@@ -127,7 +127,8 @@ header {
       position: absolute;
       top: 0;
       right: 3px; }
-.header__close {
+
+.search__close {
   border: none;
   outline-style: none;
   cursor: pointer;
@@ -136,44 +137,68 @@ header {
   display: none;
   float: right;
   padding-top: 10px; }
-  .header__close img {
+  .search__close img {
     width: 15px; }
-.header__keyword {
+.search__keyword {
   opacity: 0;
   display: none;
   width: 100%;
   flex-direction: column;
   text-align: left;
   padding-top: 10px; }
-  .header__keyword h3 {
+  .search__keyword h3 {
     color: #333;
     font-size: 1.4rem;
     font-weight: 550;
     margin-bottom: 20px; }
-  .header__keyword select {
-    width: 30%;
-    height: 30px;
+.search__category {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column; }
+  .search__category button {
     border: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    padding-left: 8%;
-    outline-style: none; }
-    .header__keyword select::-ms-expand {
-      display: none; }
-    .header__keyword select option {
-      border: none; }
-.header__tag {
+    outline-style: none;
+    cursor: pointer;
+    background: none;
+    width: 40%;
+    height: 30px;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; }
+    .search__category button:after {
+      content: '';
+      width: 80%;
+      height: 2px;
+      background: #333;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translateX(-50%); }
+    .search__category button img {
+      width: 10px;
+      margin-left: 10px; }
+  .search__category p {
+    width: 40%;
+    height: 30px;
+    font-size: 1rem;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-5%, -50px);
+    display: none;
+    opacity: 0; }
+.search__tag {
   display: flex;
   margin-left: -10px;
   margin-bottom: 25px; }
-  .header__tag a {
+  .search__tag a {
     font-size: 0.8rem;
     margin-left: 20px;
     position: relative;
     text-align: center;
     text-transform: uppercase; }
-    .header__tag a::before {
+    .search__tag a::before {
       content: attr(data-text);
       width: 130%;
       height: 170%;

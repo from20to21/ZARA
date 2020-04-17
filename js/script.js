@@ -17,19 +17,20 @@ $(function () {
     $('.search__close').click(close);
 
     $('.search__gender button').click(open);
+    $('.search__category button').click(open);
 
     $('.search__gender p').click(cat_change);
+    $('.search__category p').click(cat_change);
 
     function cat_change() {
         var target = $(this).text();
+        $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
 
-        $('.search__gender button').html(target + '<img src="img/download.png" alt="">');
-
-        $('.search__gender p').css({
+        $(this).parent().find('p').css({
             display: "none",
             transform: "translate(-5%, -50px)"
         }, 500);
-        $('.search__gender p').animate({
+        $(this).parent().find('p').animate({
             opacity: 0
         });
     }
@@ -37,21 +38,21 @@ $(function () {
     function open() {
         if (bln) {
             bln = false
-            $('.search__gender p').css({
+            $(this).parent().find('p').css({
                 display: "flex",
                 transform: "translate(-5%, 0)"
             }, 500);
-            $('.search__gender p').animate({
+            $(this).parent().find('p').animate({
                 opacity: 1
             });
         }
         else {
             bln = true;
-            $('.search__gender p').css({
+            $(this).parent().find('p').css({
                 display: "none",
                 transform: "translate(-5%, -50px)"
             }, 500);
-            $('.search__gender p').animate({
+            $(this).parent().find('p').animate({
                 opacity: 0
             });
         }

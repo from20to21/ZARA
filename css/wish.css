@@ -287,7 +287,7 @@ html, body {
   margin-left: 10px;
   margin-right: 15px; }
 .wish__text {
-  width: 50%;
+  width: 42%;
   height: 100px;
   display: flex;
   flex-direction: column;
@@ -317,29 +317,28 @@ html, body {
 .wish__btn {
   display: flex;
   flex-direction: column;
-  padding-top: 5px;
+  padding-top: 15px;
   position: relative; }
-  .wish__btn__check {
-    padding-top: 10px;
-    width: 25px;
+  .wish__btn__cart {
+    width: 100%;
     height: 25px;
-    border-radius: 100%;
-    border: none;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     outline-style: none;
     cursor: pointer;
     background: none;
     display: flex;
     align-items: center;
-    justify-content: center; }
-    .wish__btn__check img {
-      width: 25px;
-      filter: grayscale(1); }
-  .wish__btn__num {
-    margin-top: 25px;
-    width: 25px;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1); }
+  .wish__btn__num button {
+    margin-top: 15px;
+    width: 100%;
     height: 25px;
-    border-radius: 100%;
-    border: 2.5px solid #333;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     outline-style: none;
     cursor: pointer;
     background: none;
@@ -348,17 +347,19 @@ html, body {
     justify-content: center;
     color: #333;
     font-size: 1rem;
-    font-weight: bolder; }
+    font-weight: 100;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1); }
   .wish__btn span {
     position: absolute;
     color: #333;
     font-size: 1rem;
-    font-weight: bolder; }
+    font-weight: 100;
+    z-index: 3; }
     .wish__btn span.minus {
-      left: -15px;
+      left: 15px;
       bottom: 25px; }
     .wish__btn span.plus {
-      right: -15px;
+      right: 15px;
       bottom: 25px; }
 
 nav {

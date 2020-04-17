@@ -29,10 +29,10 @@ $(function () {
         $(this).parent().find('p').css({
             display: "none",
             transform: "translate(-5%, -50px)"
-        }, 500);
+        });
         $(this).parent().find('p').animate({
             opacity: 0
-        });
+        }, 500);
     }
 
     function open() {
@@ -54,7 +54,7 @@ $(function () {
             }, 500);
             $(this).parent().find('p').animate({
                 opacity: 0
-            });
+            }, 500);
         }
     }
 

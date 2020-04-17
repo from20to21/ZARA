@@ -12,6 +12,79 @@ $(function () {
 
     $('.heart').click(like);
 
+    $('.header__search').click(search);
+
+    $('.header__close').click(close);
+
+    function search() {
+        $('html').addClass("search");
+        $('.wrap').addClass("search");
+
+        $(this).animate({
+            marginLeft: "80px"
+        }, 800);
+        $('.header__close').css({
+            display: "block"
+        }, 500);
+        $('.header__close').delay(500).animate({
+            opacity: 1
+        });
+        $(this).find('input').css({
+            display: "block"
+        }, 500);
+        $(this).find('input').delay(500).animate({
+            opacity: 1
+        });
+        $('.header__shopping').animate({
+            opacity: 0
+        }, 500);
+        $('.header__shopping').delay(500).css({
+            display: "none"
+        });
+        $('header').animate({
+            height: "100vh"
+        })
+        $('.header__keyword').css({
+            display: "flex"
+        }, 500);
+        $('.header__keyword').delay(500).animate({
+            opacity: 1
+        });
+    }
+    function close() {
+        $('html').removeClass("search");
+        $('.wrap').removeClass("search");
+        $('.header__search').animate({
+            marginLeft: "10px"
+        }, 800);
+        $('.header__close').css({
+            display: "none"
+        }, 500);
+        $('.header__close').delay(500).animate({
+            opacity: 0
+        });
+        $('.header__search').find('input').css({
+            display: "none"
+        }, 500);
+        $('.header__search').find('input').delay(500).animate({
+            opacity: 0
+        });
+        $('.header__shopping').animate({
+            opacity: 1
+        }, 500);
+        $('.header__shopping').delay(500).css({
+            display: "block"
+        });
+        $('header').animate({
+            height: "45px"
+        })
+        $('.header__keyword').css({
+            display: "none"
+        }, 500);
+        $('.header__keyword').delay(500).animate({
+            opacity: 0
+        });
+    }
 
     // var dX = 0;
     // $('.collection__itemWrapper').draggable({

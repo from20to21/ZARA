@@ -58,11 +58,14 @@ table {
 a {
   text-decoration: none; }
 
-html, body {
+html.search {
   position: fixed;
   overflow: hidden; }
 
 .wrap {
+  position: relative; }
+
+.wrap.search {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
@@ -76,12 +79,13 @@ header {
   padding: 5px 10px;
   position: fixed;
   top: 0;
-  z-index: 100; }
+  z-index: 102; }
   header button img {
     width: 22px; }
 
 .header__search {
   padding-top: 5px;
+  margin-left: 10px;
   float: left;
   display: flex;
   align-items: center; }
@@ -91,20 +95,21 @@ header {
     cursor: pointer;
     background: none; }
   .header__search input {
-    width: 60%;
-    height: 26px;
+    opacity: 0;
+    display: none;
+    height: 30px;
     border: none;
     outline-style: none;
     background: #eeeeee;
-    border-radius: 8px;
+    border-radius: 10px;
     margin-left: -15px;
     padding-left: 10px;
     margin-bottom: 3px;
     font-size: 1rem;
     transform: scale(0.7); }
 .header__shopping {
-  padding-top: 5px;
-  float: right; }
+  float: right;
+  padding-top: 5px; }
   .header__shopping button {
     border: none;
     outline-style: none;
@@ -112,7 +117,7 @@ header {
     background: none;
     position: relative;
     margin-right: 10px; }
-    .header__shopping button::first-child:after {
+    .header__shopping button:first-child:after {
       content: '';
       display: block;
       width: 5px;
@@ -122,6 +127,60 @@ header {
       position: absolute;
       top: 0;
       right: 3px; }
+.header__close {
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+  background: none;
+  opacity: 0;
+  display: none;
+  float: right;
+  padding-top: 10px; }
+  .header__close img {
+    width: 15px; }
+.header__keyword {
+  opacity: 0;
+  display: none;
+  width: 100%;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 10px; }
+  .header__keyword h3 {
+    color: #333;
+    font-size: 1.4rem;
+    font-weight: 550;
+    margin-bottom: 20px; }
+.header__tag {
+  display: flex;
+  margin-left: -10px;
+  margin-bottom: 25px; }
+  .header__tag a {
+    font-size: 0.8rem;
+    margin-left: 20px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase; }
+    .header__tag a::before {
+      content: attr(data-text);
+      width: 130%;
+      height: 170%;
+      background: #eee;
+      padding-top: 6px;
+      border-radius: 10px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%); }
+
+html, body {
+  position: fixed;
+  overflow: hidden; }
+
+.wrap {
+  width: 100vw;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch; }
 
 .back {
   width: 30px;

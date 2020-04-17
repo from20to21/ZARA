@@ -23,6 +23,7 @@ $(function () {
     $('.search__category p').click(cat_change);
 
     function cat_change() {
+        bln = true;
         var target = $(this).text();
         $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
 
@@ -37,7 +38,7 @@ $(function () {
 
     function open() {
         if (bln) {
-            bln = false
+            bln = false;
             $(this).parent().find('p').css({
                 display: "flex",
                 transform: "translate(-5%, 0)"

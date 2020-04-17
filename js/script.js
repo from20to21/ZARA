@@ -46,16 +46,32 @@ $(function () {
             $(this).parent().find('p').animate({
                 opacity: 1
             });
+            $(this).find('img').css({
+                transform: "rotate(180deg)"
+            })
         }
         else {
             bln = true;
-            $(this).parent().find('p').css({
+            $('.search__gender').find('p').css({
                 display: "none",
                 transform: "translate(-5%, -50px)"
             }, 500);
-            $(this).parent().find('p').animate({
+            $('.search__gender').find('p').animate({
                 opacity: 0
             });
+            $('.search__gender').find('button').find('img').css({
+                transform: "rotate(0deg)"
+            })
+            $('.search__category').find('p').css({
+                display: "none",
+                transform: "translate(-5%, -50px)"
+            }, 500);
+            $('.search__category').find('p').animate({
+                opacity: 0
+            });
+            $('.search__category').find('button').find('img').css({
+                transform: "rotate(0deg)"
+            })
         }
     }
 

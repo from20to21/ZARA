@@ -160,11 +160,12 @@ header{
     flex-direction: column;
     text-align: left;
     padding-top: 30px;
+    padding-left: 20px;
     & h3{
       color: #333;
       font-size: 1.4rem;
       font-weight: 550;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
     }    
    }
    &__category_wrapper{
@@ -260,7 +261,7 @@ header{
   &__tag{
     display: flex;
     margin-left: -10px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     & a{
       font-size: 0.8rem;
       margin-left: 20px;

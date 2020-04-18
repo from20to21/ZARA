@@ -146,12 +146,13 @@ header {
   width: 100%;
   flex-direction: column;
   text-align: left;
-  padding-top: 30px; }
+  padding-top: 30px;
+  padding-left: 20px; }
   .search__keyword h3 {
     color: #333;
     font-size: 1.4rem;
     font-weight: 550;
-    margin-bottom: 20px; }
+    margin-bottom: 30px; }
 .search__category_wrapper {
   width: 100%;
   display: flex; }
@@ -236,7 +237,7 @@ header {
 .search__tag {
   display: flex;
   margin-left: -10px;
-  margin-bottom: 25px; }
+  margin-bottom: 35px; }
   .search__tag a {
     font-size: 0.8rem;
     margin-left: 20px;
@@ -287,11 +288,11 @@ html, body {
   margin-left: 10px;
   margin-right: 15px; }
   .wish__item.item01 {
-    background: url(../img/product/jacket/001.jpg) no-repeat center/cover; }
+    background: url(../img/wish/001.jpg) no-repeat center/cover; }
   .wish__item.item02 {
-    background: url(../img/product/jacket/002.jpg) no-repeat center/cover; }
+    background: url(../img/wish/002.jpg) no-repeat center/cover; }
   .wish__item.item03 {
-    background: url(../img/main/new_001.jpg) no-repeat center/cover; }
+    background: url(../img/wish/003.jpg) no-repeat center/cover; }
 .wish__text {
   width: 42%;
   height: 100px;

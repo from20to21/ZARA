@@ -35,15 +35,11 @@ html, body {
         border-radius: 8px;
         margin-left: 10px;
         margin-right: 15px;
-        &.item01{
-          background: url(../img/product/jacket/001.jpg)no-repeat center / cover;
+        @for $i from 1 to 4{ 
+        &.item0#{$i}{
+          background: url(../img/wish/00#{$i}.jpg)no-repeat center / cover;
         }
-        &.item02{
-            background: url(../img/product/jacket/002.jpg)no-repeat center / cover;
-        }
-        &.item03{
-            background: url(../img/main/new_001.jpg)no-repeat center / cover;
-        }
+    }
     }
     
     &__text{

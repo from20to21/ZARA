@@ -12,7 +12,7 @@ $(function () {
         $('.category').addClass('change');
         $(this).toggleClass('change');
         $(this).addClass('selected');
-
+        
         $('header').animate({
             top: "-45px"
         }, 300);
@@ -29,9 +29,11 @@ $(function () {
         $('nav').animate({
             bottom: "-45px"
         }, 300);
+
     }
 
     function back() {
+
         $(this).hasClass('selected');
         $('.category').removeClass('change');
         $('.category').removeClass('selected');

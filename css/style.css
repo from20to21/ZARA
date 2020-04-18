@@ -185,6 +185,7 @@ header {
       transform: translateX(-50%); }
     .search__gender button img {
       width: 10px;
+      height: 10px;
       margin-left: 10px; }
   .search__gender p {
     width: 100%;

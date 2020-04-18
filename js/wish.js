@@ -14,6 +14,7 @@ $(function () {
 
     $('.minus').click(minus);
     $('.plus').click(plus);
+    
     var num = 1;
 
     function minus(){

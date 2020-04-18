@@ -15,6 +15,25 @@ $(function () {
     $('.minus').click(minus);
     $('.plus').click(plus);
     
+    $('.wish__btn__cart').click(cart_select);
+    $('.wish__all__cart').click(cart_all);
+
+    function cart_select(){
+        $(this).parent().parent().animate({
+            opacity: "0",
+            marginBottom: "-120px"
+        },300);
+    }
+    function cart_all(){
+        $('.wish__btn__cart').parent().parent().animate({
+            opacity: "0",
+            marginBottom: "-120px"
+        },300);
+        $(this).animate({
+            opacity: "0",
+            marginBottom: "-120px"
+        },300);
+    }
 
     function minus(){
         var num = $(this).parent().find('button').text();

@@ -29,7 +29,6 @@ $(function () {
         $('nav').animate({
             bottom: "-45px"
         }, 300);
-
     }
 
     function back() {

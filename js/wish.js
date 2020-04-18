@@ -15,9 +15,10 @@ $(function () {
     $('.minus').click(minus);
     $('.plus').click(plus);
     
-    var num = 1;
 
     function minus(){
+        var num = $(this).parent().find('button').text();
+        console.log(num);
         if(num == 1){
             num = 1;
         }else{
@@ -26,6 +27,7 @@ $(function () {
         $(this).parent().find('button').text(num);
     }
     function plus(){
+        var num = $(this).parent().find('button').text();
         num++;
         $(this).parent().find('button').text(num);
     }

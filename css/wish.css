@@ -361,17 +361,23 @@ html, body {
     font-weight: 100;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1); }
   .wish__btn span {
+    width: 30px;
+    height: 25px;
     position: absolute;
     color: #333;
     font-size: 1rem;
     font-weight: 100;
-    z-index: 3; }
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
     .wish__btn span.minus {
       left: 15px;
-      bottom: 25px; }
+      bottom: 20px; }
     .wish__btn span.plus {
       right: 15px;
-      bottom: 25px; }
+      bottom: 20px;
+      align-items: flex-end; }
 
 nav {
   width: 100%;

@@ -120,16 +120,22 @@ html, body {
          }
         }
         & span{
+            width: 30px;
+            height:25px;
             position: absolute;           
             color: #333;
             font-size: 1rem;
             font-weight: 100;
             z-index: 3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
             &.minus{
-                left:15px; bottom: 25px;
+                left:15px; bottom: 20px;
             }
             &.plus{
-                right:15px; bottom: 25px;
+                right:15px; bottom: 20px;
+                align-items: flex-end;
             }
         }
     }

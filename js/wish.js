@@ -18,6 +18,63 @@ $(function () {
     $('.wish__btn__cart').click(cart_select);
     $('.wish__all__cart').click(cart_all);
 
+    // function drag() {
+    //     var bln = true;
+    //     var firstDrag;
+    //     $('.wish01').draggable({
+    //         axis: "x",
+    //         start: function (e) { firstDrag = e.pageX },
+    //         stop: function (e) { if (bln) { num = 0; bln = false } indicator(e, firstDrag, $(this)) }
+    //     });
+    // }
+    // drag();
+    // function indicator(e, firstDrag, $this) {
+
+    //     var max = $this.find('.item').length - 2;
+    //     var lastDrag = e.pageX;
+
+    //     if (firstDrag > lastDrag) { //왼쪽으로 드래그
+    //         if (num < max) {
+    //             num++;
+
+    //             $this.css({
+    //                 left: -160 * num
+    //             })
+    //             $this.parent().next().find('span').css({
+    //                 width: 25 * (num + 1) + "%"
+    //             });
+    //         }
+    //         else {
+    //             $this.css({
+    //                 left: -160 * num
+    //             })
+    //             $this.parent().next().find('span').css({
+    //                 width: 25 * (num + 1) + "%"
+    //             });
+    //         }
+    //     }
+    //     else { //오른쪽으로 드래그
+    //         if (num > 0) {
+    //             num--;
+    //             $this.css({
+    //                 left: -160 * num
+    //             })
+    //             $this.parent().next().find('span').css({
+    //                 width: 25 * (num + 1) + "%"
+    //             });
+    //         }
+    //         else {
+    //             $this.css({
+    //                 left: -160 * num
+    //             })
+    //             $this.parent().next().find('span').css({
+    //                 width: 25 * (num + 1) + "%"
+    //             });
+    //         }
+    //     }
+
+    // }
+
     function cart_select(){
         $(this).parent().parent().animate({
             opacity: "0",

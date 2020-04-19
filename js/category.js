@@ -155,6 +155,7 @@ $(function () {
     function close() {
         $('html').removeClass("search");
         $('.wrap').removeClass("search");
+        $('.search__category').find('button').html('CATEGORY<img src="img/download.png" alt="">');
 
         $('.search__close').css({
             display: "none"

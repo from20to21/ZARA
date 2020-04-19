@@ -23,7 +23,9 @@ $(function () {
             opacity: "0",
             marginBottom: "-120px"
         },300);
+        $(this).parent().parent().remove().delay(300);
     }
+
     function cart_all(){
         $('.wish__btn__cart').parent().parent().animate({
             opacity: "0",
@@ -37,7 +39,6 @@ $(function () {
 
     function minus(){
         var num = $(this).parent().find('button').text();
-        console.log(num);
         if(num == 1){
             num = 1;
         }else{
@@ -143,6 +144,7 @@ $(function () {
     function close() {
         $('html').removeClass("search");
         $('.wrap').removeClass("search");
+        $('.search__category').find('button').html('CATEGORY<img src="img/download.png" alt="">');
 
         $('.search__close').css({
             display: "none"

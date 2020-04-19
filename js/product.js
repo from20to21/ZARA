@@ -3,7 +3,6 @@ $(function () {
 
     var bln = true;
 
-
     $('.visual h2').delay(500).animate({
         opacity: "1",
         bottom: "20px"

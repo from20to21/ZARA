@@ -22,7 +22,7 @@ $(function () {
     $('.search__gender p').click(cat_change);
     $('.search__category p').click(cat_change);
 
-    function sale(){
+    function sale(){ //for css change in .sale span
         $('.sale').find('span').css({
             display:"inline-block",
             marginLeft: "5px",
@@ -34,36 +34,36 @@ $(function () {
     }
     sale();
 
-    function cat_change() {
+    function cat_change() { //for gender/category change in search menus
         bln = true;
         var target = $(this).text();
         $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
 
-        $(this).parent().find('p').css({
+        $(this).parent().find('p').delay(300).css({ //list close
             display: "none",
             transform: "translate(-5%, -50px)"
         });
-        $(this).parent().find('p').animate({
-            opacity: 0
-        });
+        $(this).parent().find('p').animate({ //list close2 (doesn't work because of display none) **fix need
+            opacity: 0  
+        },300);
     }
 
-    function open() {
+    function open() { //for open gender/category tab in search menu
         if (bln) {
-            bln = false;
-            $(this).parent().find('p').css({
+            bln = false; // to open it when it is not open
+            $(this).parent().find('p').css({ //list open
                 display: "flex",
                 transform: "translate(-5%, 0)"
             }, 500);
-            $(this).parent().find('p').animate({
+            $(this).parent().find('p').animate({ //list open2
                 opacity: 1
             });
-            $(this).find('img').css({
+            $(this).find('img').css({ //list open3 (missing image problem) **fix need
                 transform: "rotate(180deg)"
             })
         }
         else {
-            bln = true;
+            bln = true;  // to open it when it is not open
             $('.search__gender').find('p').css({
                 display: "none",
                 transform: "translate(-5%, -50px)"
@@ -87,9 +87,9 @@ $(function () {
         }
     }
 
-    function search() {
-        $('html').addClass("search");
-        $('.wrap').addClass("search");
+    function search() { //search page open
+        $('html').addClass("search"); //page fixed
+        $('.wrap').addClass("search"); //page fixed
 
         $('.search__close').css({
             display: "block"
@@ -119,7 +119,7 @@ $(function () {
             opacity: 1
         });
     }
-    function close() {
+    function close() { //go back to origin page
         $('html').removeClass("search");
         $('.wrap').removeClass("search");
         $('.search__category').find('button').html('CATEGORY<img src="img/download.png" alt="">');
@@ -160,6 +160,8 @@ $(function () {
         });
     }
 
+    // make scroll possilbe when drag item line... fix need
+
     // var dX = 0;
     // $('.collection__itemWrapper').draggable({
     //     axis: "x",
@@ -180,9 +182,11 @@ $(function () {
     //         }
     //     }
     // });
+
+
     var num = 0;
 
-    function drag1() {
+    function drag1() { //drag item line
         var bln = true;
         var firstDrag;
         $('.new__itemWrapper').draggable({
@@ -191,7 +195,7 @@ $(function () {
             stop: function (e) { if (bln) { num = 0; bln = false } indicator(e, firstDrag, $(this)) }
         });
     }
-    function drag2() {
+    function drag2() { //drag item line
         var bln = true;
         var firstDrag;
         $('.collection__itemWrapper').draggable({
@@ -200,7 +204,7 @@ $(function () {
             stop: function (e) { if (bln) { num = 0; bln = false } indicator(e, firstDrag, $(this)) }
         });
     }
-    function drag3() {
+    function drag3() { //drag item line
         var bln = true;
         var firstDrag;
         $('.bestseller__itemWrapper').draggable({
@@ -215,7 +219,7 @@ $(function () {
 
 
 
-    function indicator(e, firstDrag, $this) {
+    function indicator(e, firstDrag, $this) { // to move item line as much as item size
 
         var max = $this.find('.item').length - 2;
         var lastDrag = e.pageX;
@@ -266,7 +270,7 @@ $(function () {
     drag2();
     drag3();
 
-    function parallax() {
+    function parallax() { // to move image as likely parallax
         firstScroll = window.scrollY;
         positionVisual = firstScroll * 0.5;
         positionText = firstScroll * 0.7;
@@ -360,7 +364,7 @@ $(function () {
         lastScroll = firstScroll;
     }
 
-    function select() {
+    function select() { // move red line under the categroy tab
         $('.category button strong').removeClass('category__selected');
         $(this).find('strong').addClass('category__selected');
         var categoryWidth = $(this).find('strong').innerWidth();
@@ -372,7 +376,7 @@ $(function () {
         });
     }
 
-    function like() {
+    function like() { //like button acting
         $(this).find('img').toggleClass('pink');
     }
 

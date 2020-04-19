@@ -269,7 +269,8 @@ html, body {
 
 .main__wrapper {
   position: relative;
-  width: 100%; }
+  width: 100%;
+  height: 100%; }
   .main__wrapper h3 {
     color: #333;
     font-size: 1.4rem;
@@ -280,17 +281,16 @@ html, body {
 
 .wish__wrapper {
   position: absolute;
-  left: 7.2px;
-  top: 120px;
-  width: 400px;
-  margin: 0 auto;
+  left: 5%;
+  top: 60px;
+  width: 90%;
   display: flex;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd; }
 .wish__wrapper.wish02 {
-  top: 240px; }
+  top: 180px; }
 .wish__wrapper.wish03 {
-  top: 360px; }
+  top: 300px; }
 .wish__item {
   width: 100px;
   height: 100px;
@@ -383,9 +383,9 @@ html, body {
 .wish__all__cart {
   display: block;
   position: absolute;
-  top: 480px;
-  left: 57.2px;
-  width: 300px;
+  bottom: 120px;
+  left: 20%;
+  width: 60%;
   height: 40px;
   margin: 50px auto;
   border-radius: 10px;

@@ -18,6 +18,18 @@ $(function () {
     $('.wish__btn__cart').click(cart_select);
     $('.wish__all__cart').click(cart_all);
 
+    function sale(){
+        $('.sale').find('span').css({
+            display:"inline-block",
+            marginLeft: "5px",
+            color: "red",
+            fontSize: "0.8rem",
+            fontWeight: "300",
+            textDecoration: "none"
+        });
+    }
+    sale();
+    
     // function drag() {
     //     var bln = true;
     //     var firstDrag;

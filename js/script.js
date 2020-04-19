@@ -22,6 +22,18 @@ $(function () {
     $('.search__gender p').click(cat_change);
     $('.search__category p').click(cat_change);
 
+    function sale(){
+        $('.sale').find('span').css({
+            display:"inline-block",
+            marginLeft: "5px",
+            color: "red",
+            fontSize: "0.8rem",
+            fontWeight: "300",
+            textDecoration: "none"
+        });
+    }
+    sale();
+
     function cat_change() {
         bln = true;
         var target = $(this).text();

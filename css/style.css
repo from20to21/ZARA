@@ -259,12 +259,12 @@ header {
 
 .visual {
   height: 581px;
-  background: url(../img/bg_001.jpg) no-repeat center/cover;
   position: relative;
+  background: url("../img/bg_001.jpg") no-repeat center/cover;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  flex-direction: column; }
   .visual__white {
     width: 100%;
     height: 100%;
@@ -316,12 +316,12 @@ header {
 .heart {
   width: 30px;
   height: 30px;
-  border: none;
-  outline-style: none;
-  background: none;
-  cursor: pointer;
   margin-top: 6px;
   margin-left: 6px;
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+  background: none;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -339,7 +339,7 @@ header {
   margin-top: 70px;
   width: 70%;
   height: 60vh;
-  background: url(../img/bg_002.jpg) no-repeat center/cover;
+  background: url("../img/bg_002.jpg") no-repeat center/cover;
   border-top: 5px solid #333;
   position: relative; }
   .new:after {
@@ -361,11 +361,12 @@ header {
   .new button {
     width: 25%;
     height: 25px;
-    border: 1px solid #888;
     color: #434343;
+    border: none;
     outline-style: none;
     cursor: pointer;
     background: none;
+    border: 1px solid #888;
     position: absolute;
     top: 100px;
     right: -90px;
@@ -399,16 +400,17 @@ header {
     left: 0;
     transition: .2s; }
     .new__itemWrapper .item01 {
-      margin-left: 0;
-      background: url(../img/main/new_001.jpg) no-repeat center/cover; }
+      background: url("../img/main/new_001.jpg") no-repeat center/cover; }
     .new__itemWrapper .item02 {
-      background: url(../img/main/new_002.jpg) no-repeat center/cover; }
+      background: url("../img/main/new_002.jpg") no-repeat center/cover; }
     .new__itemWrapper .item03 {
-      background: url(../img/main/new_003.jpg) no-repeat center/cover; }
+      background: url("../img/main/new_003.jpg") no-repeat center/cover; }
     .new__itemWrapper .item04 {
-      background: url(../img/main/new_004.jpg) no-repeat center/cover; }
+      background: url("../img/main/new_004.jpg") no-repeat center/cover; }
     .new__itemWrapper .item05 {
-      background: url(../img/main/new_005.jpg) no-repeat center/cover; }
+      background: url("../img/main/new_005.jpg") no-repeat center/cover; }
+    .new__itemWrapper .item01 {
+      margin-left: 0; }
   .new__item {
     margin-left: 15px;
     width: 150px;
@@ -444,7 +446,7 @@ header {
   margin-left: 30%;
   width: 70%;
   height: 60vh;
-  background: url(../img/bg_003.jpg) no-repeat center/cover;
+  background: url("../img/bg_003.jpg") no-repeat center/cover;
   border-bottom: 5px solid #333;
   position: relative; }
   .collection:after {
@@ -466,11 +468,12 @@ header {
   .collection button {
     width: 25%;
     height: 25px;
-    border: 1px solid #888;
     color: #434343;
+    border: none;
     outline-style: none;
     cursor: pointer;
     background: none;
+    border: 1px solid #888;
     position: absolute;
     bottom: 60px;
     left: -100px;
@@ -504,16 +507,17 @@ header {
     left: 0;
     transition: .2s; }
     .collection__itemWrapper .item01 {
-      margin-left: 0;
-      background: url(../img/main/col_001.jpg) no-repeat center/cover; }
+      background: url("../img/main/col_001.jpg") no-repeat center/cover; }
     .collection__itemWrapper .item02 {
-      background: url(../img/main/col_002.jpg) no-repeat center/cover; }
+      background: url("../img/main/col_002.jpg") no-repeat center/cover; }
     .collection__itemWrapper .item03 {
-      background: url(../img/main/col_003.jpg) no-repeat center/cover; }
+      background: url("../img/main/col_003.jpg") no-repeat center/cover; }
     .collection__itemWrapper .item04 {
-      background: url(../img/main/col_004.jpg) no-repeat center/cover; }
+      background: url("../img/main/col_004.jpg") no-repeat center/cover; }
     .collection__itemWrapper .item05 {
-      background: url(../img/main/col_005.jpg) no-repeat center/cover; }
+      background: url("../img/main/col_005.jpg") no-repeat center/cover; }
+    .collection__itemWrapper .item01 {
+      margin-left: 0; }
   .collection__item {
     margin-left: 15px;
     width: 150px;
@@ -548,7 +552,7 @@ header {
   margin-top: 50px;
   width: 70%;
   height: 60vh;
-  background: url(../img/bg_004.jpg) no-repeat center/cover;
+  background: url("../img/bg_004.jpg") no-repeat center/cover;
   border-top: 5px solid #333;
   position: relative; }
   .bestseller:after {
@@ -569,11 +573,12 @@ header {
   .bestseller button {
     width: 25%;
     height: 25px;
-    border: 1px solid #888;
     color: #434343;
+    border: none;
     outline-style: none;
     cursor: pointer;
     background: none;
+    border: 1px solid #888;
     position: absolute;
     top: 70px;
     right: -90px;
@@ -607,16 +612,17 @@ header {
     left: 0;
     transition: .2s; }
     .bestseller__itemWrapper .item01 {
-      margin-left: 0;
-      background: url(../img/main/best_001.jpg) no-repeat center/cover; }
+      background: url("../img/main/best_001.jpg") no-repeat center/cover; }
     .bestseller__itemWrapper .item02 {
-      background: url(../img/main/best_002.jpg) no-repeat center/cover; }
+      background: url("../img/main/best_002.jpg") no-repeat center/cover; }
     .bestseller__itemWrapper .item03 {
-      background: url(../img/main/best_003.jpg) no-repeat center/cover; }
+      background: url("../img/main/best_003.jpg") no-repeat center/cover; }
     .bestseller__itemWrapper .item04 {
-      background: url(../img/main/best_004.jpg) no-repeat center/cover; }
+      background: url("../img/main/best_004.jpg") no-repeat center/cover; }
     .bestseller__itemWrapper .item05 {
-      background: url(../img/main/best_005.jpg) no-repeat center/cover; }
+      background: url("../img/main/best_005.jpg") no-repeat center/cover; }
+    .bestseller__itemWrapper .item01 {
+      margin-left: 0; }
   .bestseller__item {
     margin-left: 15px;
     width: 150px;
@@ -646,18 +652,10 @@ header {
       .bestseller__item__text p {
         font-size: 0.8rem;
         font-weight: 100; }
-  .bestseller__item.item05 .bestseller__item__text p.sale {
+  .bestseller .sale {
     font-size: 0.8rem;
     font-weight: 100;
     text-decoration: line-through; }
-    .bestseller__item.item05 .bestseller__item__text p.sale:after {
-      content: '25.99 USD';
-      display: inline-block;
-      margin-left: 5px;
-      color: red;
-      font-size: 0.8rem;
-      font-weight: 300;
-      text-decoration: none; }
 
 .item__indicator {
   display: block;
@@ -680,7 +678,7 @@ header {
   margin-top: 100px;
   width: 100%;
   height: 400px;
-  background: url(../img/bg_005.jpg) no-repeat center/cover;
+  background: url("../img/bg_005.jpg") no-repeat center/cover;
   position: relative; }
   .stories h3 {
     position: absolute;
@@ -698,10 +696,11 @@ header {
   .stories button {
     width: 25%;
     height: 25px;
-    border: 2px solid #fff;
+    border: none;
     outline-style: none;
     cursor: pointer;
     background: none;
+    border: 2px solid #fff;
     position: absolute;
     top: 58%;
     left: 50%;

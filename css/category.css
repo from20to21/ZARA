@@ -343,13 +343,13 @@ html, body {
 
 .category__woman {
   margin-top: 45px;
-  background: url(../img/cat/cat_woman.jpg) no-repeat center/cover; }
+  background: url("../img/cat/cat_woman.jpg") no-repeat center/cover; }
 
 .category__man {
-  background: url(../img/cat/cat_man.jpg) no-repeat center/cover; }
+  background: url("../img/cat/cat_man.jpg") no-repeat center/cover; }
 
 .category__kids {
-  background: url(../img/cat/cat_kids.jpg) no-repeat center/cover; }
+  background: url("../img/cat/cat_kids.jpg") no-repeat center/cover; }
 
 .category__box {
   width: 100%;

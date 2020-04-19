@@ -1,5 +1,12 @@
 @import "_common";
-
+@mixin item_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin bg_center($arg1){
+    background: url($arg1) no-repeat center / cover;
+}
 html, body {
   position: fixed;
   overflow: hidden;
@@ -89,13 +96,13 @@ html, body {
 }
 .category__woman{
     margin-top: 45px;
-    background: url(../img/cat/cat_woman.jpg) no-repeat center / cover;
+    @include bg_center('../img/cat/cat_woman.jpg');
 }
 .category__man{
-    background: url(../img/cat/cat_man.jpg) no-repeat center / cover;
+    @include bg_center('../img/cat/cat_man.jpg');
 }
 .category__kids{
-    background: url(../img/cat/cat_kids.jpg) no-repeat center / cover;
+    @include bg_center('../img/cat/cat_kids.jpg');
 }
 
 .category__box{
@@ -126,9 +133,7 @@ html, body {
                 font-weight: 400;
                 text-transform: uppercase;
                 letter-spacing: 0.05rem;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include item_center;
                 border: 1px solid #eee;
                 border-radius: 10px;
                 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
@@ -160,9 +165,7 @@ nav{
     & a{
         width: 25%;
         font-size: 0.7rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include item_center;
         text-transform: uppercase;
     }
 }

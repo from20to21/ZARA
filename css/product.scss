@@ -1,5 +1,12 @@
 @import "_common";
-
+@mixin item_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin bg_center($arg1){
+    background: url($arg1) no-repeat center / cover;
+}
 html, body {
   position: fixed;
   overflow: hidden;
@@ -85,9 +92,7 @@ html, body {
     cursor: pointer;
     margin-top: 6px;
     margin-left: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include item_center;
     & img{
         width: 20px;
         height: 20px;
@@ -111,18 +116,13 @@ html, body {
         display: flex;
         position: absolute;
         top: 0;
+        @for $i from 1 to 6{ 
+            & .item0#{$i}{
+              @include bg_center('../img/product/jacket/00#{$i}.jpg');
+            }
+        }
         & .item01 {
             margin-left: 0;
-            background: url(../img/product/jacket/001.jpg) no-repeat center / cover;
-        }
-        & .item02 {
-            background: url(../img/product/jacket/002.jpg) no-repeat center /cover;
-        }
-        & .item03 {
-            background: url(../img/product/jacket/003.jpg) no-repeat center /cover;
-        }
-        & .item04 {
-            background: url(../img/product/jacket/004.jpg) no-repeat center /cover;
         }
     }
     &__box{
@@ -188,7 +188,7 @@ html, body {
 .banner{
     width: 100%;
     height: 200px;
-    background: url(../img/product/jacket/banner001.jpg) no-repeat center / cover;
+    @include bg_center('../img/product/jacket/banner001.jpg');
     margin-bottom: 100px;
     position: relative;
     & button{
@@ -244,9 +244,7 @@ nav{
     & a{
         width: 25%;
         font-size: 0.7rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include item_center;
         text-transform: uppercase;
     }
 }

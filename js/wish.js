@@ -30,6 +30,8 @@ $(function () {
     }
     sale();
     
+    // var num = 0;
+
     // function drag() {
     //     var bln = true;
     //     var firstDrag;

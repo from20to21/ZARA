@@ -56,12 +56,12 @@ $(function () {
         if (firstDrag > lastDrag) { //if you move to left 
             $('.wish__wrapper').addClass("deselected");
             $this.removeClass("deselected");
-            $('.deselected').css({
+            $('.deselected').animate({
                 left: "5%"
-            })
-            $this.css({
+            }, 300)
+            $this.animate({
                 left: "-15%" // move item line as much as item size
-            });
+            }, 300);
         }
         else { // if you move right
             $this.css({

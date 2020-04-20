@@ -227,9 +227,9 @@ $(function () {
             if (num < max) {
                 num++;
 
-                $this.css({
+                $this.animate({
                     left: -160 * num // move item line as much as item size
-                });
+                }, 300);
                 $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%" // move indicator as much as 25%
                 });
@@ -246,9 +246,9 @@ $(function () {
         else { // if you move right
             if (num > 0) {
                 num--;
-                $this.css({
+                $this.animate({
                     left: -160 * num
-                });
+                }, 300);
                 $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
                 });

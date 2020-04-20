@@ -29,7 +29,7 @@ $(function () {
         $('nav').animate({
             bottom: "-45px"
         }, 300);
-        $('.change').delay(300).fadeOut();
+        $('.change').delay(500).fadeOut();
     }
 
     function back() {

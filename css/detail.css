@@ -267,185 +267,52 @@ html, body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; }
 
-.visual {
-  width: 100%;
-  height: 400px;
-  background: url(../img/product/jacket/visual.jpg) no-repeat center 10%/cover;
-  position: relative; }
-  .visual h2 {
-    width: 55%;
-    position: absolute;
-    left: 10px;
-    bottom: 0;
-    font-size: 2.3rem;
-    color: #fff;
-    font-weight: 600;
-    opacity: 0; }
-
-.category {
-  display: flex;
-  justify-content: flex-start;
-  width: 100%;
-  height: 50px;
-  position: relative;
-  background: #fff; }
-  .category button {
-    border: none;
-    outline-style: none;
-    cursor: pointer;
-    background: none;
-    position: relative;
-    width: 25%;
-    font-size: 0.8rem;
-    color: #434343; }
-  .category__selected {
-    color: #333;
-    font-weight: 550;
-    position: relative;
-    padding-bottom: 5px; }
-  .category span {
-    width: 28px;
-    height: 2px;
-    background: #e5004f;
-    position: absolute;
-    left: 28px;
-    bottom: 0; }
-
-.heart {
+.back {
   width: 30px;
   height: 30px;
   border: none;
   outline-style: none;
-  background: none;
   cursor: pointer;
-  margin-top: 6px;
-  margin-left: 6px;
-  display: flex;
-  justify-content: center;
-  align-items: center; }
-  .heart img {
-    width: 20px;
-    height: 20px;
-    filter: grayscale(1);
-    opacity: 0.3;
-    transition: .2s; }
-  .heart .pink {
-    filter: grayscale(0);
-    opacity: 1; }
-
-.item {
-  width: 100%;
-  height: 300px;
-  margin: 30px auto 0;
-  position: relative; }
-  .item__Wrapper {
-    width: 100%;
-    display: flex;
+  background: none;
+  position: absolute;
+  left: 10px;
+  top: 55px;
+  z-index: 100;
+  opacity: 1; }
+  .back img {
+    width: 30px;
     position: absolute;
-    top: 0; }
-    .item__Wrapper .item01 {
-      background: url("../img/product/jacket/001.jpg") no-repeat center/cover; }
-    .item__Wrapper .item02 {
-      background: url("../img/product/jacket/002.jpg") no-repeat center/cover; }
-    .item__Wrapper .item03 {
-      background: url("../img/product/jacket/003.jpg") no-repeat center/cover; }
-    .item__Wrapper .item04 {
-      background: url("../img/product/jacket/004.jpg") no-repeat center/cover; }
-    .item__Wrapper .item05 {
-      background: url("../img/product/jacket/005.jpg") no-repeat center/cover; }
-    .item__Wrapper .item01 {
-      margin-left: 0; }
-  .item__box {
-    margin-left: 2px;
-    width: 100%;
-    height: 200px;
-    position: relative; }
-  .item__text {
-    width: 100%;
-    position: absolute;
-    bottom: -28%;
-    left: 0;
-    padding-left: 10px;
-    overflow: hidden; }
-    .item__text em {
-      font-size: 0.8rem;
-      font-weight: 550; }
-    .item__text strong {
-      display: block;
-      width: 90%;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      font-size: 0.8rem;
-      font-weight: 300;
-      margin: 5px 0; }
-    .item__text p {
-      font-size: 0.8rem;
-      font-weight: 100; }
-  .item__box.item01 .item__text p.sale {
-    font-size: 0.8rem;
-    font-weight: 100;
-    text-decoration: line-through; }
-    .item__box.item01 .item__text p.sale:after {
-      content: '25.99 USD';
-      display: inline-block;
-      margin-left: 5px;
-      color: red;
-      font-size: 0.8rem;
-      font-weight: 300;
-      text-decoration: none; }
-  .item__box.item03 .item__text p.sale {
-    font-size: 0.8rem;
-    font-weight: 100;
-    text-decoration: line-through; }
-    .item__box.item03 .item__text p.sale:after {
-      content: '25.99 USD';
-      display: inline-block;
-      margin-left: 5px;
-      color: red;
-      font-size: 0.8rem;
-      font-weight: 300;
-      text-decoration: none; }
-
-.banner {
-  width: 100%;
-  height: 200px;
-  background: url("../img/product/jacket/banner001.jpg") no-repeat center/cover;
-  margin-bottom: 100px;
-  position: relative; }
-  .banner button {
-    padding-top: 10px; }
-  .banner__text {
-    width: 100%;
-    position: absolute;
-    bottom: -28%;
     left: 50%;
-    transform: translateX(-50%);
-    text-align: center; }
-    .banner__text em {
-      font-size: 0.8rem;
-      font-weight: 550; }
-    .banner__text strong {
-      display: block;
-      font-size: 0.8rem;
-      font-weight: 300;
-      margin: 5px 0; }
-    .banner__text p {
-      font-size: 0.8rem;
-      font-weight: 100;
-      text-decoration: line-through; }
-    .banner__text p.sale {
-      font-size: 0.8rem;
-      font-weight: 100;
-      text-decoration: line-through; }
-      .banner__text p.sale:after {
-        content: '19.99 USD';
-        display: inline-block;
-        margin-left: 5px;
-        color: red;
-        font-size: 0.8rem;
-        font-weight: 300;
-        text-decoration: none; }
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
+.visual {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden; }
+  .visual__wrapper {
+    width: 300%;
+    left: -100%;
+    position: relative;
+    display: flex; }
+  .visual__img01 {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .visual__img02 {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
+  .visual__img03 {
+    width: 100%;
+    height: 70vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; }
 
 nav {
   width: 100%;
@@ -464,4 +331,4 @@ nav {
     align-items: center;
     text-transform: uppercase; }
 
-/*# sourceMappingURL=product.css.map */
+/*# sourceMappingURL=detail.css.map */

@@ -22,6 +22,14 @@ $(function () {
     $('.search__gender p').click(cat_change);
     $('.search__category p').click(cat_change);
 
+    $('.new__itemBox').click(detail);
+    $('.col__itemBox').click(detail);
+    $('.best__itemBox').click(detail);
+
+    function detail() {
+        location.href = 'sub/detail.html'
+    }
+
     function sale() { //for css change in .sale span
         $('.sale').find('span').css({
             display: "inline-block",

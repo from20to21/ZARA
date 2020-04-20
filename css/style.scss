@@ -14,41 +14,7 @@
 @mixin bg_center($arg1){
     background: url($arg1) no-repeat center / cover;
 }
-@mixin item_text{
-    &__item{
-        margin-left: 15px;
-        width: 150px;
-        height: 150px;
-        box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-        position: relative;
-        &__text{
-            width :100%;
-            position: absolute;
-            bottom: -40%; left:0;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            & em{
-                font-size: 0.8rem;
-                font-weight: 550;
-            }
-            & strong{
-                display:block;
-                width: 100%;
-                overflow:hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                font-size: 0.8rem;
-                font-weight: 300;
-                margin: 5px 0;
-            }
-            & p{
-                font-size: 0.8rem;
-                font-weight: 100;
-            }
-        }
-    }
-}
+
 .visual{
     height: 581px;
     position: relative;
@@ -111,6 +77,9 @@
 }
 
 .heart{
+    position: absolute;
+    top:0; left:0;
+    z-index: 3;
     width: 30px;
     height: 30px;    
     margin-top: 6px;
@@ -197,16 +166,48 @@
         display: flex;
         position: absolute;
         top: 0; left:0;
+    }
+    &__item{
+        margin-left: 15px;
+        position: relative;
         @for $i from 1 to 6{ 
-            & .item0#{$i}{
+            & .item0#{$i}{     
+                width: 150px;
+                height: 150px;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
               @include bg_center('../img/main/new_00#{$i}.jpg');
             }
         }
         & .item01 {
             margin-left: 0;
         }
+        &__text{
+            width :100%;
+            position: absolute;
+            bottom: -40%; left:0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            & em{
+                font-size: 0.8rem;
+                font-weight: 550;
+            }
+            & strong{
+                display:block;
+                width: 100%;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.8rem;
+                font-weight: 300;
+                margin: 5px 0;
+            }
+            & p{
+                font-size: 0.8rem;
+                font-weight: 100;
+            }
+        }
     }
-    @include item_text;
 }
 
 .collection{
@@ -276,16 +277,48 @@
         display: flex;
         position: absolute;
         top: 0; left:0;
+    }
+    &__item{
+        margin-left: 15px;
+        position: relative;
         @for $i from 1 to 6{ 
-            & .item0#{$i}{
+            & .item0#{$i}{     
+                width: 150px;
+                height: 150px;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
               @include bg_center('../img/main/col_00#{$i}.jpg');
             }
         }
         & .item01 {
             margin-left: 0;
         }
+        &__text{
+            width :100%;
+            position: absolute;
+            bottom: -40%; left:0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            & em{
+                font-size: 0.8rem;
+                font-weight: 550;
+            }
+            & strong{
+                display:block;
+                width: 100%;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.8rem;
+                font-weight: 300;
+                margin: 5px 0;
+            }
+            & p{
+                font-size: 0.8rem;
+                font-weight: 100;
+            }
+        }
     }
-    @include item_text;
 }
 
 
@@ -358,16 +391,48 @@
         display: flex;
         position: absolute;
         top: 0; left:0;
+    }
+    &__item{
+        margin-left: 15px;
+        position: relative;
         @for $i from 1 to 6{ 
-            & .item0#{$i}{
+            & .item0#{$i}{     
+                width: 150px;
+                height: 150px;
+                box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
               @include bg_center('../img/main/best_00#{$i}.jpg');
             }
         }
         & .item01 {
             margin-left: 0;
         }
+        &__text{
+            width :100%;
+            position: absolute;
+            bottom: -40%; left:0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            & em{
+                font-size: 0.8rem;
+                font-weight: 550;
+            }
+            & strong{
+                display:block;
+                width: 100%;
+                overflow:hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-size: 0.8rem;
+                font-weight: 300;
+                margin: 5px 0;
+            }
+            & p{
+                font-size: 0.8rem;
+                font-weight: 100;
+            }
+        }
     }
-    @include item_text;
     .sale{
         font-size: 0.8rem;
         font-weight: 100;

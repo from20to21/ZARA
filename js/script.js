@@ -182,22 +182,11 @@ $(function () {
     function drag1() { //drag item line
         var bln = true;
         var firstDrag;
-        var firstY = 0;
-        var lastY = 0;
-        var presentY = 0;
         $('.new__itemWrapper').draggable({
             axis: "x", //let drag item only side to side
             start: function (e) {
                 firstDrag = e.pageX;
-                firstY = e.clientY
-                presentY = window.scrollY
             }, // remember where drag start (for checking where to move)
-            drag: function (e) {
-                lastY = firstY - e.clientY;
-                if (lastY > 20 || lastY < -20) {
-                    window.scrollTo(0, presentY + lastY);
-                }
-            },
             stop: function (e) {
                 if (bln) { num = 0; bln = false }
                 indicator(e, firstDrag, $(this))

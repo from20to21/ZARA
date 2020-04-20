@@ -14,13 +14,13 @@ $(function () {
 
     $('.minus').click(minus);
     $('.plus').click(plus);
-    
+
     $('.wish__btn__cart').click(cart_select);
     $('.wish__all__cart').click(cart_all);
 
-    function sale(){
+    function sale() {
         $('.sale').find('span').css({
-            display:"inline-block",
+            display: "inline-block",
             marginLeft: "5px",
             color: "red",
             fontSize: "0.8rem",
@@ -29,95 +29,61 @@ $(function () {
         });
     }
     sale();
-    
-    // var num = 0;
 
-    // function drag() {
-    //     var bln = true;
-    //     var firstDrag;
-    //     $('.wish01').draggable({
-    //         axis: "x",
-    //         start: function (e) { firstDrag = e.pageX },
-    //         stop: function (e) { if (bln) { num = 0; bln = false } indicator(e, firstDrag, $(this)) }
-    //     });
-    // }
-    // drag();
-    // function indicator(e, firstDrag, $this) {
 
-    //     var max = $this.find('.item').length - 2;
-    //     var lastDrag = e.pageX;
+    function drag() {//drag item line
+        var firstDrag;
+        $('.wish__wrapper').draggable({
+            axis: "x", //let drag item only side to side
+            start: function (e) { firstDrag = e.pageX },// remember where drag start (for checking where to move)
+            stop: function (e) { indicator(e, firstDrag, $(this)) } //make num zero (to reset) and act function indicator.
+        });
+    }
+    drag();
 
-    //     if (firstDrag > lastDrag) { //왼쪽으로 드래그
-    //         if (num < max) {
-    //             num++;
+    function indicator(e, firstDrag, $this) { // to move item line as much as item size
+        var lastDrag = e.pageX; //remember where drag end (for checking where to move)
+        if (firstDrag > lastDrag) { //if you move to left 
+            $this.css({
+                left: "-15%" // move item line as much as item size
+            });
+        }
+        else { // if you move right
+            $this.css({
+                left: "5%"
+            })
+        }
+    }
 
-    //             $this.css({
-    //                 left: -160 * num
-    //             })
-    //             $this.parent().next().find('span').css({
-    //                 width: 25 * (num + 1) + "%"
-    //             });
-    //         }
-    //         else {
-    //             $this.css({
-    //                 left: -160 * num
-    //             })
-    //             $this.parent().next().find('span').css({
-    //                 width: 25 * (num + 1) + "%"
-    //             });
-    //         }
-    //     }
-    //     else { //오른쪽으로 드래그
-    //         if (num > 0) {
-    //             num--;
-    //             $this.css({
-    //                 left: -160 * num
-    //             })
-    //             $this.parent().next().find('span').css({
-    //                 width: 25 * (num + 1) + "%"
-    //             });
-    //         }
-    //         else {
-    //             $this.css({
-    //                 left: -160 * num
-    //             })
-    //             $this.parent().next().find('span').css({
-    //                 width: 25 * (num + 1) + "%"
-    //             });
-    //         }
-    //     }
-
-    // }
-
-    function cart_select(){
+    function cart_select() {
         $(this).parent().parent().animate({
             opacity: "0",
             marginBottom: "-120px"
-        },300);
+        }, 300);
         $(this).parent().parent().remove().delay(300);
     }
 
-    function cart_all(){
+    function cart_all() {
         $('.wish__btn__cart').parent().parent().animate({
             opacity: "0",
             marginBottom: "-120px"
-        },300);
+        }, 300);
         $(this).animate({
             opacity: "0",
             marginBottom: "-120px"
-        },300);
+        }, 300);
     }
 
-    function minus(){
+    function minus() {
         var num = $(this).parent().find('button').text();
-        if(num == 1){
+        if (num == 1) {
             num = 1;
-        }else{
+        } else {
             num--;
         }
         $(this).parent().find('button').text(num);
     }
-    function plus(){
+    function plus() {
         var num = $(this).parent().find('button').text();
         num++;
         $(this).parent().find('button').text(num);
@@ -127,18 +93,11 @@ $(function () {
 
 
 
-    function cat_change() {
+    function cat_change() { //for gender/category change in search menus
         bln = true;
         var target = $(this).text();
-        $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
-
-        $(this).parent().find('p').css({
-            display: "none",
-            transform: "translate(-5%, -50px)"
-        });
-        $(this).parent().find('p').animate({
-            opacity: 0
-        });
+        $(this).parent().find('button').html(target + '<img src="../img/download.png" alt="">');
+        $(this).parent().find('p').fadeOut(500); //list close
     }
 
     function open() {

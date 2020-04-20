@@ -12,7 +12,7 @@ $(function () {
         $('.category').addClass('change');
         $(this).toggleClass('change');
         $(this).addClass('selected');
-        
+
         $('header').animate({
             top: "-45px"
         }, 300);
@@ -67,18 +67,11 @@ $(function () {
     $('.search__gender p').click(cat_change);
     $('.search__category p').click(cat_change);
 
-    function cat_change() {
+    function cat_change() { //for gender/category change in search menus
         bln = true;
         var target = $(this).text();
-        $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
-
-        $(this).parent().find('p').css({
-            display: "none",
-            transform: "translate(-5%, -50px)"
-        });
-        $(this).parent().find('p').animate({
-            opacity: 0
-        });
+        $(this).parent().find('button').html(target + '<../img src="img/download.png" alt="">');
+        $(this).parent().find('p').fadeOut(500); //list close
     }
 
     function open() {

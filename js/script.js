@@ -22,9 +22,9 @@ $(function () {
     $('.search__gender p').click(cat_change);
     $('.search__category p').click(cat_change);
 
-    function sale(){ //for css change in .sale span
+    function sale() { //for css change in .sale span
         $('.sale').find('span').css({
-            display:"inline-block",
+            display: "inline-block",
             marginLeft: "5px",
             color: "red",
             fontSize: "0.8rem",
@@ -38,14 +38,7 @@ $(function () {
         bln = true;
         var target = $(this).text();
         $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
-
-        $(this).parent().find('p').delay(300).css({ //list close
-            display: "none",
-            transform: "translate(-5%, -50px)"
-        });
-        $(this).parent().find('p').animate({ //list close2 (doesn't work because of display none) **fix need
-            opacity: 0  
-        },300);
+        $(this).parent().find('p').fadeOut(500); //list close
     }
 
     function open() { //for open gender/category tab in search menu
@@ -190,9 +183,9 @@ $(function () {
         var bln = true;
         var firstDrag;
         $('.new__itemWrapper').draggable({
-            axis: "x",
-            start: function (e) { firstDrag = e.pageX },
-            stop: function (e) { if (bln) { num = 0; bln = false } indicator(e, firstDrag, $(this)) }
+            axis: "x", //let drag item only side to side
+            start: function (e) { firstDrag = e.pageX }, // remember where drag start (for checking where to move)
+            stop: function (e) { if (bln) { num = 0; bln = false } indicator(e, firstDrag, $(this)) } //make num zero (to reset) and act function indicator.
         });
     }
     function drag2() { //drag item line
@@ -221,40 +214,40 @@ $(function () {
 
     function indicator(e, firstDrag, $this) { // to move item line as much as item size
 
-        var max = $this.find('.item').length - 2;
-        var lastDrag = e.pageX;
+        var max = $this.find('.item').length - 2; //let item move within maximum length
+        var lastDrag = e.pageX; //remember where drag end (for checking where to move)
 
-        if (firstDrag > lastDrag) {
+        if (firstDrag > lastDrag) { //if you move to left
             if (num < max) {
                 num++;
 
                 $this.css({
-                    left: -160 * num
-                })
+                    left: -160 * num // move item line as much as item size
+                });
                 $this.parent().next().find('span').css({
-                    width: 25 * (num + 1) + "%"
+                    width: 25 * (num + 1) + "%" // move indicator as much as 25%
                 });
             }
-            else {
+            else { //if num > max => if you try to move more than maximum length, let item not move.
                 $this.css({
                     left: -160 * num
-                })
+                });
                 $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
                 });
             }
         }
-        else {
+        else { // if you move right
             if (num > 0) {
                 num--;
                 $this.css({
                     left: -160 * num
-                })
+                });
                 $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
                 });
             }
-            else {
+            else { //if num <0 => if you try to move back, let item not move.
                 $this.css({
                     left: -160 * num
                 })

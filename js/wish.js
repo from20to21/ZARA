@@ -21,7 +21,7 @@ $(function () {
     $('.wish__trash').click(trash);
 
     function trash() {
-        $(this).parent().remove();
+        $(this).parent().fadeOut();
     }
     function sale() {
         $('.sale').find('span').css({
@@ -35,7 +35,7 @@ $(function () {
     }
     sale();
 
-    
+
     function drag() {//drag item line
         var firstDrag;
         $('.wish__wrapper').draggable({
@@ -75,7 +75,7 @@ $(function () {
             opacity: "0",
             marginBottom: "-120px"
         }, 300);
-        $(this).parent().parent().remove().delay(300);
+        $(this).parent().parent().delay(300).fadeOut();
     }
 
     function cart_all() {

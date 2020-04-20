@@ -35,7 +35,7 @@ $(function () {
     }
     sale();
 
-
+    
     function drag() {//drag item line
         var firstDrag;
         $('.wish__wrapper').draggable({

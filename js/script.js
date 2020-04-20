@@ -221,12 +221,12 @@ $(function () {
             if (num < max) {
                 num++;
 
-                $this.animate({
+                $this.css({
                     left: -160 * num // move item line as much as item size
-                }, 500);
-                $this.parent().next().find('span').animate({
+                });
+                $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%" // move indicator as much as 25%
-                }, 500);
+                });
             }
             else { //if num > max => if you try to move more than maximum length, let item not move.
                 $this.css({
@@ -237,15 +237,15 @@ $(function () {
                 });
             }
         }
-        else { // if you move to right
+        else { // if you move right
             if (num > 0) {
                 num--;
-                $this.animate({
+                $this.css({
                     left: -160 * num
-                }, 500);
-                $this.parent().next().find('span').animate({
+                });
+                $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
-                }, 500);
+                });
             }
             else { //if num <0 => if you try to move back, let item not move.
                 $this.css({
@@ -256,6 +256,7 @@ $(function () {
                 });
             }
         }
+
     }
 
     drag1();

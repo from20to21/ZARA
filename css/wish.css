@@ -379,8 +379,7 @@ html, body {
       bottom: 20px; }
 .wish__all__cart {
   display: block;
-  position: absolute;
-  bottom: 120px;
+  position: relative;
   left: 20%;
   width: 60%;
   height: 40px;

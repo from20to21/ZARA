@@ -42,7 +42,7 @@ $(function () {
     function cat_change() { //for gender/category change in search menus
         bln = true;
         var target = $(this).text();
-        $(this).parent().find('button').html(target + '<../img src="img/download.png" alt="">');
+        $(this).parent().find('button').html(target + '<img src="../img/download.png" alt="">');
         $(this).parent().find('p').fadeOut(500); //list close
     }
 

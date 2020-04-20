@@ -29,11 +29,11 @@ $(function () {
         $('nav').animate({
             bottom: "-45px"
         }, 300);
-
+        $('.change').delay(300).fadeOut();
     }
 
     function back() {
-
+        $('.change').fadeIn();
         $(this).hasClass('selected');
         $('.category').removeClass('change');
         $('.category').removeClass('selected');

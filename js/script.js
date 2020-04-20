@@ -185,7 +185,10 @@ $(function () {
         $('.new__itemWrapper').draggable({
             axis: "x", //let drag item only side to side
             start: function (e) { firstDrag = e.pageX }, // remember where drag start (for checking where to move)
-            stop: function (e) { if (bln) { num = 0; bln = false } indicator(e, firstDrag, $(this)) } //make num zero (to reset) and act function indicator.
+            stop: function (e) {
+                if (bln) { num = 0; bln = false }
+                indicator(e, firstDrag, $(this))
+            } //make num zero (to reset) and act function indicator.
         });
     }
     function drag2() { //drag item line
@@ -194,7 +197,10 @@ $(function () {
         $('.collection__itemWrapper').draggable({
             axis: "x",
             start: function (e) { firstDrag = e.pageX },
-            stop: function (e) { if (bln) { num = 0; bln = false } indicator(e, firstDrag, $(this)) }
+            stop: function (e) {
+                if (bln) { num = 0; bln = false }
+                indicator(e, firstDrag, $(this))
+            }
         });
     }
     function drag3() { //drag item line

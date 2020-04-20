@@ -197,7 +197,6 @@
         display: flex;
         position: absolute;
         top: 0; left:0;
-        transition: .2s;
         @for $i from 1 to 6{ 
             & .item0#{$i}{
               @include bg_center('../img/main/new_00#{$i}.jpg');
@@ -277,7 +276,6 @@
         display: flex;
         position: absolute;
         top: 0; left:0;
-        transition: .2s;
         @for $i from 1 to 6{ 
             & .item0#{$i}{
               @include bg_center('../img/main/col_00#{$i}.jpg');
@@ -360,7 +358,6 @@
         display: flex;
         position: absolute;
         top: 0; left:0;
-        transition: .2s;
         @for $i from 1 to 6{ 
             & .item0#{$i}{
               @include bg_center('../img/main/best_00#{$i}.jpg');

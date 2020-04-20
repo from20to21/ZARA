@@ -281,18 +281,14 @@ html, body {
     padding-bottom: 30px; }
 
 .wish__wrapper {
-  position: absolute;
+  position: relative;
   left: 5%;
-  top: 120px;
   width: 90%;
   display: flex;
   padding-bottom: 10px;
   border-bottom: 1px solid #ddd;
-  transition: .5s; }
-.wish__wrapper.wish02 {
-  top: 240px; }
-.wish__wrapper.wish03 {
-  top: 360px; }
+  transition: .5s;
+  margin-top: 5px; }
 .wish__item {
   width: 100px;
   height: 100px;

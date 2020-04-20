@@ -13,7 +13,6 @@ $(function () {
     var currentIdx = parseInt(idx / 2) + 1;
     var lastLeft = 0;
     var presentLeft = parseInt($('.visual__wrapper').css("left"));
-    // console.log(presentLeft);
     function drag() {//drag item line
         var firstDrag;
         $('.visual__wrapper').draggable({
@@ -32,8 +31,7 @@ $(function () {
         var moveLeft = lastLeft + presentLeft;
         var moveRight = lastLeft - presentLeft;
         var nextSrc, previousSrc;
-        // var currentDiv = '.visual__img0' + currentIdx;
-        // console.log($this.find(currentDiv).css("background-image"));
+
         if (firstDrag > lastDrag) { //if you move to left
             if (currentIdx == idx) {
                 $this.animate({
@@ -45,6 +43,9 @@ $(function () {
                     left: moveLeft
                 }, 300);
                 currentIdx++;
+                $this.css({
+                    transform : "translateX("+-presentLeft+"px)"
+                });
             }
             nextSrc = $('.visual__img__next').css("background-image");
             $('.visual__img__main').css({
@@ -62,14 +63,14 @@ $(function () {
                     left: moveRight
                 }, 300);
                 currentIdx--;
+                $this.css({
+                    transform : "translateX("+presentLeft+"px)"
+                });
             }
             previousSrc = $('.visual__img__previous').css("background-image");
-            
             $('.visual__img__main').css({
                 "backgroundImage" : previousSrc
             });
         }
-        // var currentDiv2 = '.visual__img0' + currentIdx;
-        // console.log($this.find(currentDiv2).css("background-image"));
     }
 });

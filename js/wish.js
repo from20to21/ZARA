@@ -44,9 +44,14 @@ $(function () {
     function indicator(e, firstDrag, $this) { // to move item line as much as item size
         var lastDrag = e.pageX; //remember where drag end (for checking where to move)
         if (firstDrag > lastDrag) { //if you move to left 
-            $this.css({
+            $('.wish__wrapper').addClass("deselected");
+            $this.removeClass("deselected");
+            $('.deselected').animate({
+                left: "5%"
+            }, 500)
+            $this.animate({
                 left: "-15%" // move item line as much as item size
-            });
+            }, 500);
         }
         else { // if you move right
             $this.css({

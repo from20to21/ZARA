@@ -54,9 +54,9 @@ $(function () {
             $('.deselected').css({
                 left: "5%"
             })
-            $this.animate({
+            $this.css({
                 left: "-15%" // move item line as much as item size
-            }, 500);
+            });
         }
         else { // if you move right
             $this.css({

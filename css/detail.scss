@@ -43,27 +43,37 @@ html, body {
     width: 100%;
     height: 70vh;
     overflow: hidden;
+    position: relative;
+    &__img__main{
+        width: 100%;
+        height: 70vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: fixed;
+        top: 0; left: 0;
+    }
     &__wrapper{
        width: 300%;
        left: -100%;
        position: relative;
        display: flex;
     }   
-    &__img01{
+    &__img__previous{
         width: 100%;
         height: 70vh;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    &__img02{
+    &__img__transparent{
         width: 100%;
         height: 70vh;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
     }
-    &__img03{
+    &__img__next{
         width: 100%;
         height: 70vh;
         background-size: cover;

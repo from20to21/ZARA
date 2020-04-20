@@ -2,7 +2,12 @@
 @mixin box_shadow {
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
-
+@mixin button_reset {
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
+}
 html, body {
   position: fixed;
   overflow: hidden;
@@ -160,6 +165,17 @@ html, body {
         font-size: 0.8rem;
         font-weight: 100;
         @include box_shadow;
+    }
+    &__trash{
+        @include button_reset;
+        background: red;
+        width: 25%;
+        height: 108%;
+        position: absolute;
+        right: -31%; bottom: 0;
+        & img{
+            width: 25px;
+        }
     }
 }
 

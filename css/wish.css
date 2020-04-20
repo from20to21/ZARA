@@ -286,7 +286,8 @@ html, body {
   width: 90%;
   display: flex;
   padding-bottom: 10px;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 1px solid #ddd;
+  transition: .5s; }
 .wish__wrapper.wish02 {
   top: 240px; }
 .wish__wrapper.wish03 {
@@ -399,6 +400,19 @@ html, body {
   font-size: 0.8rem;
   font-weight: 100;
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1); }
+.wish__trash {
+  border: none;
+  outline-style: none;
+  cursor: pointer;
+  background: none;
+  background: red;
+  width: 25%;
+  height: 108%;
+  position: absolute;
+  right: -31%;
+  bottom: 0; }
+  .wish__trash img {
+    width: 25px; }
 
 nav {
   width: 100%;

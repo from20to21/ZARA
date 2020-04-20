@@ -18,6 +18,11 @@ $(function () {
     $('.wish__btn__cart').click(cart_select);
     $('.wish__all__cart').click(cart_all);
 
+    $('.wish__trash').click(trash);
+
+    function trash() {
+        $(this).parent().remove();
+    }
     function sale() {
         $('.sale').find('span').css({
             display: "inline-block",

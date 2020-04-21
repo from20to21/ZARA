@@ -10,7 +10,7 @@ $(function () {
         backgroundImage: "url(../img/detail/detail003.jpg)"
     });
     // var idx = $('.visual__image').length;
-    // var currentIdx = parseInt(idx / 2) + 1;
+    var currentIdx = 1;
     var lastLeft = 0;
     var presentLeft = parseInt($('.visual__wrapper').css("left"));
     var moveLeft, moveRight;
@@ -36,14 +36,14 @@ $(function () {
     function revert2() {
         var dragAmount = Math.abs(lastDrag - firstDrag);
         if (dragAmount > $(window).width() / 2.5) {
-            indicator(firstDrag, $('.visual__wrapper'), lastLeft);
+            dragMove(firstDrag, $('.visual__wrapper'), lastLeft);
             return false;
         }
         else {
             return true;
         }
     }
-    function indicator(firstDrag, $this, lastLeft) { // to move item line as much as item size
+    function dragMove(firstDrag, $this, lastLeft) { // to move item line as much as item size
         //remember where drag end (for checking where to move)
         moveLeft = lastLeft + presentLeft;
         moveRight = lastLeft - presentLeft;
@@ -57,6 +57,7 @@ $(function () {
             //     }, 300);
             // }
             // else {
+
             $this.animate({
                 left: moveLeft
             }, 200, origin);
@@ -76,9 +77,43 @@ $(function () {
                 $this.css({
                     left: presentLeft
                 });
+                // console.log(currentIdx);
+                // var indicator = "'" + ".visual__indicator__00" + currentIdx + "'";
+                // console.log(indicator);
+                if (currentIdx == 1) {
+                    $('.visual__indicator__001').animate({
+                        width: "4px",
+                        height: "4px",
+                    }, 300);
+                    $('.visual__indicator__002').animate({
+                        width: "7px",
+                        height: "7px",
+                    }, 300);
+                }
+                if (currentIdx == 2) {
+                    $('.visual__indicator__002').animate({
+                        width: "4px",
+                        height: "4px",
+                    }, 300);
+                    $('.visual__indicator__003').animate({
+                        width: "7px",
+                        height: "7px",
+                    }, 300);
+                }
+                if (currentIdx == 3) {
+                    $('.visual__indicator__003').animate({
+                        width: "4px",
+                        height: "4px",
+                    }, 300);
+                    $('.visual__indicator__001').animate({
+                        width: "7px",
+                        height: "7px",
+                    }, 300);
+                    currentIdx = 0;
+                }
+                currentIdx++;
+                console.log(currentIdx);
             }
-            //     currentIdx++;
-            // }
         }
         else { // if you move right
             // if (currentIdx == 3) {
@@ -109,9 +144,40 @@ $(function () {
                 $this.css({
                     left: presentLeft
                 });
+                if (currentIdx == 3) {
+                    $('.visual__indicator__002').animate({
+                        width: "7px",
+                        height: "7px",
+                    }, 300);
+                    $('.visual__indicator__003').animate({
+                        width: "4px",
+                        height: "4px",
+                    }, 300);
+                }
+                if (currentIdx == 2) {
+                    $('.visual__indicator__001').animate({
+                        width: "7px",
+                        height: "7px",
+                    }, 300);
+                    $('.visual__indicator__002').animate({
+                        width: "4px",
+                        height: "4px",
+                    }, 300);
+                }
+                if (currentIdx == 1) {
+                    $('.visual__indicator__003').animate({
+                        width: "7px",
+                        height: "7px",
+                    }, 300);
+                    $('.visual__indicator__001').animate({
+                        width: "4px",
+                        height: "4px",
+                    }, 300);
+                    currentIdx = 4;
+                }
+                console.log(currentIdx);
+                currentIdx--;
             }
-            // currentIdx--;
-            // }
         }
     }
 

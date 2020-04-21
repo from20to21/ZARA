@@ -82,7 +82,27 @@ html, body {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-    }    
+    }
+    &__indicator{
+        position: absolute;
+        bottom: 30px; left: 20px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        & span{
+            width: 4px;
+            height: 4px;
+            background: #434343;
+            border: 1px solid #434343;
+            border-radius: 100%;
+            &.visual__indicator__001{
+                width: 7px;
+                height: 7px;
+            }
+        }
+    }
 }
 .main{
     width: 100%;

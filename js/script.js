@@ -188,13 +188,13 @@ $(function () {
 
     var num = 0;
 
-    function drag1(e) { //drag item line
-        e.stopPropagation();
+    function drag1() { //drag item line
         var bln = true;
         var firstDrag;
         $('.new__itemWrapper').draggable({
             axis: "x", //let drag item only side to side
             start: function (e) {
+                e.stopPropagation();
                 firstDrag = e.pageX;
             }, // remember where drag start (for checking where to move)
             stop: function (e) {
@@ -203,26 +203,30 @@ $(function () {
             } //make num zero (to reset) and act function indicator.
         });
     }
-    function drag2(e) { //drag item line
-        e.stopPropagation();
+    function drag2() { //drag item line
         var bln = true;
         var firstDrag;
         $('.collection__itemWrapper').draggable({
             axis: "x",
-            start: function (e) { firstDrag = e.pageX },
+            start: function (e) {
+                e.stopPropagation();
+                firstDrag = e.pageX
+            },
             stop: function (e) {
                 if (bln) { num = 0; bln = false }
                 indicator(e, firstDrag, $(this))
             }
         });
     }
-    function drag3(e) { //drag item line
-        e.stopPropagation();
+    function drag3() { //drag item line
         var bln = true;
         var firstDrag;
         $('.bestseller__itemWrapper').draggable({
             axis: "x",
-            start: function (e) { firstDrag = e.pageX },
+            start: function (e) {
+                e.stopPropagation();
+                firstDrag = e.pageX
+            },
             stop: function (e) {
                 if (bln) { num = 0; bln = false }
                 indicator(e, firstDrag, $(this))

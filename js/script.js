@@ -23,7 +23,7 @@ $(function () {
     $('.search__category p').click(cat_change);
 
     $('.new__wrapper').click(function (e) {
-        console.log(e.target);
+        e.stopPropagation();
         if ($(e.target).hasClass("new__itemBox")) {
             detail();
         }
@@ -32,7 +32,7 @@ $(function () {
         }
     });
     $('.col__wrapper').click(function (e) {
-        console.log(e.target);
+        e.stopPropagation();
         if ($(e.target).hasClass("col__itemBox")) {
             detail();
         }
@@ -41,7 +41,7 @@ $(function () {
         }
     });
     $('.best__wrapper').click(function (e) {
-        console.log(e.target);
+        e.stopPropagation();
         if ($(e.target).hasClass("best__itemBox")) {
             detail();
         }
@@ -217,7 +217,6 @@ $(function () {
         $('.new__itemWrapper').draggable({
             axis: "x", //let drag item only side to side
             start: function (e) {
-                e.stopPropagation();
                 firstDrag = e.pageX;
             }, // remember where drag start (for checking where to move)
             stop: function (e) {
@@ -232,7 +231,6 @@ $(function () {
         $('.collection__itemWrapper').draggable({
             axis: "x",
             start: function (e) {
-                e.stopPropagation();
                 firstDrag = e.pageX
             },
             stop: function (e) {
@@ -247,7 +245,6 @@ $(function () {
         $('.bestseller__itemWrapper').draggable({
             axis: "x",
             start: function (e) {
-                e.stopPropagation();
                 firstDrag = e.pageX
             },
             stop: function (e) {

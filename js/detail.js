@@ -46,7 +46,7 @@ $(function () {
             // else {
             $this.animate({
                 left: moveLeft
-            }, 300, origin);
+            }, 200, origin);
             function origin() {
                 presentSrc = $('.visual__img__main').css("background-image");
                 nextSrc = $('.visual__img__next').css("background-image");
@@ -80,7 +80,7 @@ $(function () {
             // else {
             $this.animate({
                 left: moveRight
-            }, 300, origin);
+            }, 200, origin);
             function origin() {
                 previousSrc = $('.visual__img__previous').css("background-image");
                 presentSrc = $('.visual__img__main').css("background-image");

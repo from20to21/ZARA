@@ -23,7 +23,9 @@ $(function () {
     $('.search__category p').click(cat_change);
 
     $('.new__wrapper').click(function (e) {
+        console.log('a');
         e.stopPropagation();
+        e.stopImmediatePropagation();
         if ($(e.target).hasClass("new__itemBox")) {
             detail();
         }
@@ -51,7 +53,7 @@ $(function () {
     });
 
     function detail() {
-        location.href = 'sub/detail.html'
+        // location.href = 'sub/detail.html'
     }
 
     function sale() { //for css change in .sale span
@@ -217,6 +219,7 @@ $(function () {
         $('.new__itemWrapper').draggable({
             axis: "x", //let drag item only side to side
             start: function (e) {
+                console.log('b')
                 firstDrag = e.pageX;
             }, // remember where drag start (for checking where to move)
             stop: function (e) {
@@ -301,9 +304,9 @@ $(function () {
 
     }
 
-    // drag1();
-    // drag2();
-    // drag3();
+    drag1();
+    drag2();
+    drag3();
 
     function parallax() { // to move image as likely parallax
         firstScroll = window.scrollY;

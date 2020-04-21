@@ -14,7 +14,7 @@ $(function () {
     var lastLeft = 0;
     var presentLeft = parseInt($('.visual__wrapper').css("left"));
     var moveLeft, moveRight;
-    var nextSrc, previousSrc;
+    var nextSrc, presentSrc, previousSrc;
     var changedLeft;
     function drag() {//drag item line
         var firstDrag;
@@ -41,51 +41,67 @@ $(function () {
             transform: "translateX(" + 0 + "px)"
         });
         if (firstDrag > lastDrag) { //if you move to left
-            if (currentIdx == idx) {
-                $this.animate({
-                    left: lastLeft
-                }, 300);
+            // if (currentIdx == idx) {
+            //     $this.animate({
+            //         left: lastLeft
+            //     }, 300);
+            // }
+            // else {
+            $this.animate({
+                left: moveLeft
+            }, 300, origin);
+            function origin() {
+                presentSrc = $('.visual__img__main').css("background-image");
+                nextSrc = $('.visual__img__next').css("background-image");
+                previousSrc = $('.visual__img__previous').css("background-image");
+                $('.visual__img__previous').css({
+                    "backgroundImage": presentSrc
+                });
+                $('.visual__img__main').css({
+                    "backgroundImage": nextSrc
+                });
+                $('.visual__img__next').css({
+                    "backgroundImage": previousSrc
+                });
+                $this.css({
+                    left: presentLeft
+                });
             }
-            else {
-                $this.animate({
-                    left: moveLeft
-                }, 300, origin);
-                function origin() {
-                    nextSrc = $('.visual__img__next').css("background-image");
-                    $('.visual__img__main').css({
-                        "backgroundImage": nextSrc
-                    });
-                    $this.css({
-                        left: presentLeft
-                    });
-                }
-                currentIdx++;
-            }
+            //     currentIdx++;
+            // }
         }
         else { // if you move right
-            if (currentIdx == 3) {
-                currentIdx--;
+            // if (currentIdx == 3) {
+            //     currentIdx--;
+            // }
+            // if (currentIdx == 1) {
+            //     $this.animate({
+            //         left: lastLeft
+            //     }, 300);
+            // }
+            // else {
+            $this.animate({
+                left: moveRight
+            }, 300, origin);
+            function origin() {
+                previousSrc = $('.visual__img__previous').css("background-image");
+                presentSrc = $('.visual__img__main').css("background-image");
+                nextSrc = $('.visual__img__next').css("background-image");
+                $('.visual__img__previous').css({
+                    "backgroundImage": nextSrc
+                });
+                $('.visual__img__main').css({
+                    "backgroundImage": previousSrc
+                });
+                $('.visual__img__next').css({
+                    "backgroundImage": presentSrc
+                });
+                $this.css({
+                    left: presentLeft
+                });
             }
-            if (currentIdx == 1) {
-                $this.animate({
-                    left: lastLeft
-                }, 300);
-            }
-            else {
-                $this.animate({
-                    left: moveRight
-                }, 300, origin);
-                function origin() {
-                    previousSrc = $('.visual__img__previous').css("background-image");
-                    $('.visual__img__main').css({
-                        "backgroundImage": previousSrc
-                    });
-                    $this.css({
-                        left: presentLeft
-                    });
-                }
-                currentIdx--;
-            }
+            // currentIdx--;
+            // }
         }
     }
 

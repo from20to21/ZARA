@@ -188,7 +188,8 @@ $(function () {
 
     var num = 0;
 
-    function drag1() { //drag item line
+    function drag1(e) { //drag item line
+        e.stopPropagation();
         var bln = true;
         var firstDrag;
         $('.new__itemWrapper').draggable({
@@ -202,7 +203,8 @@ $(function () {
             } //make num zero (to reset) and act function indicator.
         });
     }
-    function drag2() { //drag item line
+    function drag2(e) { //drag item line
+        e.stopPropagation();
         var bln = true;
         var firstDrag;
         $('.collection__itemWrapper').draggable({
@@ -214,7 +216,8 @@ $(function () {
             }
         });
     }
-    function drag3() { //drag item line
+    function drag3(e) { //drag item line
+        e.stopPropagation();
         var bln = true;
         var firstDrag;
         $('.bestseller__itemWrapper').draggable({
@@ -383,13 +386,9 @@ $(function () {
             left: categoryOffset.left
         });
     }
-
     function like(e) { //like button acting
         e.stopPropagation();
         $(this).find('img').toggleClass('pink');
     }
-
-
-
 });
 

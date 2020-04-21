@@ -15,23 +15,36 @@ $(function () {
     var presentLeft = parseInt($('.visual__wrapper').css("left"));
     var moveLeft, moveRight;
     var nextSrc, presentSrc, previousSrc;
-    var bln = true;
+    var lastDrag, firstDrag;
+    $(window).on('mousemove', function (e) {
+        lastDrag = e.pageX;
+    })
     function drag() {//drag item line
-        var firstDrag;
         $('.visual__wrapper').draggable({
             axis: "x", //let drag item only side to side
+            revert: function () {
+                return revert2();
+            },
             start: function (e) {
                 firstDrag = e.pageX;
                 lastLeft = parseInt($('.visual__wrapper').css("left"));
             },// remember where drag start (for checking where to move)
-            stop: function (e) { if (bln) { indicator(e, firstDrag, $(this), lastLeft) } }
+            stop: function (e) { lastDrag = e.pageX; }
         });
     }
     drag();
-
-    function indicator(e, firstDrag, $this, lastLeft) { // to move item line as much as item size
-        bln = false;
-        var lastDrag = e.pageX; //remember where drag end (for checking where to move)
+    function revert2() {
+        var dragAmount = Math.abs(lastDrag - firstDrag);
+        if (dragAmount > $(window).width() / 3) {
+            indicator(firstDrag, $('.visual__wrapper'), lastLeft);
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    function indicator(firstDrag, $this, lastLeft) { // to move item line as much as item size
+        //remember where drag end (for checking where to move)
         moveLeft = lastLeft + presentLeft;
         moveRight = lastLeft - presentLeft;
         $this.css({
@@ -63,7 +76,6 @@ $(function () {
                 $this.css({
                     left: presentLeft
                 });
-                bln = true;
             }
             //     currentIdx++;
             // }
@@ -97,7 +109,6 @@ $(function () {
                 $this.css({
                     left: presentLeft
                 });
-                bln = true;
             }
             // currentIdx--;
             // }

@@ -1,10 +1,10 @@
 $(function () {
 
     $('.visual__img__previous').css({
-        backgroundImage: "url(../img/detail/detail002.jpg)"
+        backgroundImage: "url(../img/detail/detail001.jpg)"
     });
     $('.visual__img__main').css({
-        backgroundImage: "url(../img/detail/detail001.jpg)"
+        backgroundImage: "url(../img/detail/detail002.jpg)"
     });
     $('.visual__img__next').css({
         backgroundImage: "url(../img/detail/detail003.jpg)"
@@ -13,6 +13,9 @@ $(function () {
     var currentIdx = parseInt(idx / 2) + 1;
     var lastLeft = 0;
     var presentLeft = parseInt($('.visual__wrapper').css("left"));
+    var moveLeft, moveRight;
+    var nextSrc, previousSrc;
+    var changedLeft;
     function drag() {//drag item line
         var firstDrag;
         $('.visual__wrapper').draggable({
@@ -28,10 +31,15 @@ $(function () {
 
     function indicator(e, firstDrag, $this, lastLeft) { // to move item line as much as item size
         var lastDrag = e.pageX; //remember where drag end (for checking where to move)
-        var moveLeft = lastLeft + presentLeft;
-        var moveRight = lastLeft - presentLeft;
-        var nextSrc, previousSrc;
-
+        moveLeft = lastLeft + presentLeft;
+        moveRight = lastLeft - presentLeft;
+        console.log(presentLeft);
+        console.log(lastLeft);
+        console.log(moveLeft);
+        console.log(moveRight);
+        $this.css({
+            transform: "translateX(" + 0 + "px)"
+        });
         if (firstDrag > lastDrag) { //if you move to left
             if (currentIdx == idx) {
                 $this.animate({
@@ -41,18 +49,23 @@ $(function () {
             else {
                 $this.animate({
                     left: moveLeft
-                }, 300);
+                }, 300, origin);
+                function origin() {
+                    nextSrc = $('.visual__img__next').css("background-image");
+                    $('.visual__img__main').css({
+                        "backgroundImage": nextSrc
+                    });
+                    $this.css({
+                        left: presentLeft
+                    });
+                }
                 currentIdx++;
-                $this.css({
-                    transform : "translateX("+-presentLeft+"px)"
-                });
             }
-            nextSrc = $('.visual__img__next').css("background-image");
-            $('.visual__img__main').css({
-                "backgroundImage" : nextSrc
-            });
         }
         else { // if you move right
+            if (currentIdx == 3) {
+                currentIdx--;
+            }
             if (currentIdx == 1) {
                 $this.animate({
                     left: lastLeft
@@ -61,16 +74,21 @@ $(function () {
             else {
                 $this.animate({
                     left: moveRight
-                }, 300);
+                }, 300, origin);
+                function origin() {
+                    previousSrc = $('.visual__img__previous').css("background-image");
+                    $('.visual__img__main').css({
+                        "backgroundImage": previousSrc
+                    });
+                    $this.css({
+                        left: presentLeft
+                    });
+                }
                 currentIdx--;
-                $this.css({
-                    transform : "translateX("+presentLeft+"px)"
-                });
             }
-            previousSrc = $('.visual__img__previous').css("background-image");
-            $('.visual__img__main').css({
-                "backgroundImage" : previousSrc
-            });
         }
     }
+
+
+
 });

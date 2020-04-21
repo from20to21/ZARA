@@ -22,12 +22,35 @@ $(function () {
     $('.search__gender p').click(cat_change);
     $('.search__category p').click(cat_change);
 
-    $('.new__itemBox').click(detail);
-    $('.col__itemBox').click(detail);
-    $('.best__itemBox').click(detail);
+    $('.new__wrapper').click(function (e) {
+        console.log(e.target);
+        if ($(e.target).hasClass("new__itemBox")) {
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) {
+            like();
+        }
+    });
+    $('.col__wrapper').click(function (e) {
+        console.log(e.target);
+        if ($(e.target).hasClass("col__itemBox")) {
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) {
+            like();
+        }
+    });
+    $('.best__wrapper').click(function (e) {
+        console.log(e.target);
+        if ($(e.target).hasClass("best__itemBox")) {
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) {
+            like();
+        }
+    });
 
-    function detail(e) {
-        e.stopPropagation();
+    function detail() {
         location.href = 'sub/detail.html'
     }
 
@@ -390,8 +413,7 @@ $(function () {
             left: categoryOffset.left
         });
     }
-    function like(e) { //like button acting
-        e.stopPropagation();
+    function like() { //like button acting
         $(this).find('img').toggleClass('pink');
     }
 });

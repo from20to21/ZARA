@@ -77,9 +77,6 @@ $(function () {
                 $this.css({
                     left: presentLeft
                 });
-                // console.log(currentIdx);
-                // var indicator = "'" + ".visual__indicator__00" + currentIdx + "'";
-                // console.log(indicator);
                 if (currentIdx == 1) {
                     $('.visual__indicator__001').animate({
                         width: "4px",

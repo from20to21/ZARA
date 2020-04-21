@@ -35,7 +35,7 @@ $(function () {
     drag();
     function revert2() {
         var dragAmount = Math.abs(lastDrag - firstDrag);
-        if (dragAmount > $(window).width() / 3) {
+        if (dragAmount > $(window).width() / 2.5) {
             indicator(firstDrag, $('.visual__wrapper'), lastLeft);
             return false;
         }

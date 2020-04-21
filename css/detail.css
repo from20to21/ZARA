@@ -385,6 +385,24 @@ html, body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 0.7rem;
     font-weight: 100; }
+  .main__btn__cart {
+    display: block;
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 30px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+    background: #434343;
+    color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    font-size: 0.7rem;
+    font-weight: 100; }
 
 nav {
   width: 100%;

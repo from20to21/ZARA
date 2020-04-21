@@ -145,6 +145,22 @@ html, body {
         font-size: 0.7rem;
         font-weight: 100;
     }
+    &__btn__cart{
+        display: block;
+        width: 40%;
+        margin: 0 auto;
+        margin-top: 20px;
+        height: 30px;
+        text-transform: uppercase;
+        border-radius: 10px;
+        @include button_reset;
+        @include box_shadow;
+        background: #434343;
+        color: #fff;
+        border:1px solid rgba(0,0,0,0.1);
+        font-size: 0.7rem;
+        font-weight: 100;
+    }
 }
 nav{
     width: 100%;

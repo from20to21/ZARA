@@ -27,6 +27,7 @@ $(function () {
     $('.best__itemBox').click(detail);
 
     function detail(e) {
+        e.stopPropagation();
         location.href = 'sub/detail.html'
     }
 
@@ -383,7 +384,8 @@ $(function () {
         });
     }
 
-    function like() { //like button acting
+    function like(e) { //like button acting
+        e.stopPropagation();
         $(this).find('img').toggleClass('pink');
     }
 

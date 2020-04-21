@@ -301,9 +301,9 @@ $(function () {
 
     }
 
-    drag1();
-    drag2();
-    drag3();
+    // drag1();
+    // drag2();
+    // drag3();
 
     function parallax() { // to move image as likely parallax
         firstScroll = window.scrollY;

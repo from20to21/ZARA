@@ -9,13 +9,13 @@ $(function () {
     $('.visual__img__next').css({
         backgroundImage: "url(../img/detail/detail003.jpg)"
     });
-    var idx = $('.visual__image').length;
-    var currentIdx = parseInt(idx / 2) + 1;
+    // var idx = $('.visual__image').length;
+    // var currentIdx = parseInt(idx / 2) + 1;
     var lastLeft = 0;
     var presentLeft = parseInt($('.visual__wrapper').css("left"));
     var moveLeft, moveRight;
     var nextSrc, presentSrc, previousSrc;
-    var changedLeft;
+    var bln = true;
     function drag() {//drag item line
         var firstDrag;
         $('.visual__wrapper').draggable({
@@ -24,19 +24,16 @@ $(function () {
                 firstDrag = e.pageX;
                 lastLeft = parseInt($('.visual__wrapper').css("left"));
             },// remember where drag start (for checking where to move)
-            stop: function (e) { indicator(e, firstDrag, $(this), lastLeft) }
+            stop: function (e) { if (bln) { indicator(e, firstDrag, $(this), lastLeft) } }
         });
     }
     drag();
 
     function indicator(e, firstDrag, $this, lastLeft) { // to move item line as much as item size
+        bln = false;
         var lastDrag = e.pageX; //remember where drag end (for checking where to move)
         moveLeft = lastLeft + presentLeft;
         moveRight = lastLeft - presentLeft;
-        console.log(presentLeft);
-        console.log(lastLeft);
-        console.log(moveLeft);
-        console.log(moveRight);
         $this.css({
             transform: "translateX(" + 0 + "px)"
         });
@@ -66,6 +63,7 @@ $(function () {
                 $this.css({
                     left: presentLeft
                 });
+                bln = true;
             }
             //     currentIdx++;
             // }
@@ -99,6 +97,7 @@ $(function () {
                 $this.css({
                     left: presentLeft
                 });
+                bln = true;
             }
             // currentIdx--;
             // }

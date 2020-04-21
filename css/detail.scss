@@ -81,7 +81,37 @@ html, body {
         background-repeat: no-repeat;
     }    
 }
-
+.main{
+    width: 100%;
+    height: 30vh;
+    position: relative;
+    &__dragLine{
+        width: 10%;
+        height: 4px;
+        background: #bbb;
+        border-radius: 2px;
+        position: absolute;
+        left:50%; top: -10px;
+        transform: translateX(-50%);
+    }
+    &__title{
+        padding:10px 0 0 10px;
+        & h3{
+            display:block;
+            width: 90%;
+            overflow:hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 1.2rem;
+            font-weight: 550;
+        }
+        & p{
+            font-size: 1rem;
+            font-weight: 100;
+            margin-top: 5px;
+        }
+    }
+}
 nav{
     width: 100%;
     height: 40px;

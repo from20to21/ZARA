@@ -13,6 +13,9 @@
     cursor: pointer;
     background: none;
 }
+@mixin box_shadow {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+}
 html, body {
   position: fixed;
   overflow: hidden;
@@ -94,22 +97,53 @@ html, body {
         left:50%; top: -10px;
         transform: translateX(-50%);
     }
+    &__content{
+        padding-top: 15px;
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
     &__title{
-        padding:10px 0 0 10px;
+        flex-grow: 4;
         & h3{
             display:block;
-            width: 90%;
+            width: 100%;
             overflow:hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
-            font-size: 1.2rem;
+            font-size: 1rem;
             font-weight: 550;
+            text-transform: uppercase;
         }
         & p{
-            font-size: 1rem;
+            font-size: 0.8rem;
             font-weight: 100;
-            margin-top: 5px;
+            margin-top: 8px;
         }
+    }
+    &__color{
+        flex-grow: 3;
+        height: 30px;
+        text-transform: uppercase;
+        margin-right: 10px; 
+        border-radius: 10px;
+        @include button_reset;
+        @include box_shadow;
+        border:1px solid rgba(0,0,0,0.1);
+        font-size: 0.7rem;
+        font-weight: 100;
+    }
+    &__size{
+        flex-grow: 3;
+        height: 30px;
+        text-transform: uppercase;
+        border-radius: 10px;
+        @include button_reset;
+        @include box_shadow;
+        border:1px solid rgba(0,0,0,0.1);
+        font-size: 0.7rem;
+        font-weight: 100;
     }
 }
 nav{

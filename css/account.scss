@@ -64,6 +64,8 @@ html, body {
             outline-style: none;
             border-radius: none;
             padding:0 10px;
+            font-size: 1rem;
+            transform: scale(0.7);
         }
     }
     &__password{
@@ -83,6 +85,8 @@ html, body {
             outline-style: none;
             border-radius: none;
             padding:0 10px;
+            font-size: 1rem;
+            transform: scale(0.7);
         }
     }
 }

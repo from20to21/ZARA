@@ -329,6 +329,26 @@ html, body {
     padding: 0 10px;
     font-size: 1rem;
     transform: scale(0.9); }
+.sign__check {
+  margin-top: 15px;
+  display: flex;
+  align-items: center; }
+  .sign__check button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    outline-style: none;
+    cursor: pointer;
+    background: none;
+    background: #ddd;
+    border-radius: 5px; }
+  .sign__check p {
+    font-size: 0.8rem;
+    color: #434343;
+    margin-left: 5px; }
+  .sign__check a {
+    font-size: 0.8rem;
+    margin-left: 90px; }
 
 nav {
   width: 100%;

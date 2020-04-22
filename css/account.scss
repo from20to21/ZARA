@@ -91,6 +91,27 @@ html, body {
             transform: scale(0.9);
         }
     }
+    &__check{
+        margin-top: 15px;
+        display: flex;
+        align-items: center;
+        & button{
+            width: 20px;
+            height: 20px;
+            @include button_reset;
+            background: #ddd;
+            border-radius: 5px;
+        }
+        & p{
+            font-size: 0.8rem;
+            color: #434343;
+            margin-left: 5px;
+        }
+        & a{
+            font-size: 0.8rem;
+            margin-left: 90px;
+        }
+    }
 }
 
 nav{

@@ -381,16 +381,18 @@ header {
   background: #434343;
   color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  font-size: 0.7rem;
-  font-weight: 100; }
+  font-size: 0.8rem;
+  font-weight: 100;
+  letter-spacing: 0.05rem; }
 .sign__signUp {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   margin-top: 150px;
   display: flex; }
   .sign__signUp p {
     font-size: 0.8rem;
-    font-weight: 100; }
+    font-weight: 100;
+    letter-spacing: 0.05rem; }
   .sign__signUp a {
     margin-left: 10px;
     border-bottom: 1px solid #aaa;

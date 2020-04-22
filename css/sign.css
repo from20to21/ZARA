@@ -289,40 +289,35 @@ header {
   height: 100px;
   margin: 0 auto;
   border-radius: 100%;
-  background: #434343 url(../img/user.png) no-repeat center 20%/50%;
-  overflow: hidden; }
+  background: #434343 url(../img/user.png) no-repeat center 200%/cover;
+  position: relative;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1); }
   .sign__pic input {
     display: none; }
-.sign__email {
-  position: relative;
-  border-bottom: 1px solid #aaa; }
-  .sign__email p {
-    font-size: 0.7rem;
-    font-weight: 100;
+  .sign__pic__add {
+    width: 35px;
+    height: 35px;
+    border-radius: 100%;
+    background: #434343 url(../img/plus.png) no-repeat center/50%;
     position: absolute;
-    z-index: 3;
-    top: -10px;
-    letter-spacing: 0.05rem; }
-  .sign__email input {
-    width: 300px;
-    height: 40px;
-    border: none;
-    outline-style: none;
-    border-radius: none;
-    font-size: 1rem;
-    transform: scale(0.9); }
-.sign__password {
+    right: 0;
+    bottom: 0;
+    border: 4px solid #fff; }
+.sign__list {
   margin-top: 20px;
   position: relative;
   border-bottom: 1px solid #aaa; }
-  .sign__password p {
+  .sign__list.name {
+    margin-top: 50px; }
+  .sign__list p {
     font-size: 0.7rem;
     font-weight: 100;
     position: absolute;
     z-index: 3;
     top: -10px;
-    letter-spacing: 0.05rem; }
-  .sign__password input {
+    letter-spacing: 0.05rem;
+    text-transform: uppercase; }
+  .sign__list input {
     width: 300px;
     height: 40px;
     border: none;
@@ -330,48 +325,11 @@ header {
     border-radius: none;
     font-size: 1rem;
     transform: scale(0.9); }
-.sign__check {
-  margin-top: 15px;
-  display: flex;
-  align-items: center; }
-  .sign__check button {
-    width: 20px;
-    height: 20px;
-    border: none;
-    outline-style: none;
-    cursor: pointer;
-    background: none;
-    background: #ddd;
-    border-radius: 5px;
-    position: relative; }
-    .sign__check button.checked {
-      background: #bbb; }
-    .sign__check button img {
-      width: 10px;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      opacity: 0; }
-      .sign__check button img.checked {
-        opacity: 1; }
-  .sign__check p {
-    font-size: 0.8rem;
-    font-weight: 100;
-    letter-spacing: 0.05rem;
-    color: #434343;
-    margin-left: 5px; }
-  .sign__check a {
-    font-size: 0.8rem;
-    letter-spacing: 0.05rem;
-    margin-left: 150px;
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 5px; }
-.sign__logIn {
+.sign__signUp {
   display: block;
   width: 80%;
   margin: 0 auto;
-  margin-top: 85px;
+  margin-top: 30px;
   height: 40px;
   text-transform: uppercase;
   border-radius: 20px;
@@ -386,20 +344,6 @@ header {
   font-size: 0.8rem;
   font-weight: 100;
   letter-spacing: 0.05rem; }
-.sign__signUp {
-  width: 80%;
-  margin: 0 auto;
-  margin-top: 75px;
-  display: flex; }
-  .sign__signUp p {
-    font-size: 0.8rem;
-    font-weight: 100;
-    letter-spacing: 0.05rem; }
-  .sign__signUp a {
-    margin-left: 20px;
-    border-bottom: 1px solid #aaa;
-    font-size: 0.9rem;
-    padding-bottom: 5px; }
 
 nav {
   width: 100%;

@@ -1,9 +1,9 @@
 $(function () {
 
-    $('.sign__pic').bind('click', check);
+    //$('.sign__pic').bind('click', check);
 
     function check() {
-        $('.sign__pic input').click()
+        //$('.sign__pic input').trigger('click');
     }
 
 });

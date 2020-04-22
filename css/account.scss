@@ -50,6 +50,7 @@ html, body {
     }
     &__email{
         position: relative;
+        border-bottom: 1px solid #aaa;
         & p{
             font-size: 1rem;
             font-weight: 100;
@@ -63,12 +64,12 @@ html, body {
             outline-style: none;
             border-radius: none;
             padding:0 10px;
-            border-bottom: 1px solid #aaa;
         }
     }
     &__password{
         margin-top: 20px;
         position: relative;
+        border-bottom: 1px solid #aaa;
         & p{
             font-size: 1rem;
             font-weight: 100;
@@ -82,7 +83,6 @@ html, body {
             outline-style: none;
             border-radius: none;
             padding:0 10px;
-            border-bottom: 1px solid #aaa;
         }
     }
 }

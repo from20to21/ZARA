@@ -293,7 +293,8 @@ html, body {
   top: 50%;
   transform: translate(-50%, -50%); }
 .sign__email {
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #aaa; }
   .sign__email p {
     font-size: 1rem;
     font-weight: 100;
@@ -305,11 +306,11 @@ html, body {
     border: none;
     outline-style: none;
     border-radius: none;
-    padding: 0 10px;
-    border-bottom: 1px solid #aaa; }
+    padding: 0 10px; }
 .sign__password {
   margin-top: 20px;
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #aaa; }
   .sign__password p {
     font-size: 1rem;
     font-weight: 100;
@@ -321,8 +322,7 @@ html, body {
     border: none;
     outline-style: none;
     border-radius: none;
-    padding: 0 10px;
-    border-bottom: 1px solid #aaa; }
+    padding: 0 10px; }
 
 nav {
   width: 100%;

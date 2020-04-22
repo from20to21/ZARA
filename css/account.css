@@ -306,7 +306,7 @@ html, body {
     outline-style: none;
     border-radius: none;
     padding: 0 10px;
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #aaa; }
 .sign__password {
   margin-top: 20px;
   position: relative; }
@@ -322,7 +322,7 @@ html, body {
     outline-style: none;
     border-radius: none;
     padding: 0 10px;
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #aaa; }
 
 nav {
   width: 100%;

@@ -23,7 +23,6 @@ $(function () {
     $('.search__category p').click(cat_change);
 
     $('.new__wrapper').click(function (e) {
-        console.log('a');
         e.stopPropagation();
         e.stopImmediatePropagation();
         if ($(e.target).hasClass("new__itemBox")) {
@@ -53,7 +52,7 @@ $(function () {
     });
 
     function detail() {
-        // location.href = 'sub/detail.html'
+        location.href = 'sub/detail.html'
     }
 
     function sale() { //for css change in .sale span

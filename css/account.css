@@ -304,6 +304,7 @@ html, body {
     height: 40px;
     border: none;
     outline-style: none;
+    border-radius: none;
     padding: 0 10px;
     border-bottom: 1px solid #434343; }
 .sign__password {
@@ -319,6 +320,7 @@ html, body {
     height: 40px;
     border: none;
     outline-style: none;
+    border-radius: none;
     padding: 0 10px;
     border-bottom: 1px solid #434343; }
 

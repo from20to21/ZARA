@@ -290,7 +290,7 @@ html, body {
 .sign__wrapper {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 40%;
   transform: translate(-50%, -50%); }
 .sign__email {
   position: relative;

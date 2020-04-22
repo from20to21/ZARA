@@ -265,7 +265,8 @@ html, body {
   width: 100vw;
   height: 100vh;
   overflow-y: scroll;
-  -webkit-overflow-scrolling: touch; }
+  -webkit-overflow-scrolling: touch;
+  position: relative; }
 
 .back {
   width: 30px;
@@ -285,6 +286,41 @@ html, body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%); }
+
+.sign__wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); }
+.sign__email {
+  position: relative; }
+  .sign__email p {
+    font-size: 1rem;
+    font-weight: 100;
+    position: absolute;
+    top: 10px; }
+  .sign__email input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline-style: none;
+    padding: 0 10px;
+    border-bottom: 1px solid #434343; }
+.sign__password {
+  margin-top: 20px;
+  position: relative; }
+  .sign__password p {
+    font-size: 1rem;
+    font-weight: 100;
+    position: absolute;
+    top: 10px; }
+  .sign__password input {
+    width: 250px;
+    height: 40px;
+    border: none;
+    outline-style: none;
+    padding: 0 10px;
+    border-bottom: 1px solid #434343; }
 
 nav {
   width: 100%;

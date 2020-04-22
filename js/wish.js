@@ -41,11 +41,11 @@ $(function () {
         $('.wish__wrapper').draggable({
             axis: "x", //let drag item only side to side
             start: function (e) { firstDrag = e.pageX },// remember where drag start (for checking where to move)
-            drag: function () {
-                $(this).css({
-                    left: "5%"
-                })
-            },
+            // drag: function () {
+            //     $(this).css({
+            //         left: "5%"
+            //     })
+            // },
             stop: function (e) { indicator(e, firstDrag, $(this)) } //make num zero (to reset) and act function indicator.
         });
     }
@@ -64,9 +64,9 @@ $(function () {
             }, 300);
         }
         else { // if you move right
-            $this.css({
+            $this.animate({
                 left: "5%"
-            })
+            }, 300)
         }
     }
 

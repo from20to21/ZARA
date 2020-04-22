@@ -16,6 +16,8 @@ $(function () {
     var moveLeft, moveRight;
     var nextSrc, presentSrc, previousSrc;
     var lastDrag, firstDrag;
+    var firstDragVert, lastDragVert;
+
     $(window).on('mousemove', function (e) {
         lastDrag = e.pageX;
     })
@@ -23,7 +25,7 @@ $(function () {
         $('.visual__wrapper').draggable({
             axis: "x", //let drag item only side to side
             revert: function () {
-                return revert2();
+                return reverse();
             },
             start: function (e) {
                 firstDrag = e.pageX;
@@ -33,7 +35,7 @@ $(function () {
         });
     }
     drag();
-    function revert2() {
+    function reverse() {
         var dragAmount = Math.abs(lastDrag - firstDrag);
         if (dragAmount > $(window).width() / 2.5) {
             dragMove(firstDrag, $('.visual__wrapper'), lastLeft);
@@ -141,5 +143,29 @@ $(function () {
     }
 
 
+    // function drag2() {//drag item line
+    //     $('.main__wrapper').draggable({
+    //         axis: "y", //let drag item only side to side
+    //         revert: function () {
+    //             return reverse2();
+    //         },
+    //         start: function (e) {
+    //             firstDragVert = e.pageY;
+    //             lastTop = parseInt($('.main__wrapper').css("top"));
+    //         },// remember where drag start (for checking where to move)
+    //         stop: function (e) { lastDragVert = e.pageY; }
+    //     });
+    // }
+    // drag2();
+    // function reverse2() {
+    //     var dragAmount = Math.abs(lastDragVert - firstDragVert);
+    //     if (dragAmount > $(window).height() / 2.5) {
+    //         // dragMove(firstDragVert, $('.main__wrapper'), lastTop);
+    //         return false;
+    //     }
+    //     else {
+    //         return true;
+    //     }
+    // }
 
 });

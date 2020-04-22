@@ -78,38 +78,19 @@ $(function () {
                     left: presentLeft
                 });
                 if (currentIdx == 1) {
-                    $('.visual__indicator__001').animate({
-                        width: "4px",
-                        height: "4px",
-                    }, 300);
-                    $('.visual__indicator__002').animate({
-                        width: "7px",
-                        height: "7px",
-                    }, 300);
+                    $('.visual__indicator span').removeClass('select');
+                    $('.visual__indicator__002').addClass('select');
                 }
                 if (currentIdx == 2) {
-                    $('.visual__indicator__002').animate({
-                        width: "4px",
-                        height: "4px",
-                    }, 300);
-                    $('.visual__indicator__003').animate({
-                        width: "7px",
-                        height: "7px",
-                    }, 300);
+                    $('.visual__indicator span').removeClass('select');
+                    $('.visual__indicator__003').addClass('select');
                 }
                 if (currentIdx == 3) {
-                    $('.visual__indicator__003').animate({
-                        width: "4px",
-                        height: "4px",
-                    }, 300);
-                    $('.visual__indicator__001').animate({
-                        width: "7px",
-                        height: "7px",
-                    }, 300);
+                    $('.visual__indicator span').removeClass('select');
+                    $('.visual__indicator__001').addClass('select');
                     currentIdx = 0;
                 }
                 currentIdx++;
-                console.log(currentIdx);
             }
         }
         else { // if you move right
@@ -142,37 +123,18 @@ $(function () {
                     left: presentLeft
                 });
                 if (currentIdx == 3) {
-                    $('.visual__indicator__002').animate({
-                        width: "7px",
-                        height: "7px",
-                    }, 300);
-                    $('.visual__indicator__003').animate({
-                        width: "4px",
-                        height: "4px",
-                    }, 300);
+                    $('.visual__indicator span').removeClass('select');
+                    $('.visual__indicator__002').addClass('select');
                 }
                 if (currentIdx == 2) {
-                    $('.visual__indicator__001').animate({
-                        width: "7px",
-                        height: "7px",
-                    }, 300);
-                    $('.visual__indicator__002').animate({
-                        width: "4px",
-                        height: "4px",
-                    }, 300);
+                    $('.visual__indicator span').removeClass('select');
+                    $('.visual__indicator__001').addClass('select');
                 }
                 if (currentIdx == 1) {
-                    $('.visual__indicator__003').animate({
-                        width: "7px",
-                        height: "7px",
-                    }, 300);
-                    $('.visual__indicator__001').animate({
-                        width: "4px",
-                        height: "4px",
-                    }, 300);
+                    $('.visual__indicator span').removeClass('select');
+                    $('.visual__indicator__003').addClass('select');
                     currentIdx = 4;
                 }
-                console.log(currentIdx);
                 currentIdx--;
             }
         }

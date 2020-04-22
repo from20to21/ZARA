@@ -333,14 +333,13 @@ html, body {
     justify-content: space-between;
     align-items: center; }
     .visual__indicator span {
-      width: 4px;
-      height: 4px;
-      background: #434343;
-      border: 1px solid #434343;
-      border-radius: 100%; }
-      .visual__indicator span.visual__indicator__001 {
-        width: 7px;
-        height: 7px; }
+      width: 6px;
+      height: 6px;
+      background: rgba(0, 0, 0, 0.2);
+      border-radius: 100%;
+      transition: .5s; }
+      .visual__indicator span.select {
+        background: white; }
 
 .main {
   width: 100%;

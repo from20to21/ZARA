@@ -344,11 +344,15 @@ html, body {
     border-radius: 5px; }
   .sign__check p {
     font-size: 0.8rem;
+    font-weight: 100;
+    letter-spacing: 0.02rem;
     color: #434343;
     margin-left: 5px; }
   .sign__check a {
     font-size: 0.8rem;
-    margin-left: 90px; }
+    letter-spacing: 0.02rem;
+    font-weight: 100;
+    margin-left: 110px; }
 
 nav {
   width: 100%;

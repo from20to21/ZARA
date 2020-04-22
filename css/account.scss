@@ -104,12 +104,16 @@ html, body {
         }
         & p{
             font-size: 0.8rem;
+            font-weight: 100;
+            letter-spacing: 0.02rem;
             color: #434343;
             margin-left: 5px;
         }
         & a{
             font-size: 0.8rem;
-            margin-left: 90px;
+            letter-spacing: 0.02rem;
+            font-weight: 100;
+            margin-left: 110px;
         }
     }
 }

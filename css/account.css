@@ -308,7 +308,7 @@ html, body {
     border-radius: none;
     padding: 0 10px;
     font-size: 1rem;
-    transform: scale(0.7); }
+    transform: scale(0.9); }
 .sign__password {
   margin-top: 20px;
   position: relative;
@@ -326,7 +326,7 @@ html, body {
     border-radius: none;
     padding: 0 10px;
     font-size: 1rem;
-    transform: scale(0.7); }
+    transform: scale(0.9); }
 
 nav {
   width: 100%;

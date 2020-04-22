@@ -116,6 +116,22 @@ html, body {
             margin-left: 110px;
         }
     }
+    &__logIn{
+        display: block;
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 50px;
+        height: 40px;
+        text-transform: uppercase;
+        border-radius: 20px;
+        @include button_reset;
+        @include box_shadow;
+        background: #434343;
+        color: #fff;
+        border:1px solid rgba(0,0,0,0.1);
+        font-size: 0.7rem;
+        font-weight: 100;
+    }
 }
 
 nav{

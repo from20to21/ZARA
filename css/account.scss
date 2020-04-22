@@ -52,11 +52,11 @@ html, body {
         position: relative;
         border-bottom: 1px solid #aaa;
         & p{
-            font-size: 1rem;
+            font-size: 0.7rem;
             font-weight: 100;
             position: absolute;
             z-index: 3;
-            top: 10px;
+            top: -10px;
         }
         & input{
             width: 250px;
@@ -74,11 +74,11 @@ html, body {
         position: relative;
         border-bottom: 1px solid #aaa;
         & p{
-            font-size: 1rem;
+            font-size: 0.7rem;
             font-weight: 100;
             position: absolute;
             z-index: 3;
-            top: 10px;
+            top: -10px;
         }
         & input{
             width: 250px;

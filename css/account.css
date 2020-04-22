@@ -296,11 +296,11 @@ html, body {
   position: relative;
   border-bottom: 1px solid #aaa; }
   .sign__email p {
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 100;
     position: absolute;
     z-index: 3;
-    top: 10px; }
+    top: -10px; }
   .sign__email input {
     width: 250px;
     height: 40px;
@@ -315,11 +315,11 @@ html, body {
   position: relative;
   border-bottom: 1px solid #aaa; }
   .sign__password p {
-    font-size: 1rem;
+    font-size: 0.7rem;
     font-weight: 100;
     position: absolute;
     z-index: 3;
-    top: 10px; }
+    top: -10px; }
   .sign__password input {
     width: 250px;
     height: 40px;

@@ -59,12 +59,12 @@ html, body {
             top: -10px;
         }
         & input{
-            width: 250px;
+            width: 300px;
             height: 40px;
             border: none;
             outline-style: none;
             border-radius: none;
-            padding:0 10px;
+            padding:0 5px;
             font-size: 1rem;
             transform: scale(0.9);
         }
@@ -81,12 +81,12 @@ html, body {
             top: -10px;
         }
         & input{
-            width: 250px;
+            width: 300px;
             height: 40px;
             border: none;
             outline-style: none;
             border-radius: none;
-            padding:0 10px;
+            padding:0 5px;
             font-size: 1rem;
             transform: scale(0.9);
         }
@@ -135,7 +135,7 @@ html, body {
     &__signUp{
         width: 90%;
         margin: 0 auto;
-        margin-top: 50px;
+        margin-top: 100px;
         display: flex;
         & p {
         font-size: 0.8rem;

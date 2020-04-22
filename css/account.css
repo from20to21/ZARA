@@ -299,6 +299,7 @@ html, body {
     font-size: 1rem;
     font-weight: 100;
     position: absolute;
+    z-index: 3;
     top: 10px; }
   .sign__email input {
     width: 250px;
@@ -317,6 +318,7 @@ html, body {
     font-size: 1rem;
     font-weight: 100;
     position: absolute;
+    z-index: 3;
     top: 10px; }
   .sign__password input {
     width: 250px;

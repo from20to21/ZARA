@@ -115,6 +115,20 @@ header{
             @include button_reset;
             background: #ddd;
             border-radius: 5px;
+            position: relative;
+            &.checked{
+                background: #bbb;
+            }
+            & img{
+                width: 10px;
+                position: absolute;
+                left: 50%;top: 50%;
+                transform: translate(-50%,-50%);
+                opacity: 0;
+                &.checked{
+                    opacity: 1;
+                }
+            }
         }
         & p{
             font-size: 0.8rem;

@@ -352,7 +352,19 @@ header {
     cursor: pointer;
     background: none;
     background: #ddd;
-    border-radius: 5px; }
+    border-radius: 5px;
+    position: relative; }
+    .sign__check button.checked {
+      background: #bbb; }
+    .sign__check button img {
+      width: 10px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0; }
+      .sign__check button img.checked {
+        opacity: 1; }
   .sign__check p {
     font-size: 0.8rem;
     font-weight: 100;

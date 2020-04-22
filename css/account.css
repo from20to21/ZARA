@@ -371,6 +371,19 @@ html, body {
   border: 1px solid rgba(0, 0, 0, 0.1);
   font-size: 0.7rem;
   font-weight: 100; }
+.sign__signUp {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 50px;
+  display: flex; }
+  .sign__signUp p {
+    font-size: 0.8rem;
+    font-weight: 100; }
+  .sign__signUp a {
+    margin-left: 30px;
+    border-bottom: 1px solid #aaa;
+    font-size: 0.9rem;
+    padding-bottom: 5px; }
 
 nav {
   width: 100%;

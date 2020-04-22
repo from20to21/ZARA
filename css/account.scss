@@ -132,6 +132,22 @@ html, body {
         font-size: 0.7rem;
         font-weight: 100;
     }
+    &__signUp{
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 50px;
+        display: flex;
+        & p {
+        font-size: 0.8rem;
+        font-weight: 100;
+        }
+        & a{
+            margin-left: 30px;
+            border-bottom: 1px solid #aaa;
+            font-size: 0.9rem;
+            padding-bottom: 5px;
+        }
+    }
 }
 
 nav{

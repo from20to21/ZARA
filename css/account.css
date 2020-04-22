@@ -276,7 +276,8 @@ header {
     text-align: center;
     color: #434343;
     font-weight: 400;
-    letter-spacing: 0.1rem; }
+    letter-spacing: 0.1rem;
+    text-transform: uppercase; }
 
 .back {
   width: 30px;
@@ -361,8 +362,9 @@ header {
   .sign__check a {
     font-size: 0.8rem;
     letter-spacing: 0.05rem;
-    font-weight: 100;
-    margin-left: 150px; }
+    margin-left: 150px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 5px; }
 .sign__logIn {
   display: block;
   width: 80%;

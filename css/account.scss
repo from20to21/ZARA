@@ -37,6 +37,7 @@ header{
         color: #434343;
         font-weight: 400;
         letter-spacing: 0.1rem;
+        text-transform: uppercase;
     }
 }
 
@@ -125,8 +126,9 @@ header{
         & a{
             font-size: 0.8rem;
             letter-spacing: 0.05rem;
-            font-weight: 100;
             margin-left: 150px;
+            border-bottom: 1px solid #aaa;
+            padding-bottom: 5px;
         }
     }
     &__logIn{

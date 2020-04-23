@@ -248,7 +248,7 @@ $(function () {
         $('.new__item__text p').text(startY + ',' + endY);
 
         console.log(Math.abs(startY - endY));
-        if (startY - endY < 50) {
+        if (Math.abs(startY - endY) < 10) {
             $(window).scrollTop(currentY);
         }
     }

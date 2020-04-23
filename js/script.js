@@ -245,6 +245,8 @@ $(function () {
                 });
             }
         }
+        $('.new__item__text p').text(startY + ',' + endY);
+
         console.log(Math.abs(startY - endY));
         if (startY - endY < 50) {
             $(window).scrollTop(currentY);

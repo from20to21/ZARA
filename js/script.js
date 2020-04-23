@@ -319,7 +319,7 @@ $(function () {
     function touchEnd(e) {
         var max = $(this).find('.item').length - 2; //let item move within maximum length
         endX = e.originalEvent.changedTouches[0].screenX;
-        if (startX > endX) { //if you move to left
+        if (startX > endX && Math.abs(startX - endX) > 50) { //if you move to left
             if (num < max) {
                 num++;
                 $(this).animate({
@@ -338,7 +338,7 @@ $(function () {
                 });
             }
         }
-        else { // if you move right
+        else if (startX < endX && Math.abs(startX - endX) > 50) { // if you move right
             if (num > 0) {
                 num--;
                 $(this).animate({

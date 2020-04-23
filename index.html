@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="css/style.css" rel="stylesheet" />
-    <!-- <script src="https://kit.fontawesome.com/71dbb0a759.js" crossorigin="anonymous"></script> -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
         integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
@@ -19,14 +18,15 @@
 
 <body>
     <div class="wrap">
+        <!-- header -->
         <header>
-            <div class="header__shopping">
-                <button><img src="img/shop.png" alt=""></button>
-            </div>
+            <!-- search button -->
             <div class="header__search">
                 <button><img src="img/search.png" alt=""></button>
                 <input type="text" name="" id="">
             </div>
+            <!-- //search button -->
+            <!-- search contents -->
             <button class="search__close"><img src="img/close.png" alt=""></button>
             <div class="search__keyword">
                 <h3>Popluar Keyword</h3>
@@ -59,9 +59,19 @@
                     </div>
                 </div>
             </div>
+            <!-- //search contents -->
+            <!-- cart button -->
+            <div class="header__cart">
+                <button><img src="img/shop.png" alt=""></button>
+            </div>
+            <!-- //cart button -->
         </header>
+        <!-- //header -->
+
+        <!-- visual -->
         <div class="visual">
             <div class="visual__white"></div>
+            <!-- logo -->
             <h1>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1077.37 453.17001" fill="none">
                     <path
@@ -69,8 +79,12 @@
                         fill="white"></path>
                 </svg>
             </h1>
+            <!-- //logo -->
             <h2>Summer Collection</h2>
         </div>
+        <!-- //visual -->
+
+        <!-- category -->
         <div class="category">
             <button><strong class="category__selected">WOMAN</strong></button>
             <button><strong>MAN</strong></button>
@@ -78,180 +92,197 @@
             <button><strong>SHOUES & BAGS</strong></button>
             <span></span>
         </div>
-        <div class="new">
-            <h3>NEW IN</h3>
-            <button>VIEW</button>
-        </div>
-        <div class="new__text">
-            <h3>New In</h3>
-            <a href="#">Show All</a>
-        </div>
-        <div class="new__wrapper">
-            <div class="new__itemWrapper">
-                <div class="new__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="new__itemBox item01"></div>
-                    <div class="new__item__text">
-                        <em>NEW</em>
-                        <strong>SHIRT WITH POCKET</strong>
-                        <p>35.90d USD</p>
+        <!-- //category -->
+
+        <!-- section "new" -->
+        <section class="new">
+            <h2>NEW IN</h2>
+            <div class="new__image">
+                <button>VIEW</button>
+            </div>
+            <div class="new__text">
+                <h3>New In</h3>
+                <a href="#">Show All</a>
+            </div>
+            <div class="new__wrapper">
+                <div class="new__itemWrapper">
+                    <div class="new__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="new__itemBox item01"></div>
+                        <div class="new__item__text">
+                            <em>NEW</em>
+                            <strong>SHIRT WITH POCKET</strong>
+                            <p>35.90d USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="new__item item">
-                    <button class=" heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="new__itemBox item02"></div>
-                    <div class="new__item__text">
-                        <em>NEW</em>
-                        <strong>OVERSIZED KNIT TOP</strong>
-                        <p>25.90 USD</p>
+                    <div class="new__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="new__itemBox item02"></div>
+                        <div class="new__item__text">
+                            <em>NEW</em>
+                            <strong>OVERSIZED KNIT TOP</strong>
+                            <p>25.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="new__item item">
-                    <button class=" heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="new__itemBox item03"></div>
-                    <div class="new__item__text">
-                        <em>NEW</em>
-                        <strong>STRIPED KNIT TOP</strong>
-                        <p>29.90 USD</p>
+                    <div class="new__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="new__itemBox item03"></div>
+                        <div class="new__item__text">
+                            <em>NEW</em>
+                            <strong>STRIPED KNIT TOP</strong>
+                            <p>29.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="new__item item">
-                    <button class=" heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="new__itemBox item04"></div>
-                    <div class="new__item__text">
-                        <em>NEW</em>
-                        <strong>JACQUARD BLAZER</strong>
-                        <p>89.90 USD</p>
+                    <div class="new__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="new__itemBox item04"></div>
+                        <div class="new__item__text">
+                            <em>NEW</em>
+                            <strong>JACQUARD BLAZER</strong>
+                            <p>89.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="new__item item">
-                    <button class=" heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="new__itemBox item05"></div>
-                    <div class="new__item__text">
-                        <em>NEW</em>
-                        <strong>BUTTONED POPLIN SHIRT</strong>
-                        <p>49.90 USD</p>
+                    <div class="new__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="new__itemBox item05"></div>
+                        <div class="new__item__text">
+                            <em>NEW</em>
+                            <strong>BUTTONED POPLIN SHIRT</strong>
+                            <p>49.90 USD</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <span class="item__indicator"><span></span></span>
+            <span class="item__indicator"><span></span></span>
+        </section>
+        <!-- //section "new" -->
 
-        <div class="collection">
-            <h3>COLLECTION</h3>
-            <button>VIEW</button>
-        </div>
-        <div class="collection__text">
-            <h3>Collection</h3>
-            <a href="#">Show All</a>
-        </div>
-        <div class="collection__wrapper">
-            <div class="collection__itemWrapper">
-                <div class="collection__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="col__itemBox item01"></div>
-                    <div class="collection__item__text">
-                        <em>NEW</em>
-                        <strong>RUFFLED POPLIN SHIRT</strong>
-                        <p>39.90 USD</p>
+        <!-- section "collection" -->
+        <section class="collection">
+            <h2>COLLECTION</h2>
+            <div class="collection__image">
+                <button>VIEW</button>
+            </div>
+            <div class="collection__text">
+                <h3>Collection</h3>
+                <a href="#">Show All</a>
+            </div>
+            <div class="collection__wrapper">
+                <div class="collection__itemWrapper">
+                    <div class="collection__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="col__itemBox item01"></div>
+                        <div class="collection__item__text">
+                            <em>NEW</em>
+                            <strong>RUFFLED POPLIN SHIRT</strong>
+                            <p>39.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="collection__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="col__itemBox item02"></div>
-                    <div class="collection__item__text">
-                        <strong>PRINTED PAJAMA TOP</strong>
-                        <p>39.90 USD</p>
+                    <div class="collection__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="col__itemBox item02"></div>
+                        <div class="collection__item__text">
+                            <strong>PRINTED PAJAMA TOP</strong>
+                            <p>39.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="collection__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="col__itemBox item03"></div>
-                    <div class="collection__item__text">
-                        <em>NEW</em>
-                        <strong>VOLUMINOUS ASYMMETRIC DRESS</strong>
-                        <p>49.90 USD</p>
+                    <div class="collection__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="col__itemBox item03"></div>
+                        <div class="collection__item__text">
+                            <em>NEW</em>
+                            <strong>VOLUMINOUS ASYMMETRIC DRESS</strong>
+                            <p>49.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="collection__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="col__itemBox item04"></div>
-                    <div class="collection__item__text">
-                        <strong>GINGHAM JUMPSUIT DRESS</strong>
-                        <p>49.90 USD</p>
+                    <div class="collection__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="col__itemBox item04"></div>
+                        <div class="collection__item__text">
+                            <strong>GINGHAM JUMPSUIT DRESS</strong>
+                            <p>49.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="collection__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="col__itemBox item05"></div>
-                    <div class="collection__item__text">
-                        <strong>PRINT TOP</strong>
-                        <p>39.90 USD</p>
+                    <div class="collection__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="col__itemBox item05"></div>
+                        <div class="collection__item__text">
+                            <strong>PRINT TOP</strong>
+                            <p>39.90 USD</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <span class="item__indicator"><span></span></span>
+            <span class="item__indicator"><span></span></span>
+        </section>
+        <!-- //section "collection" -->
 
-        <div class="bestseller">
-            <h3>BEST SELLER</h3>
-            <button>VIEW</button>
-        </div>
-        <div class="bestseller__text">
-            <h3>BestSeller</h3>
-            <a href="#">Show All</a>
-        </div>
-        <div class="bestseller__wrapper">
-            <div class="bestseller__itemWrapper">
-                <div class="bestseller__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="best__itemBox item01"></div>
-                    <div class="bestseller__item__text">
-                        <strong>TWEED BLAZER</strong>
-                        <p>149.00 USD</p>
+        <!-- section "bestseller" -->
+        <section class="bestseller">
+            <h2>BEST SELLER</h2>
+            <div class="bestseller__image">
+                <button>VIEW</button>
+            </div>
+            <div class="bestseller__text">
+                <h3>BestSeller</h3>
+                <a href="#">Show All</a>
+            </div>
+            <div class="bestseller__wrapper">
+                <div class="bestseller__itemWrapper">
+                    <div class="bestseller__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="best__itemBox item01"></div>
+                        <div class="bestseller__item__text">
+                            <strong>TWEED BLAZER</strong>
+                            <p>149.00 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="bestseller__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="best__itemBox item02"></div>
-                    <div class="bestseller__item__text">
-                        <strong>BLAZER WITH BUTTONS</strong>
-                        <p>129.00 USD</p>
+                    <div class="bestseller__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="best__itemBox item02"></div>
+                        <div class="bestseller__item__text">
+                            <strong>BLAZER WITH BUTTONS</strong>
+                            <p>129.00 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="bestseller__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="best__itemBox item03"></div>
-                    <div class="bestseller__item__text">
-                        <strong>GEOMETRIC PRINTED BLOUSE</strong>
-                        <p>49.90 USD</p>
+                    <div class="bestseller__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="best__itemBox item03"></div>
+                        <div class="bestseller__item__text">
+                            <strong>GEOMETRIC PRINTED BLOUSE</strong>
+                            <p>49.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="bestseller__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="best__itemBox item04"></div>
-                    <div class="bestseller__item__text">
-                        <strong>PRINTED MINI SKIRT</strong>
-                        <p>39.90 USD</p>
+                    <div class="bestseller__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="best__itemBox item04"></div>
+                        <div class="bestseller__item__text">
+                            <strong>PRINTED MINI SKIRT</strong>
+                            <p>39.90 USD</p>
+                        </div>
                     </div>
-                </div>
-                <div class="bestseller__item item">
-                    <button class="heart"><img src="img/heart2.png" alt=""></button>
-                    <div class="best__itemBox item05"></div>
-                    <div class="bestseller__item__text">
-                        <em>SPECIAL PRICE</em>
-                        <strong>RIGID MINIMALIST SHOPPER</strong>
-                        <p class="sale">39.90 USD<span>25.99 USD</span></p>
+                    <div class="bestseller__item item">
+                        <button class="heart"><img src="img/heart2.png" alt=""></button>
+                        <div class="best__itemBox item05"></div>
+                        <div class="bestseller__item__text">
+                            <em>SPECIAL PRICE</em>
+                            <strong>RIGID MINIMALIST SHOPPER</strong>
+                            <p class="sale">39.90 USD<span>25.99 USD</span></p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <span class="item__indicator"><span></span></span>
+            <span class="item__indicator"><span></span></span>
+        </section>
+        <!-- //section "bestseller" -->
 
+        <!-- section "stories" -->
         <div class="stories">
             <h3>STORIES</h3>
             <button>VIEW</button>
         </div>
+        <!-- //section "stories" -->
+
         <nav>
             <a href="index.html">Home</a>
             <a href="sub/category.html">Category</a>

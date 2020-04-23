@@ -108,17 +108,17 @@ header {
     margin-bottom: 3px;
     font-size: 1rem;
     transform: scale(0.7); }
-.header__shopping {
+.header__cart {
   float: right;
   padding-top: 5px; }
-  .header__shopping button {
+  .header__cart button {
     border: none;
     outline-style: none;
     cursor: pointer;
     background: none;
     position: relative;
     margin-right: 10px; }
-    .header__shopping button:first-child:after {
+    .header__cart button:first-child:after {
       content: '';
       display: block;
       width: 5px;
@@ -338,6 +338,8 @@ html, body {
   height: 300px;
   margin: 30px auto 0;
   position: relative; }
+  .item:last-of-type {
+    margin-bottom: 100px; }
   .item__Wrapper {
     width: 100%;
     display: flex;

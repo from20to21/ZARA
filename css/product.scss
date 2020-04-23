@@ -95,6 +95,9 @@ html, body {
     height: 300px;
     margin: 30px auto 0;
     position: relative;
+    &:last-of-type{
+        margin-bottom: 100px;
+    }
     &__Wrapper{
         width: 100%;
         display: flex;

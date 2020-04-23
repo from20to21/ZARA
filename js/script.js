@@ -1,5 +1,7 @@
 
+
 $(function () {
+
 
     var firstScroll, lastScroll,
         positionVisual, positionText,
@@ -322,13 +324,13 @@ $(function () {
             $('.visual').css({
                 'background-position-y': positionVisual
             });
-            $('.new').css({
+            $('.new__image').css({
                 'background-position-y': positionNew,
             });
-            $('.collection').css({
+            $('.collection__image').css({
                 'background-position-y': positionCollection
             });
-            $('.bestseller').css({
+            $('.bestseller__image').css({
                 'background-position-y': positionBest
             });
             $('.visual h1').css({
@@ -338,7 +340,7 @@ $(function () {
                 $('header').css({
                     display: "none"
                 });
-                $('.new').css({
+                $('.new__image').css({
                     marginTop: "120px"
                 });
                 $('.category').css({
@@ -356,20 +358,20 @@ $(function () {
             $('.visual').css({
                 'background-position-y': positionVisual
             });
-            $('.new').css({
+            $('.new__image').css({
                 'background-position-y': positionNew,
             });
-            $('.collection').css({
+            $('.collection__image').css({
                 'background-position-y': positionCollection
             });
-            $('.bestseller').css({
+            $('.bestseller__image').css({
                 'background-position-y': positionBest
             });
             if (firstScroll < 538) {
                 $('header').css({
                     display: "block"
                 });
-                $('.new').css({
+                $('.new__image').css({
                     marginTop: "70px"
                 });
                 $('.visual h1').css({

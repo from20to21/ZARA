@@ -374,7 +374,7 @@ html, body {
     .category__box__main01 a {
       text-align: right;
       font-size: 0.9rem;
-      font-weight: 100;
+      font-weight: bold;
       color: #434343;
       margin-bottom: 20px;
       text-transform: uppercase; }
@@ -386,7 +386,7 @@ html, body {
     .category__box__main02 a {
       text-align: right;
       font-size: 0.9rem;
-      font-weight: 100;
+      font-weight: bold;
       color: #434343;
       margin-bottom: 20px;
       text-transform: uppercase; }

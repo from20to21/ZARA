@@ -266,7 +266,7 @@ $(function () {
                 num++;
 
                 $this.animate({
-                    left: -160 * num // move item line as much as item size
+                    left: -165 * num // move item line as much as item size
                 }, 300);
                 $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%" // move indicator as much as 25%
@@ -274,7 +274,7 @@ $(function () {
             }
             else { //if num > max => if you try to move more than maximum length, let item not move.
                 $this.css({
-                    left: -160 * num
+                    left: -165 * num
                 });
                 $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
@@ -285,7 +285,7 @@ $(function () {
             if (num > 0) {
                 num--;
                 $this.animate({
-                    left: -160 * num
+                    left: -165 * num
                 }, 300);
                 $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
@@ -293,7 +293,7 @@ $(function () {
             }
             else { //if num <0 => if you try to move back, let item not move.
                 $this.css({
-                    left: -160 * num
+                    left: -165 * num
                 })
                 $this.parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"

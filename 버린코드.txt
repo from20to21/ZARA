@@ -1,0 +1,118 @@
+    // make scroll possilbe when drag item line... fix need
+
+    // var dX = 0;
+    // $('.collection__itemWrapper').draggable({
+    //     axis: "x",
+    //     scroll: false,
+    //     start: function (e) { firstDrag = e.pageX },
+    //     drag: function (e) {
+    //         dX = Math.abs(firstDrag - e.pageX);
+    //         if (dx > 50) {
+    //             e.preventDefault();
+    //         }
+    //     },
+    //     stop: function (e) {
+    //         console.log(dX)
+    //         if (dX > 100) {
+    //             indicator;
+    //         } else {
+    //             e.preventDefault();
+    //         }
+    //     }
+    // });
+
+
+    // var num = 0;
+
+    // function drag1() { //drag item line
+    //     var bln = true;
+    //     var firstDrag;
+    //     $('.new__itemWrapper').draggable({
+    //         axis: "x", //let drag item only side to side
+    //         start: function (e) {
+    //             console.log('b')
+    //             firstDrag = e.pageX;
+    //         }, // remember where drag start (for checking where to move)
+    //         stop: function (e) {
+    //             if (bln) { num = 0; bln = false }
+    //             indicator(e, firstDrag, $(this))
+    //         } //make num zero (to reset) and act function indicator.
+    //     });
+    // }
+    // function drag2() { //drag item line
+    //     var bln = true;
+    //     var firstDrag;
+    //     $('.collection__itemWrapper').draggable({
+    //         axis: "x",
+    //         start: function (e) {
+    //             firstDrag = e.pageX
+    //         },
+    //         stop: function (e) {
+    //             if (bln) { num = 0; bln = false }
+    //             indicator(e, firstDrag, $(this))
+    //         }
+    //     });
+    // }
+    // function drag3() { //drag item line
+    //     var bln = true;
+    //     var firstDrag;
+    //     $('.bestseller__itemWrapper').draggable({
+    //         axis: "x",
+    //         start: function (e) {
+    //             firstDrag = e.pageX
+    //         },
+    //         stop: function (e) {
+    //             if (bln) { num = 0; bln = false }
+    //             indicator(e, firstDrag, $(this))
+    //         }
+    //     });
+    // }
+    // drag1();
+    // drag2();
+    // drag3();
+
+    // function indicator(e, firstDrag, $this) { // to move item line as much as item size
+    //     var max = $this.find('.item').length - 2; //let item move within maximum length
+    //     var lastDrag = e.pageX; //remember where drag end (for checking where to move)
+
+    //     if (firstDrag > lastDrag) { //if you move to left
+    //         if (num < max) {
+    //             num++;
+
+    //             $this.animate({
+    //                 left: -165 * num // move item line as much as item size
+    //             }, 300);
+    //             $this.parent().next().find('span').css({
+    //                 width: 25 * (num + 1) + "%" // move indicator as much as 25%
+    //             });
+    //         }
+    //         else { //if num > max => if you try to move more than maximum length, let item not move.
+    //             $this.css({
+    //                 left: -165 * num
+    //             });
+    //             $this.parent().next().find('span').css({
+    //                 width: 25 * (num + 1) + "%"
+    //             });
+    //         }
+    //     }
+    //     else { // if you move right
+    //         if (num > 0) {
+    //             num--;
+    //             $this.animate({
+    //                 left: -165 * num
+    //             }, 300);
+    //             $this.parent().next().find('span').css({
+    //                 width: 25 * (num + 1) + "%"
+    //             });
+    //         }
+    //         else { //if num <0 => if you try to move back, let item not move.
+    //             $this.css({
+    //                 left: -165 * num
+    //             })
+    //             $this.parent().next().find('span').css({
+    //                 width: 25 * (num + 1) + "%"
+    //             });
+    //         }
+    //     }
+
+    // }

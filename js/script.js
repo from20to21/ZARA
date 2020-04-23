@@ -362,8 +362,8 @@ $(function () {
             }
         }
 
-        if (Math.abs(startY - endY) > 50) {
-            window.scrollY = currentY;
+        if (Math.abs(startY - endY) < 100) {
+            $(window).scrollTop(currentY);
         }
     }
 

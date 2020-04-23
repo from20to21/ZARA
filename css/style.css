@@ -352,7 +352,7 @@ button.heart {
   .new__image {
     margin-top: 70px;
     width: 70%;
-    height: 60vh;
+    height: 400px;
     background: url("../img/background/bg_002.jpg") no-repeat center/cover;
     border-top: 5px solid #333;
     position: relative; }
@@ -474,7 +474,7 @@ button.heart {
     margin-bottom: 50px;
     margin-left: 30%;
     width: 70%;
-    height: 60vh;
+    height: 500px;
     background: url("../img/background/bg_003.jpg") no-repeat center/cover;
     border-bottom: 5px solid #333;
     position: relative; }
@@ -594,7 +594,7 @@ button.heart {
   .bestseller__image {
     margin-top: 50px;
     width: 70%;
-    height: 60vh;
+    height: 500px;
     background: url("../img/background/bg_004.jpg") no-repeat center/cover;
     border-top: 5px solid #333;
     position: relative; }

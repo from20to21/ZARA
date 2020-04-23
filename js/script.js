@@ -246,7 +246,7 @@ $(function () {
             }
         }
         console.log(Math.abs(startY - endY));
-        if (Math.abs(startY - endY) < 50) {
+        if (startY - endY < 50) {
             $(window).scrollTop(currentY);
         }
     }

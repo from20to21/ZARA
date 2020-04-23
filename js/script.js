@@ -307,7 +307,7 @@ $(function () {
 
     // }
 
-    var startX, endX;
+    var startX, startY, endX, endY, currentY;
     var num = 0;
 
     $('.new__itemWrapper').on('touchstart', touchStart);
@@ -315,10 +315,14 @@ $(function () {
 
     function touchStart(e) {
         startX = e.originalEvent.changedTouches[0].screenX;
+        startY = e.originalEvent.changedTouches[0].screenY;
+        currentY = window.scrollY;
     }
     function touchEnd(e) {
         var max = $(this).find('.item').length - 2; //let item move within maximum length
         endX = e.originalEvent.changedTouches[0].screenX;
+        endY = e.originalEvent.changedTouches[0].screenY;
+
         if (startX > endX && Math.abs(startX - endX) > 50) { //if you move to left
             if (num < max) {
                 num++;
@@ -356,6 +360,10 @@ $(function () {
                     width: 25 * (num + 1) + "%"
                 });
             }
+        }
+
+        if (Math.abs(startY - endY) > 50) {
+            window.scrollY = currentY;
         }
     }
 

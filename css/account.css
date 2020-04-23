@@ -301,9 +301,13 @@ header {
 .sign__wrapper {
   position: absolute;
   left: 50%;
-  top: 55%;
+  top: 45%;
   transform: translate(-50%, -50%); }
+  .sign__wrapper h1 {
+    width: 70%;
+    margin: 0 auto; }
 .sign__email {
+  margin-top: 30px;
   position: relative;
   border-bottom: 1px solid #aaa; }
   .sign__email p {
@@ -381,7 +385,7 @@ header {
   display: block;
   width: 80%;
   margin: 0 auto;
-  margin-top: 85px;
+  margin-top: 35px;
   height: 40px;
   text-transform: uppercase;
   border-radius: 20px;
@@ -399,7 +403,7 @@ header {
 .sign__signUp {
   width: 80%;
   margin: 0 auto;
-  margin-top: 75px;
+  margin-top: 35px;
   display: flex; }
   .sign__signUp p {
     font-size: 0.8rem;

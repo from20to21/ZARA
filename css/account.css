@@ -307,7 +307,7 @@ header {
     width: 70%;
     margin: 0 auto; }
 .sign__email {
-  margin-top: 30px;
+  margin-top: 40px;
   position: relative;
   border-bottom: 1px solid #aaa; }
   .sign__email p {
@@ -385,7 +385,7 @@ header {
   display: block;
   width: 80%;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 45px;
   height: 40px;
   text-transform: uppercase;
   border-radius: 20px;
@@ -403,7 +403,7 @@ header {
 .sign__signUp {
   width: 80%;
   margin: 0 auto;
-  margin-top: 35px;
+  margin-top: 45px;
   display: flex; }
   .sign__signUp p {
     font-size: 0.8rem;

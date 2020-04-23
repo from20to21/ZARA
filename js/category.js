@@ -24,7 +24,7 @@ $(function () {
             display: "block"
         });
         $(this).next().next().css({
-            display: "block"
+            display: "flex"
         });
         $('nav').animate({
             bottom: "-45px"

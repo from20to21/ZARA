@@ -110,34 +110,44 @@ html, body {
     height: 45%;
     display: none;
     background: #fff;
-    & ul{
-        width: 95%;
-        margin: 0 auto;
-        padding-top: 7%;
-        &:after{
-            content: '';
-            clear: both;
+    &__promotion{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        & a{
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #434343;
+            margin-bottom: 20px;
         }
-        & li{
-            float: left; 
-            width:33.33333%;
-            height: 60px;
-            & a{
-                display: block;
-                width: 90%;
-                margin: 0 auto;
-                height: 78%;
-                background: #fff;
-                color: #434343;
-                font-size: 0.8rem;
-                font-weight: 400;
-                text-transform: uppercase;
-                letter-spacing: 0.05rem;
-                @include item_center;
-                border: 1px solid #eee;
-                border-radius: 10px;
-                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1);
-            }
+    }
+    &__main01{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        & a{
+            text-align: right;
+            font-size: 0.9rem;
+            font-weight: 100;
+            color: #434343;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+    }
+    &__main02{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        padding-right: 20px;
+        & a{
+            text-align: right;
+            font-size: 0.9rem;
+            font-weight: 100;
+            color: #434343;
+            margin-bottom: 20px;
+            text-transform: uppercase;
         }
     }
     &.kids ul li a{

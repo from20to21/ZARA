@@ -11,10 +11,13 @@ $(function () {
     var bln = true;
 
     $('.new__itemWrapper').on('touchstart', touchStart);
+    $('.new__itemWrapper').on('touchmove', touchMove);
     $('.new__itemWrapper').on('touchend', touchEnd);
     $('.collection__itemWrapper').on('touchstart', touchStart);
+    $('.collection__itemWrapper').on('touchmove', touchMove);
     $('.collection__itemWrapper').on('touchend', touchEnd);
     $('.bestseller__itemWrapper').on('touchstart', touchStart);
+    $('.bestseller__itemWrapper').on('touchmove', touchMove);
     $('.bestseller__itemWrapper').on('touchend', touchEnd);
 
     $(window).scroll(parallax); //parallax effect
@@ -65,7 +68,6 @@ $(function () {
     function detail() {
         location.href = 'sub/detail.html'
     }
-
     function sale() { //for css change in .sale span
         $('.sale').find('span').css({
             display: "inline-block",
@@ -77,14 +79,12 @@ $(function () {
         });
     }
     sale();
-
     function cat_change() { //for gender/category change in search menus
         bln = true;
         var target = $(this).text();
         $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
         $(this).parent().find('p').fadeOut(500); //list close
     }
-
     function open() { //for open gender/category tab in search menu
         if (bln) {
             bln = false; // to open it when it is not open
@@ -123,7 +123,6 @@ $(function () {
             })
         }
     }
-
     function search() { //search page open
         $('html').addClass("search"); //page fixed
         $('.wrap').addClass("search"); //page fixed
@@ -201,11 +200,17 @@ $(function () {
         startX = e.originalEvent.changedTouches[0].screenX;
         currentY = window.scrollY;
     }
-    function touchEnd(e) {
+    $(window).on('scroll.scroll', function () {
+        console.log('a')
+    });
+    function touchMove(e) {
+        //e.preventDefault();
+        $(window).off('scroll');
+    }
+    function touchEnd(e) { // num값 공유하는 문제점있음 //overflow auto가 해답!!
         var max = $(this).find('.item').length - 2; //let item move within maximum length
         endX = e.originalEvent.changedTouches[0].screenX;
         endY = window.scrollY;
-
         if (startX > endX && Math.abs(startX - endX) > 50) { //if you move to left
             if (num < max) {
                 num++;
@@ -245,11 +250,11 @@ $(function () {
             }
         }
         $('.new__item__text p').text(startY + ',' + endY);
-
-        console.log(Math.abs(currentY - endY));
-        if (Math.abs(currentY - endY) < 50) {
-            $(window).scrollTop(currentY);
-        }
+        $(window).bind('scroll.scroll');
+        // console.log(Math.abs(currentY - endY));
+        // if (Math.abs(currentY - endY) < 50) {
+        //     $(window).scrollTop(currentY);
+        // }
     }
     function parallax() { // to move image as likely parallax
         firstScroll = window.scrollY;

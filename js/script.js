@@ -8,23 +8,23 @@ $(function () {
         positionNew, positionCollection,
         positionBest, bln = true;
 
-    $(window).scroll(parallax);
+    $(window).scroll(parallax); //parallax effect
 
-    $('.category button').click(select);
+    $('.category button').click(select); //category change
 
-    $('.heart').click(like);
+    $('.heart').click(like); //heart button click event (color change)
 
-    $('.header__search').click(search);
+    $('.header__search').click(search); // search menu open
 
-    $('.search__close').click(close);
+    $('.search__close').click(close); // search menu close
 
-    $('.search__gender button').click(open);
-    $('.search__category button').click(open);
+    $('.search__gender button').click(open); // search-gender tab open
+    $('.search__category button').click(open); // search-category tab open
 
-    $('.search__gender p').click(cat_change);
-    $('.search__category p').click(cat_change);
+    $('.search__gender p').click(cat_change); // search-gender change
+    $('.search__category p').click(cat_change);  // search-category change
 
-    $('.new__wrapper').click(function (e) {
+    $('.new__wrapper').click(function (e) { // new - click event
         e.stopPropagation();
         e.stopImmediatePropagation();
         if ($(e.target).hasClass("new__itemBox")) {
@@ -34,7 +34,7 @@ $(function () {
             like();
         }
     });
-    $('.col__wrapper').click(function (e) {
+    $('.col__wrapper').click(function (e) { // collection - click event
         e.stopPropagation();
         if ($(e.target).hasClass("col__itemBox")) {
             detail();
@@ -43,7 +43,7 @@ $(function () {
             like();
         }
     });
-    $('.best__wrapper').click(function (e) {
+    $('.best__wrapper').click(function (e) { // bestseller - click event
         e.stopPropagation();
         if ($(e.target).hasClass("best__itemBox")) {
             detail();
@@ -257,7 +257,9 @@ $(function () {
             }
         });
     }
-
+    drag1();
+    drag2();
+    drag3();
 
     function indicator(e, firstDrag, $this) { // to move item line as much as item size
         var max = $this.find('.item').length - 2; //let item move within maximum length
@@ -304,10 +306,6 @@ $(function () {
         }
 
     }
-
-    drag1();
-    drag2();
-    drag3();
 
     function parallax() { // to move image as likely parallax
         firstScroll = window.scrollY;
@@ -404,8 +402,8 @@ $(function () {
     }
 
     function select() { // move red line under the categroy tab
-        $('.category button strong').removeClass('category__selected');
-        $(this).find('strong').addClass('category__selected');
+        $('.category button strong').removeClass('selected');
+        $(this).find('strong').addClass('selected');
         var categoryWidth = $(this).find('strong').innerWidth();
         var categoryOffset = $(this).find('strong').offset();
 
@@ -413,6 +411,8 @@ $(function () {
             width: categoryWidth,
             left: categoryOffset.left
         });
+        // if($(this))
+        console.log($(this).attr('attr'));
     }
     function like() { //like button acting
         $(this).find('img').toggleClass('pink');

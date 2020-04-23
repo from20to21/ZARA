@@ -18,7 +18,7 @@
 .visual{
     height: 581px;
     position: relative;
-    @include bg_center('../img/bg_001.jpg');
+    @include bg_center('../img/background/bg_001.jpg');
     @include item_center;
     flex-direction: column;
     &__white{
@@ -59,7 +59,7 @@
     & button:last-of-type{
         width: 35%;
     }
-    &__selected{
+    &.selected{
         color: #333;
         font-weight: 550;
         position: relative;
@@ -112,7 +112,7 @@ button.heart{
     margin-top: 70px;
     width: 70%;
     height: 60vh;
-    @include bg_center('../img/bg_002.jpg');
+    @include bg_center('../img/background/bg_002.jpg');
     border-top: 5px solid #333;
     position: relative;
         &:after{
@@ -229,7 +229,7 @@ button.heart{
     margin-left: 30%;
     width: 70%;
     height: 60vh;
-    @include bg_center('../img/bg_003.jpg');
+    @include bg_center('../img/background/bg_003.jpg');
     border-bottom: 5px solid #333;
     position: relative;
         &:after{
@@ -347,7 +347,7 @@ button.heart{
     margin-top: 50px;
     width: 70%;
     height: 60vh;
-    @include bg_center('../img/bg_004.jpg');
+    @include bg_center('../img/background/bg_004.jpg');
     border-top: 5px solid #333;
     position: relative;
         &:after{
@@ -477,7 +477,7 @@ button.heart{
     margin-top: 100px;
     width: 100%;
     height: 400px;
-    @include bg_center('../img/bg_005.jpg');
+    @include bg_center('../img/background/bg_005.jpg');
     position: relative;
     & h3{
         position: absolute;

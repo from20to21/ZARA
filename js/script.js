@@ -199,13 +199,12 @@ $(function () {
 
     function touchStart(e) {
         startX = e.originalEvent.changedTouches[0].screenX;
-        startY = e.originalEvent.changedTouches[0].screenY;
         currentY = window.scrollY;
     }
     function touchEnd(e) {
         var max = $(this).find('.item').length - 2; //let item move within maximum length
         endX = e.originalEvent.changedTouches[0].screenX;
-        endY = e.originalEvent.changedTouches[0].screenY;
+        endY = window.scrollY;
 
         if (startX > endX && Math.abs(startX - endX) > 50) { //if you move to left
             if (num < max) {
@@ -247,8 +246,8 @@ $(function () {
         }
         $('.new__item__text p').text(startY + ',' + endY);
 
-        console.log(Math.abs(startY - endY));
-        if (Math.abs(startY - endY) < 10) {
+        console.log(Math.abs(currentY - endY));
+        if (Math.abs(currentY - endY) < 50) {
             $(window).scrollTop(currentY);
         }
     }

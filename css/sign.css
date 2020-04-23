@@ -283,31 +283,17 @@ header {
   width: 90%;
   margin: 0 auto;
   padding-top: 70px; }
-.sign__pic {
-  width: 100px;
-  height: 100px;
-  margin: 0 auto;
-  border-radius: 100%;
-  background: #434343 url(../img/user.png) no-repeat center 200%/cover;
-  position: relative;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1), 0 3px 5px 0 rgba(0, 0, 0, 0.1); }
-  .sign__pic input {
-    display: none; }
-  .sign__pic__add {
-    width: 35px;
-    height: 35px;
-    border-radius: 100%;
-    background: #434343 url(../img/plus.png) no-repeat center/50%;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    border: 4px solid #fff; }
+  .sign__wrapper h1 {
+    width: 40%;
+    margin: 0 auto; }
 .sign__list {
   width: 80%;
   margin: 0 auto;
   margin-top: 20px;
   position: relative;
   border-bottom: 1px solid #aaa; }
+  .sign__list__wrapper {
+    margin-top: 50px; }
   .sign__list p {
     font-size: 0.7rem;
     font-weight: 100;

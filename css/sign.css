@@ -280,10 +280,9 @@ header {
     text-transform: uppercase; }
 
 .sign__wrapper {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%); }
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 70px; }
 .sign__pic {
   width: 100px;
   height: 100px;
@@ -304,6 +303,8 @@ header {
     bottom: 0;
     border: 4px solid #fff; }
 .sign__list {
+  width: 80%;
+  margin: 0 auto;
   margin-top: 20px;
   position: relative;
   border-bottom: 1px solid #aaa; }
@@ -316,7 +317,7 @@ header {
     letter-spacing: 0.05rem;
     text-transform: uppercase; }
   .sign__list input {
-    width: 300px;
+    width: 100%;
     height: 30px;
     border: none;
     outline-style: none;

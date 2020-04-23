@@ -192,10 +192,10 @@ $(function () {
 
     $('.new__itemWrapper').on('touchstart', touchStart);
     $('.new__itemWrapper').on('touchend', touchEnd);
-    $('.col__itemWrapper').on('touchstart', touchStart);
-    $('.col__itemWrapper').on('touchend', touchEnd);
-    $('.best__itemWrapper').on('touchstart', touchStart);
-    $('.best__itemWrapper').on('touchend', touchEnd);
+    $('.collection__itemWrapper').on('touchstart', touchStart);
+    $('.collection__itemWrapper').on('touchend', touchEnd);
+    $('.bestseller__itemWrapper').on('touchstart', touchStart);
+    $('.bestseller__itemWrapper').on('touchend', touchEnd);
 
     function touchStart(e) {
         startX = e.originalEvent.changedTouches[0].screenX;

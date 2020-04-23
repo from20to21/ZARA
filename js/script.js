@@ -6,7 +6,16 @@ $(function () {
     var firstScroll, lastScroll,
         positionVisual, positionText,
         positionNew, positionCollection,
-        positionBest, bln = true;
+        positionBest, startX, startY, endX, endY, currentY;
+    var num = 0;
+    var bln = true;
+
+    $('.new__itemWrapper').on('touchstart', touchStart);
+    $('.new__itemWrapper').on('touchend', touchEnd);
+    $('.collection__itemWrapper').on('touchstart', touchStart);
+    $('.collection__itemWrapper').on('touchend', touchEnd);
+    $('.bestseller__itemWrapper').on('touchstart', touchStart);
+    $('.bestseller__itemWrapper').on('touchend', touchEnd);
 
     $(window).scroll(parallax); //parallax effect
 
@@ -187,15 +196,6 @@ $(function () {
             opacity: 0
         });
     }
-    var startX, startY, endX, endY, currentY;
-    var num = 0;
-
-    $('.new__itemWrapper').on('touchstart', touchStart);
-    $('.new__itemWrapper').on('touchend', touchEnd);
-    $('.collection__itemWrapper').on('touchstart', touchStart);
-    $('.collection__itemWrapper').on('touchend', touchEnd);
-    $('.bestseller__itemWrapper').on('touchstart', touchStart);
-    $('.bestseller__itemWrapper').on('touchend', touchEnd);
 
     function touchStart(e) {
         startX = e.originalEvent.changedTouches[0].screenX;
@@ -251,8 +251,6 @@ $(function () {
             $(window).scrollTop(currentY);
         }
     }
-
-
     function parallax() { // to move image as likely parallax
         firstScroll = window.scrollY;
         positionVisual = firstScroll * 0.5;
@@ -346,7 +344,6 @@ $(function () {
         }
         lastScroll = firstScroll;
     }
-
     function select() { // move red line under the categroy tab
         $('.category button strong').removeClass('selected');
         $(this).find('strong').addClass('selected');

@@ -187,35 +187,38 @@ $(function () {
     }
 
 
-
+    var lastscroll;
     // $('.new__wrapper').on('scroll', function (e) {
     //     e.preventDefault();
     // });
     $('.new__wrapper').on('touchstart', newS);
-    $('.new__wrapper').on('touchmove', newM);
-    $('.new__wrapper').on('touchend', newE);
     function newS() {
         startX = $('.new__wrapper').scrollLeft();
     }
-    function newM() {
-        var currentLeft = $('.new__wrapper').scrollLeft();
+    function newRight() {
         $('.new__wrapper').scrollLeft(
-            currentLeft
+            startX + 165
         );
     }
-    function newE() {
-        endX = $('.new__wrapper').scrollLeft();
-        if (startX < endX) {
-            $('.new__wrapper').scrollLeft(
-                startX + 165  // move item line as much as item size
-            );
+    function newLeft() {
+        $('.new__wrapper').scrollLeft(
+            startX - 165
+        );
+    }
+    $('.new__wrapper').on('scroll', function (e) {
+        e.preventDefault();
+        var currentscroll = $('.new__wrapper').scrollLeft();
+        $('.new__wrapper').scrollLeft(
+            currentscroll
+        );
+        if (lastscroll < currentscroll) {
+            $('.new__wrapper').on('touchend', newRight);
         }
         else {
-            $('.new__wrapper').scrollLeft(
-                startX - 165
-            );
+            $('.new__wrapper').on('touchend', newLeft);
         }
-    }
+        lastscroll = currentscroll;
+    })
 
     // function touchEnd2() {
     //     var max = $(this).find('.item').length - 2; //let item move within maximum length

@@ -210,7 +210,7 @@ $(function () {
         var currentscroll = $('.new__wrapper').scrollLeft();
         if (b) {
             b = false;
-            if (lastscroll < currentscroll) {
+            if (lastscroll <= currentscroll) {
                 c += 165;
                 //$('.new__wrapper').on('touchend', newRight);
             }

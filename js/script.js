@@ -187,7 +187,7 @@ $(function () {
     }
 
 
-    var lastscroll;
+    var lastscroll = 0;
     // $('.new__wrapper').on('scroll', function (e) {
     //     e.preventDefault();
     // });
@@ -196,27 +196,35 @@ $(function () {
         startX = $('.new__wrapper').scrollLeft();
     }
     function newRight() {
-        $('.new__wrapper').scrollLeft(
-            startX + 165
-        );
+        $('.new__wrapper').scrollLeft(c);
+
     }
     function newLeft() {
         $('.new__wrapper').scrollLeft(
             startX - 165
         );
     }
+    var b = true, c = 0;
     $('.new__wrapper').on('scroll', function (e) {
-        e.preventDefault();
+        //e.preventDefault();
         var currentscroll = $('.new__wrapper').scrollLeft();
-        $('.new__wrapper').scrollLeft(
-            currentscroll
-        );
-        if (lastscroll < currentscroll) {
-            $('.new__wrapper').on('touchend', newRight);
+        if (b) {
+            b = false;
+            if (lastscroll < currentscroll) {
+                c += 165;
+                //$('.new__wrapper').on('touchend', newRight);
+            }
+            else {
+                c -= 165;
+
+                //$('.new__wrapper').on('touchend', newLeft);
+            }
+
+            setTimeout(function () { b = true; }, 1000);
         }
-        else {
-            $('.new__wrapper').on('touchend', newLeft);
-        }
+        //newRight();
+        $(this).scrollLeft(c);
+        console.log(c)
         lastscroll = currentscroll;
     })
 

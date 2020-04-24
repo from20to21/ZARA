@@ -11,11 +11,11 @@ $(function () {
     var bln = true;
 
     $('.new__itemWrapper').on('touchstart', touchStart);
-    $('.new__itemWrapper').on('touchend', touchEnd);
+    // $('.new__itemWrapper').on('touchend', touchEnd);
     $('.collection__itemWrapper').on('touchstart', touchStart);
-    $('.collection__itemWrapper').on('touchend', touchEnd);
+    // $('.collection__itemWrapper').on('touchend', touchEnd);
     $('.bestseller__itemWrapper').on('touchstart', touchStart);
-    $('.bestseller__itemWrapper').on('touchend', touchEnd);
+    // $('.bestseller__itemWrapper').on('touchend', touchEnd);
 
     $(window).scroll(parallax); //parallax effect
 
@@ -193,11 +193,21 @@ $(function () {
         });
     }
 
+
+    $(".new__wrapper").on('scroll', function (e) {
+        e.preventDefault();
+        $(".new__wrapper").scrollLeft(
+            165  // move item line as much as item size
+        );
+        console.log($(this).scrollLeft());
+    })
     function touchStart(e) {
         startX = e.originalEvent.changedTouches[0].screenX;
         currentY = window.scrollY;
-        startLeft = $(this).parent().scrollLeft();
-        console.log($(this).parent().scrollLeft());
+        //startLeft = $(this).parent().scrollLeft();
+
+
+
     }
     function touchEnd(e) { // num값 공유하는 문제점있음
         var max = $(this).find('.item').length - 2; //let item move within maximum length

@@ -220,7 +220,7 @@ $(function () {
                 //$('.new__wrapper').on('touchend', newLeft);
             }
 
-            setTimeout(function () { b = true; }, 1000);
+            setTimeout(function () { b = true; }, 500);
         }
         //newRight();
         $(this).scrollLeft(c);

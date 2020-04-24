@@ -283,7 +283,10 @@ button.heart{
         height: 220px;
         margin: 0 auto;
         position: relative;
-        overflow: hidden;
+        overflow: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
     &__itemWrapper{
         display: flex;

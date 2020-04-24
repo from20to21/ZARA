@@ -191,42 +191,42 @@ $(function () {
     // $('.new__wrapper').on('scroll', function (e) {
     //     e.preventDefault();
     // });
-    $('.new__wrapper').on('touchstart', newS);
-    function newS() {
-        startX = $('.new__wrapper').scrollLeft();
-    }
-    function newRight() {
-        $('.new__wrapper').scrollLeft(c);
+    // $('.new__wrapper').on('touchstart', newS);
+    // function newS() {
+    //     startX = $('.new__wrapper').scrollLeft();
+    // }
+    // function newRight() {
+    //     $('.new__wrapper').scrollLeft(c);
 
-    }
-    function newLeft() {
-        $('.new__wrapper').scrollLeft(
-            startX - 165
-        );
-    }
-    var b = true, c = 0;
-    $('.new__wrapper').on('scroll', function (e) {
-        //e.preventDefault();
-        var currentscroll = $('.new__wrapper').scrollLeft();
-        if (b) {
-            b = false;
-            if (lastscroll <= currentscroll) {
-                c += 165;
-                //$('.new__wrapper').on('touchend', newRight);
-            }
-            else {
-                c -= 165;
+    // }
+    // function newLeft() {
+    //     $('.new__wrapper').scrollLeft(
+    //         startX - 165
+    //     );
+    // }
+    // var b = true, c = 0;
+    // $('.new__wrapper').on('scroll', function (e) {
+    //     //e.preventDefault();
+    //     var currentscroll = $('.new__wrapper').scrollLeft();
+    //     if (b) {
+    //         b = false;
+    //         if (lastscroll <= currentscroll) {
+    //             c += 165;
+    //             //$('.new__wrapper').on('touchend', newRight);
+    //         }
+    //         else {
+    //             c -= 165;
 
-                //$('.new__wrapper').on('touchend', newLeft);
-            }
+    //             //$('.new__wrapper').on('touchend', newLeft);
+    //         }
 
-            setTimeout(function () { b = true; }, 500);
-        }
-        //newRight();
-        $(this).scrollLeft(c);
-        console.log(c)
-        lastscroll = currentscroll;
-    })
+    //         setTimeout(function () { b = true; }, 500);
+    //     }
+    //     //newRight();
+    //     $(this).scrollLeft(c);
+    //     console.log(c)
+    //     lastscroll = currentscroll;
+    // })
 
     // function touchEnd2() {
     //     var max = $(this).find('.item').length - 2; //let item move within maximum length

@@ -524,7 +524,9 @@ button.heart {
     height: 220px;
     margin: 0 auto;
     position: relative;
-    overflow: hidden; }
+    overflow: auto; }
+    .collection__wrapper::-webkit-scrollbar {
+      display: none; }
   .collection__itemWrapper {
     display: flex;
     position: absolute;

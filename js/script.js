@@ -5,19 +5,19 @@ $(function () {
 
     var firstScroll, lastScroll,
         positionVisual, positionText,
-        positionNew, positionCollection,
-        positionBest, startX, startY, endX, endY, currentY;
+        positionNew, positionCollection, positionBest,
+        startX, startY, endX, endY, currentY;
     var num = 0;
     var bln = true;
 
     $('.new__itemWrapper').on('touchstart', touchStart);
-    $('.new__itemWrapper').on('touchmove', touchMove);
+    // $('.new__itemWrapper').on('touchmove', touchMove);
     $('.new__itemWrapper').on('touchend', touchEnd);
     $('.collection__itemWrapper').on('touchstart', touchStart);
-    $('.collection__itemWrapper').on('touchmove', touchMove);
+    // $('.collection__itemWrapper').on('touchmove', touchMove);
     $('.collection__itemWrapper').on('touchend', touchEnd);
     $('.bestseller__itemWrapper').on('touchstart', touchStart);
-    $('.bestseller__itemWrapper').on('touchmove', touchMove);
+    // $('.bestseller__itemWrapper').on('touchmove', touchMove);
     $('.bestseller__itemWrapper').on('touchend', touchEnd);
 
     $(window).scroll(parallax); //parallax effect
@@ -200,14 +200,15 @@ $(function () {
         startX = e.originalEvent.changedTouches[0].screenX;
         currentY = window.scrollY;
     }
-    $(window).on('scroll.scroll', function () {
-        console.log('a')
-    });
-    function touchMove(e) {
-        //e.preventDefault();
-        $(window).off('scroll');
-    }
-    function touchEnd(e) { // num값 공유하는 문제점있음 //overflow auto가 해답!!
+    // $(window).on('scroll.scroll', function () {
+    //     console.log('a')
+    // });
+    // function touchMove(e) {
+    //     //e.preventDefault();
+    //     $(window).off('scroll');
+    // }
+
+    function touchEnd(e) { // num값 공유하는 문제점있음
         var max = $(this).find('.item').length - 2; //let item move within maximum length
         endX = e.originalEvent.changedTouches[0].screenX;
         endY = window.scrollY;
@@ -249,6 +250,7 @@ $(function () {
                 });
             }
         }
+
         $('.new__item__text p').text(startY + ',' + endY);
         $(window).bind('scroll.scroll');
         // console.log(Math.abs(currentY - endY));

@@ -4,18 +4,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-} //자식들 가운데정렬
-
+}
 @mixin button_reset {
     border: none;
     outline-style: none;
     cursor: pointer;
     background: none;
-} //버튼모양 초기화
+}
 
 @mixin bg_center($arg1){
     background: url($arg1) no-repeat center / cover;
-} //배경이미지 가운데정렬
+}
 
 .visual{
     height: 581px;
@@ -164,7 +163,10 @@ button.heart{
         height: 220px;
         margin: 0 auto;
         position: relative;
-        overflow: hidden;
+        overflow: auto;
+        &::-webkit-scrollbar{
+            display: none;
+        }
     }
     &__itemWrapper{
         display: flex;

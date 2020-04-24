@@ -399,7 +399,8 @@ button.heart {
     height: 220px;
     margin: 0 auto;
     position: relative;
-    overflow: auto; }
+    overflow: auto;
+    transition: .5s; }
     .new__wrapper::-webkit-scrollbar {
       display: none; }
   .new__itemWrapper {

@@ -6,18 +6,15 @@ $(function () {
     var firstScroll, lastScroll,
         positionVisual, positionText,
         positionNew, positionCollection, positionBest,
-        startX, startY, endX, endY, currentY;
+        startX, endX, startLeft;
     var num = 0;
     var bln = true;
 
     $('.new__itemWrapper').on('touchstart', touchStart);
-    // $('.new__itemWrapper').on('touchmove', touchMove);
     $('.new__itemWrapper').on('touchend', touchEnd);
     $('.collection__itemWrapper').on('touchstart', touchStart);
-    // $('.collection__itemWrapper').on('touchmove', touchMove);
     $('.collection__itemWrapper').on('touchend', touchEnd);
     $('.bestseller__itemWrapper').on('touchstart', touchStart);
-    // $('.bestseller__itemWrapper').on('touchmove', touchMove);
     $('.bestseller__itemWrapper').on('touchend', touchEnd);
 
     $(window).scroll(parallax); //parallax effect
@@ -199,65 +196,53 @@ $(function () {
     function touchStart(e) {
         startX = e.originalEvent.changedTouches[0].screenX;
         currentY = window.scrollY;
+        startLeft = $(this).parent().scrollLeft();
+        console.log($(this).parent().scrollLeft());
     }
-    // $(window).on('scroll.scroll', function () {
-    //     console.log('a')
-    // });
-    // function touchMove(e) {
-    //     //e.preventDefault();
-    //     $(window).off('scroll');
-    // }
-
     function touchEnd(e) { // num값 공유하는 문제점있음
         var max = $(this).find('.item').length - 2; //let item move within maximum length
         endX = e.originalEvent.changedTouches[0].screenX;
-        endY = window.scrollY;
-        if (startX > endX && Math.abs(startX - endX) > 50) { //if you move to left
+        console.log($(this).parent().scrollLeft());
+        if (startX > endX) { //if you move to left
             if (num < max) {
                 num++;
-                $(this).animate({
-                    left: -165 * num // move item line as much as item size
-                }, 300);
+                $(this).parent().scrollLeft(
+                    startLeft + 165  // move item line as much as item size
+                );
                 $(this).parent().next().find('span').css({
                     width: 25 * (num + 1) + "%" // move indicator as much as 25%
                 });
             }
             else { //if num > max => if you try to move more than maximum length, let item not move.
-                $(this).css({
-                    left: -165 * num
-                });
+                $(this).parent().scrollLeft(
+                    startLeft
+                );
                 $(this).parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
                 });
             }
         }
-        else if (startX < endX && Math.abs(startX - endX) > 50) { // if you move right
+        else if (startX < endX) { // if you move right
             if (num > 0) {
-                num--;
-                $(this).animate({
-                    left: -165 * num
-                }, 300);
+                $(this).parent().scrollLeft(
+                    startLeft - 165
+                );
                 $(this).parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
                 });
+                num--;
             }
             else { //if num <0 => if you try to move back, let item not move.
-                $(this).css({
-                    left: -165 * num
+                $(this).parent().scrollLeft({
+                    startLeft
                 })
                 $(this).parent().next().find('span').css({
                     width: 25 * (num + 1) + "%"
                 });
             }
         }
-
-        $('.new__item__text p').text(startY + ',' + endY);
-        $(window).bind('scroll.scroll');
-        // console.log(Math.abs(currentY - endY));
-        // if (Math.abs(currentY - endY) < 50) {
-        //     $(window).scrollTop(currentY);
-        // }
     }
+
     function parallax() { // to move image as likely parallax
         firstScroll = window.scrollY;
         positionVisual = firstScroll * 0.5;

@@ -164,6 +164,7 @@ button.heart{
         margin: 0 auto;
         position: relative;
         overflow: auto;
+        transition: .5s;
         &::-webkit-scrollbar{
             display: none;
         }

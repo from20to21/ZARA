@@ -192,9 +192,16 @@ $(function () {
     //     e.preventDefault();
     // });
     $('.new__wrapper').on('touchstart', newS);
+    $('.new__wrapper').on('touchmove', newM);
     $('.new__wrapper').on('touchend', newE);
     function newS() {
         startX = $('.new__wrapper').scrollLeft();
+    }
+    function newM() {
+        var currentLeft = $('.new__wrapper').scrollLeft();
+        $('.new__wrapper').scrollLeft(
+            currentLeft
+        );
     }
     function newE() {
         endX = $('.new__wrapper').scrollLeft();

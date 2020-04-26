@@ -524,7 +524,8 @@ button.heart {
     height: 220px;
     margin: 0 auto;
     position: relative;
-    overflow: auto; }
+    overflow: auto;
+    transition: .5s; }
     .collection__wrapper::-webkit-scrollbar {
       display: none; }
   .collection__itemWrapper {
@@ -646,7 +647,10 @@ button.heart {
     height: 220px;
     margin: 0 auto;
     position: relative;
-    overflow: hidden; }
+    overflow: auto;
+    transition: .5s; }
+    .bestseller__wrapper::-webkit-scrollbar {
+      display: none; }
   .bestseller__itemWrapper {
     display: flex;
     position: absolute;

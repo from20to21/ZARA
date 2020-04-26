@@ -23,9 +23,6 @@ $(function () {
                 visibility: "visible"
             }, 300);
             $(this).next().css({
-                display: "block"
-            });
-            $(this).next().next().css({
                 display: "flex"
             });
             $('nav').animate({
@@ -47,9 +44,6 @@ $(function () {
                 opacity: "0",
                 visibility: "hidden"
             }, 300);
-            $('.category__wrapper strong').css({
-                display: "none"
-            });
             $('.category__box').css({
                 display: "none"
             });

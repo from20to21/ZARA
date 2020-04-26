@@ -41,18 +41,6 @@ html, body {
     position:relative;
     font-size:0;
     height:100vh;
-    & strong{
-        display: block;
-        width: 100%;
-        height: 5%;
-        margin: 0 auto;
-        margin-top: 5%;
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 440;
-        letter-spacing: 0.1rem;
-        display: none;
-    }
 }
 .category{
     width: 95%;
@@ -110,6 +98,7 @@ html, body {
     height: 45%;
     display: none;
     background: #fff;
+    margin-top: 40px;
     &__promotion{
         width: 40%;
         display: flex;

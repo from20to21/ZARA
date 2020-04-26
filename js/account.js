@@ -1,10 +1,14 @@
 $(function () {
 
-    $('.sign__check button').click(check);
+    $('header').load("header.html");
+    $('nav').load("nav.html");
 
-    function check() {
-        $(this).toggleClass("checked");
-        $(this).find('img').toggleClass("checked");
-    }
+    setTimeout(function () {
+        $('.sign__check button').click(check);
 
+        function check() {
+            $(this).toggleClass("checked");
+            $(this).find('img').toggleClass("checked");
+        }
+    });
 });

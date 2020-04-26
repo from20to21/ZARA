@@ -1,10 +1,10 @@
 $(function () {
 
-    $('header').load("header.html");
-    $('nav').load("nav.html");
+    $('header').load("header.html"); // insert "header"
+    $('nav').load("nav.html"); // insert "nav"
 
     setTimeout(function () {
-        $('.sign__check button').click(check);
+        $('.sign__check button').click(check); // remeber check
 
         function check() {
             $(this).toggleClass("checked");

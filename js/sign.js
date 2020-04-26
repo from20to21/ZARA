@@ -1,6 +1,7 @@
 $(function () {
-    $('header').load("header.html");
-    $('nav').load("nav.html");
+    //insert html
+    $('header').load("header.html"); // insert "header"
+    $('nav').load("nav.html"); // insert "nav""
     setTimeout(function () {
 
     });

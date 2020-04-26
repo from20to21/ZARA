@@ -16,103 +16,13 @@ $(function () {
 
     $('.heart').click(like); //heart button click event (color change)
 
+    // search menu
     $('.header__search').click(search); // search menu open
-
     $('.search__close').click(close); // search menu close
-
     $('.search__gender button').click(open); // search-gender tab open
     $('.search__category button').click(open); // search-category tab open
-
     $('.search__gender p').click(cat_change); // search-gender change
     $('.search__category p').click(cat_change);  // search-category change
-
-    $('.new__wrapper').click(function (e) { // new - click event
-        e.stopPropagation();
-        e.stopImmediatePropagation();
-        if ($(e.target).hasClass("new__itemBox")) {
-            detail();
-        }
-        if ($(e.target).hasClass("heart")) {
-            like();
-        }
-    });
-    $('.col__wrapper').click(function (e) { // collection - click event
-        e.stopPropagation();
-        if ($(e.target).hasClass("col__itemBox")) {
-            detail();
-        }
-        if ($(e.target).hasClass("heart")) {
-            like();
-        }
-    });
-    $('.best__wrapper').click(function (e) { // bestseller - click event
-        e.stopPropagation();
-        if ($(e.target).hasClass("best__itemBox")) {
-            detail();
-        }
-        if ($(e.target).hasClass("heart")) {
-            like();
-        }
-    });
-
-    function detail() {
-        location.href = 'sub/detail.html'
-    }
-    function sale() { //for css change in .sale span
-        $('.sale').find('span').css({
-            display: "inline-block",
-            marginLeft: "5px",
-            color: "red",
-            fontSize: "0.8rem",
-            fontWeight: "300",
-            textDecoration: "none"
-        });
-    }
-    sale();
-    function cat_change() { //for gender/category change in search menus
-        bln = true;
-        var target = $(this).text();
-        $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
-        $(this).parent().find('p').fadeOut(500); //list close
-    }
-    function open() { //for open gender/category tab in search menu
-        if (bln) {
-            bln = false; // to open it when it is not open
-            $(this).parent().find('p').css({ //list open
-                display: "flex",
-                transform: "translate(-5%, 0)"
-            }, 500);
-            $(this).parent().find('p').animate({ //list open2
-                opacity: 1
-            });
-            $(this).find('img').css({ //list open3 (missing image problem) **fix need
-                transform: "rotate(180deg)"
-            })
-        }
-        else {
-            bln = true;  // to open it when it is not open
-            $('.search__gender').find('p').css({
-                display: "none",
-                transform: "translate(-5%, -50px)"
-            }, 500);
-            $('.search__gender').find('p').animate({
-                opacity: 0
-            });
-            $('.search__gender').find('button').find('img').css({
-                transform: "rotate(0deg)"
-            })
-            $('.search__category').find('p').css({
-                display: "none",
-                transform: "translate(-5%, -50px)"
-            }, 500);
-            $('.search__category').find('p').animate({
-                opacity: 0
-            });
-            $('.search__category').find('button').find('img').css({
-                transform: "rotate(0deg)"
-            })
-        }
-    }
     function search() { //search page open
         $('html').addClass("search"); //page fixed
         $('.wrap').addClass("search"); //page fixed
@@ -185,6 +95,98 @@ $(function () {
             opacity: 0
         });
     }
+    function open() { //for open gender/category tab in search menu
+        if (bln) {
+            bln = false; // to open it when it is not open
+            $(this).parent().find('p').css({ //list open
+                display: "flex",
+                transform: "translate(-5%, 0)"
+            }, 500);
+            $(this).parent().find('p').animate({ //list open2
+                opacity: 1
+            });
+            $(this).find('img').css({ //list open3 (missing image problem) **fix need
+                transform: "rotate(180deg)"
+            })
+        }
+        else {
+            bln = true;  // to open it when it is not open
+            $('.search__gender').find('p').css({
+                display: "none",
+                transform: "translate(-5%, -50px)"
+            }, 500);
+            $('.search__gender').find('p').animate({
+                opacity: 0
+            });
+            $('.search__gender').find('button').find('img').css({
+                transform: "rotate(0deg)"
+            })
+            $('.search__category').find('p').css({
+                display: "none",
+                transform: "translate(-5%, -50px)"
+            }, 500);
+            $('.search__category').find('p').animate({
+                opacity: 0
+            });
+            $('.search__category').find('button').find('img').css({
+                transform: "rotate(0deg)"
+            })
+        }
+    }
+    function cat_change() { //for gender/category change in search menus
+        bln = true;
+        var target = $(this).text();
+        $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
+        $(this).parent().find('p').fadeOut(500); //list close
+    }
+    //search menu end
+
+    function detail() { // go to detail.html
+        location.href = 'sub/detail.html'
+    }
+
+    $('.new__wrapper').click(function (e) { // new - click event
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        if ($(e.target).hasClass("new__itemBox")) { // go to detail.html
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) { //heart button click event (color change)
+            like();
+        }
+    });
+    $('.col__wrapper').click(function (e) { // collection - click event
+        e.stopPropagation();
+        if ($(e.target).hasClass("col__itemBox")) {
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) {
+            like();
+        }
+    });
+    $('.best__wrapper').click(function (e) { // bestseller - click event
+        e.stopPropagation();
+        if ($(e.target).hasClass("best__itemBox")) {
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) {
+            like();
+        }
+    });
+
+
+    function sale() { //for css change in .sale span
+        $('.sale').find('span').css({
+            display: "inline-block",
+            marginLeft: "5px",
+            color: "red",
+            fontSize: "0.8rem",
+            fontWeight: "300",
+            textDecoration: "none"
+        });
+    }
+    sale();
+
 
 
     var lastscroll = 0;

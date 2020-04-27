@@ -196,18 +196,18 @@ $(function () {
     $('.new__wrapper').on('scroll', function (e) {
         e.preventDefault();
     });
-    $('.new__wrapper').on('touchstart', newS);
-    function newS() {
-        startX = $('.new__wrapper').scrollLeft();
-    }
+    // $('.new__wrapper').on('touchstart', newS);
+    // function newS() {
+    //     startX = $('.new__wrapper').scrollLeft();
+    // }
     // function newRight() {
     //     $('.new__wrapper').scrollLeft(c);
     // }
-    function newLeft() {
-        $('.new__wrapper').scrollLeft(
-            startX - 165
-        );
-    }
+    // function newLeft() {
+    //     $('.new__wrapper').scrollLeft(
+    //         startX - 165
+    //     );
+    // }
     $('.new__wrapper').on('scrollstart', function (e) {
         console.log('start')
     });

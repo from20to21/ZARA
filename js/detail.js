@@ -36,10 +36,10 @@ $(function () {
             $(this).find('input').delay(500).animate({
                 opacity: 1
             });
-            $('.header__shopping').animate({
+            $('.header__cart').animate({
                 opacity: 0
             }, 500);
-            $('.header__shopping').delay(500).css({
+            $('.header__cart').delay(500).css({
                 display: "none"
             });
             $('header').animate({

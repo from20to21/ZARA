@@ -4,7 +4,7 @@ $(function () {
     $('nav').load("nav.html"); // insert "nav"
 
     setTimeout(function () {
-        $('.sign__check button').click(check); // remeber check
+        $('.sign__check button').click(check); // "remeber" check
 
         function check() {
             $(this).toggleClass("checked");

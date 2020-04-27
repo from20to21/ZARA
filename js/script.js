@@ -9,12 +9,13 @@ $(function () {
     var startX, endX = 0;
     var num = 0;
     var bln = true;
+    var lastscroll = 0;
+    var b = true, c = 0;
 
     $(window).scroll(parallax); //parallax effect
 
     $('.category button').click(select); //category change
 
-    $('.heart').click(like); //heart button click event (color change)
 
     // search menu
     $('.header__search').click(search); // search menu open
@@ -141,9 +142,6 @@ $(function () {
     }
     //search menu end
 
-    function detail() { // go to detail.html
-        location.href = 'sub/detail.html'
-    }
 
     $('.new__wrapper').click(function (e) { // new - click event
         e.stopPropagation();
@@ -174,7 +172,13 @@ $(function () {
         }
     });
 
-
+    function detail() { // go to detail.html
+        location.href = 'sub/detail.html'
+    }
+    $('.heart').click(like); 
+    function like() { //heart button click event (color change)
+        $(this).find('img').toggleClass('pink');
+    }
     function sale() { //for css change in .sale span
         $('.sale').find('span').css({
             display: "inline-block",
@@ -189,7 +193,6 @@ $(function () {
 
 
 
-    var lastscroll = 0;
     $('.new__wrapper').on('scroll', function (e) {
         e.preventDefault();
     });
@@ -206,14 +209,9 @@ $(function () {
             startX - 165
         );
     }
-    var b = true, c = 0;
     $('.new__wrapper').on('scrollstart', function (e) {
         console.log('start')
     });
-
-
-
-
     $('.new__wrapper').on('scrollstop', function (e) {
         $.event.special.scrollstop.latency = 250;
         //e.preventDefault();
@@ -385,11 +383,7 @@ $(function () {
             width: categoryWidth,
             left: categoryOffset.left
         });
-        // if($(this))
-        console.log($(this).attr('attr'));
     }
-    function like() { //like button acting
-        $(this).find('img').toggleClass('pink');
-    }
+
 });
 

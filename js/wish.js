@@ -6,7 +6,7 @@ $(function () {
 
     setTimeout(function () {
         var bln = true;
-        
+
         // search menu
         $('.header__search').click(search); // search menu open
         $('.search__close').click(close); // search menu close
@@ -131,19 +131,8 @@ $(function () {
             $(this).parent().find('p').fadeOut(500); //list close
         }
         //search menu end
-        
-        $('.minus').click(minus);
-        $('.plus').click(plus);
 
-        $('.wish__btn__cart').click(cart_select);
-        $('.wish__all__cart').click(cart_all);
-
-        $('.wish__trash').click(trash);
-
-        function trash() {
-            $(this).parent().fadeOut();
-        }
-        function sale() {
+        function sale() { //sale css change
             $('.sale').find('span').css({
                 display: "inline-block",
                 marginLeft: "5px",
@@ -154,8 +143,6 @@ $(function () {
             });
         }
         sale();
-
-
         function drag() {//drag item line
             var firstDrag;
             $('.wish__wrapper').draggable({
@@ -170,7 +157,6 @@ $(function () {
             });
         }
         drag();
-
         function indicator(e, firstDrag, $this) { // to move item line as much as item size
             var lastDrag = e.pageX; //remember where drag end (for checking where to move)
             if (firstDrag > lastDrag) { //if you move to left 
@@ -190,15 +176,34 @@ $(function () {
             }
         }
 
-        function cart_select() {
+        //wish list menu
+        $('.minus').click(minus);
+        $('.plus').click(plus);
+        $('.wish__btn__cart').click(cart_select);
+        $('.wish__all__cart').click(cart_all);
+        $('.wish__trash').click(trash);
+        function minus() { //minus amount
+            var num = $(this).parent().find('button').text();
+            if (num == 1) {
+                num = 1;
+            } else {
+                num--;
+            }
+            $(this).parent().find('button').text(num);
+        }
+        function plus() {//plus amount
+            var num = $(this).parent().find('button').text();
+            num++;
+            $(this).parent().find('button').text(num);
+        }
+        function cart_select() { //add to cart one item
             $(this).parent().parent().animate({
                 opacity: "0",
                 marginBottom: "-120px"
             }, 300);
             $(this).parent().parent().delay(300).fadeOut();
         }
-
-        function cart_all() {
+        function cart_all() { //add to cart all
             $('.wish__btn__cart').parent().parent().animate({
                 opacity: "0",
                 marginBottom: "-120px"
@@ -208,21 +213,9 @@ $(function () {
                 marginBottom: "-120px"
             }, 300);
         }
-
-        function minus() {
-            var num = $(this).parent().find('button').text();
-            if (num == 1) {
-                num = 1;
-            } else {
-                num--;
-            }
-            $(this).parent().find('button').text(num);
+        function trash() {
+            $(this).parent().fadeOut();
         }
-        function plus() {
-            var num = $(this).parent().find('button').text();
-            num++;
-            $(this).parent().find('button').text(num);
-        }
-
+        //wish list menu end
     }, 500);
 });

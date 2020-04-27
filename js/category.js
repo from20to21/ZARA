@@ -3,7 +3,7 @@ $(function () {
     //insert html
     $('header').load("header.html"); // insert "header"
     $('nav').load("nav.html"); // insert "nav""
-    
+
     setTimeout(function () {
         var bln = true;
 
@@ -134,8 +134,7 @@ $(function () {
 
         $('.category').click(change);
         $('.back').click(back);
-
-        function change() {
+        function change() { //category menu open
             $('.category').addClass('change');
             $(this).toggleClass('change');
             $(this).addClass('selected');
@@ -155,8 +154,7 @@ $(function () {
             }, 300);
             $('.change').delay(500).fadeOut();
         }
-
-        function back() {
+        function back() { //category menu close
             $('.change').fadeIn();
             $(this).hasClass('selected');
             $('.category').removeClass('change');

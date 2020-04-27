@@ -138,6 +138,8 @@ $(function () {
         }
         //search menu end
 
+
+        //drag event...massed up
         $('.visual__img__previous').css({
             backgroundImage: "url(../img/detail/detail001.jpg)"
         });

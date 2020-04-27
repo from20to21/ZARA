@@ -32,6 +32,7 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+//wish list start
 .wish{
     &__wrapper{
         position: relative;
@@ -172,7 +173,9 @@ html, body {
         }
     }
 }
+//wish list end
 
+//nav start
 nav{
     width: 100%;
     height: 40px;
@@ -191,3 +194,4 @@ nav{
         text-transform: uppercase;
     }
 }
+//nav end

@@ -142,55 +142,61 @@ $(function () {
     //search menu end
 
 
-    // $('.new__wrapper').click(function (e) { // new - click event
-    //     e.stopPropagation();
-    //     e.stopImmediatePropagation();
-    //     if ($(e.target).hasClass("new__itemBox")) { // go to detail.html
-    //         detail();
-    //     }
-    //     if ($(e.target).hasClass("heart")) { //heart button click event (color change)
-    //         like();
-    //     }
-    // });
-    // $('.col__wrapper').click(function (e) { // collection - click event
-    //     e.stopPropagation();
-    //     if ($(e.target).hasClass("col__itemBox")) {
-    //         detail();
-    //     }
-    //     if ($(e.target).hasClass("heart")) {
-    //         like();
-    //     }
-    // });
-    // $('.best__wrapper').click(function (e) { // bestseller - click event
-    //     e.stopPropagation();
-    //     if ($(e.target).hasClass("best__itemBox")) {
-    //         detail();
-    //     }
-    //     if ($(e.target).hasClass("heart")) {
-    //         like();
-    //     }
-    // });
+    $('.new__wrapper').click(function (e) { // new - click event
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        if ($(e.target).hasClass("new__itemBox")) { // go to detail.html
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) { //heart button click event (color change)
+            like();
+        }
+    });
+    $('.col__wrapper').click(function (e) { // collection - click event
+        e.stopPropagation();
+        if ($(e.target).hasClass("col__itemBox")) {
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) {
+            like();
+        }
+    });
+    $('.best__wrapper').click(function (e) { // bestseller - click event
+        e.stopPropagation();
+        if ($(e.target).hasClass("best__itemBox")) {
+            detail();
+        }
+        if ($(e.target).hasClass("heart")) {
+            like();
+        }
+    });
 
-    // function detail() { // go to detail.html
-    //     location.href = 'sub/detail.html'
-    // }
-    // $('.heart').click(like);
-    // function like() { //heart button click event (color change)
-    //     $(this).find('img').toggleClass('pink');
-    // }
-    // function sale() { //for css change in .sale span
-    //     $('.sale').find('span').css({
-    //         display: "inline-block",
-    //         marginLeft: "5px",
-    //         color: "red",
-    //         fontSize: "0.8rem",
-    //         fontWeight: "300",
-    //         textDecoration: "none"
-    //     });
-    // }
-    // sale();
+    function detail() { // go to detail.html
+        location.href = 'sub/detail.html'
+    }
+    $('.heart').click(like);
+    function like() { //heart button click event (color change)
+        $(this).find('img').toggleClass('pink');
+    }
+    function sale() { //for css change in .sale span
+        $('.sale').find('span').css({
+            display: "inline-block",
+            marginLeft: "5px",
+            color: "red",
+            fontSize: "0.8rem",
+            fontWeight: "300",
+            textDecoration: "none"
+        });
+    }
+    sale();
 
-
+    $('.move').on('scroll', function (e) { //for chang indicator bar
+        var currentscroll = $(this).scrollLeft();
+        e.preventDefault();
+        $(this).next().find('span').css({
+            width: currentscroll * 0.85
+        })
+    });
 
     // $('.new__wrapper').on('scroll', function (e) {
     //     e.preventDefault();

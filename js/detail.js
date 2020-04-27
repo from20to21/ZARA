@@ -55,7 +55,7 @@ $(function () {
         function close() { //go back to origin page
             $('html').removeClass("search");
             $('.wrap').removeClass("search");
-            $('.search__category').find('button').html('CATEGORY<img src="img/download.png" alt="">');
+            $('.search__category').find('button').html('CATEGORY<img src="../img/icon/download.png" alt="">');
 
             $('.search__close').css({
                 display: "none"
@@ -69,10 +69,10 @@ $(function () {
             $('.header__search').find('input').delay(500).animate({
                 opacity: 0
             });
-            $('.header__shopping').animate({
+            $('.header__cart').animate({
                 opacity: 1
             }, 500);
-            $('.header__shopping').delay(500).css({
+            $('.header__cart').delay(500).css({
                 display: "block"
             });
             $('header').animate({
@@ -133,7 +133,7 @@ $(function () {
         function cat_change() { //for gender/category change in search menus
             bln = true;
             var target = $(this).text();
-            $(this).parent().find('button').html(target + '<img src="img/download.png" alt="">');
+            $(this).parent().find('button').html(target + '<img src="../img/icon/download.png" alt="">');
             $(this).parent().find('p').fadeOut(500); //list close
         }
         //search menu end

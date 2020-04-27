@@ -11,11 +11,9 @@
     cursor: pointer;
     background: none;
 }
-
 @mixin bg_center($arg1){
     background: url($arg1) no-repeat center / cover;
 }
-
 .visual{
     height: 581px;
     position: relative;

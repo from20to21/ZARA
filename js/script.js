@@ -2,7 +2,6 @@
 
 $(function () {
 
-
     var firstScroll, lastScroll,
         positionVisual, positionText,
         positionNew, positionCollection, positionBest;
@@ -235,7 +234,7 @@ $(function () {
         });
         //console.log(c)
         lastscroll = currentscroll;
-    })
+    });
 
     // function touchEnd2() {
     //     var max = $(this).find('.item').length - 2; //let item move within maximum length

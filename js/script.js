@@ -277,6 +277,7 @@ $(function () {
     //         }
     //     }
     // }
+
     function parallax() { // to move image as likely parallax
         firstScroll = window.scrollY;
         positionVisual = firstScroll * 0.5;

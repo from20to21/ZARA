@@ -175,7 +175,7 @@ $(function () {
     function detail() { // go to detail.html
         location.href = 'sub/detail.html'
     }
-    $('.heart').click(like); 
+    $('.heart').click(like);
     function like() { //heart button click event (color change)
         $(this).find('img').toggleClass('pink');
     }
@@ -200,10 +200,9 @@ $(function () {
     function newS() {
         startX = $('.new__wrapper').scrollLeft();
     }
-    function newRight() {
-        $('.new__wrapper').scrollLeft(c);
-
-    }
+    // function newRight() {
+    //     $('.new__wrapper').scrollLeft(c);
+    // }
     function newLeft() {
         $('.new__wrapper').scrollLeft(
             startX - 165
@@ -213,7 +212,7 @@ $(function () {
         console.log('start')
     });
     $('.new__wrapper').on('scrollstop', function (e) {
-        $.event.special.scrollstop.latency = 250;
+        // $.event.special.scrollstop.latency = 250;
         //e.preventDefault();
         var currentscroll = $('.new__wrapper').scrollLeft();
         if (b) {
@@ -227,10 +226,9 @@ $(function () {
 
                 //$('.new__wrapper').on('touchend', newLeft);
             }
-
             setTimeout(function () { b = true; }, 500);
         }
-        //newRight();
+        // newRight();
         // scrollLeft()
         $(this).animate({
             scrollLeft: c

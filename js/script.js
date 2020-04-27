@@ -192,9 +192,9 @@ $(function () {
 
 
 
-    $('.new__wrapper').on('scroll', function (e) {
-        e.preventDefault();
-    });
+    // $('.new__wrapper').on('scroll', function (e) {
+    //     e.preventDefault();
+    // });
     // $('.new__wrapper').on('touchstart', newS);
     // function newS() {
     //     startX = $('.new__wrapper').scrollLeft();
@@ -207,34 +207,34 @@ $(function () {
     //         startX - 165
     //     );
     // }
-    $('.new__wrapper').on('scrollstart', function (e) {
-        console.log('start')
-    });
-    $('.new__wrapper').on('scrollstop', function (e) {
-        // $.event.special.scrollstop.latency = 250;
-        //e.preventDefault();
-        var currentscroll = $('.new__wrapper').scrollLeft();
-        if (b) {
-            b = false;
-            if (lastscroll <= currentscroll) {
-                c += 165;
-                //$('.new__wrapper').on('touchend', newRight);
-            }
-            else {
-                c -= 165;
+    // $('.new__wrapper').on('scrollstart', function (e) {
+    //     console.log('start')
+    // });
+    // $('.new__wrapper').on('scrollstop', function (e) {
+    // $.event.special.scrollstop.latency = 250;
+    //e.preventDefault();
+    //     var currentscroll = $('.new__wrapper').scrollLeft();
+    //     if (b) {
+    //         b = false;
+    //         if (lastscroll <= currentscroll) {
+    //             c += 165;
+    //             //$('.new__wrapper').on('touchend', newRight);
+    //         }
+    //         else {
+    //             c -= 165;
 
-                //$('.new__wrapper').on('touchend', newLeft);
-            }
-            setTimeout(function () { b = true; }, 500);
-        }
-        // newRight();
-        // scrollLeft()
-        $(this).animate({
-            scrollLeft: c
-        });
-        //console.log(c)
-        lastscroll = currentscroll;
-    });
+    //             //$('.new__wrapper').on('touchend', newLeft);
+    //         }
+    //         setTimeout(function () { b = true; }, 500);
+    //     }
+    //     // newRight();
+    //     // scrollLeft()
+    //     $(this).animate({
+    //         scrollLeft: c
+    //     });
+    //     //console.log(c)
+    //     lastscroll = currentscroll;
+    // });
 
     // function touchEnd2() {
     //     var max = $(this).find('.item').length - 2; //let item move within maximum length

@@ -392,6 +392,12 @@ xhr.onload = function () {                       // When readystate changes
             $('.new__image').css({
                 backgroundImage: `url("${newImage}")`
             });
+            $('.collection__image').css({
+                backgroundImage: `url("${colImage}")`
+            });
+            $('.bestseller__image').css({
+                backgroundImage: `url("${bestImage}")`
+            });
             $('.category span').animate({
                 width: categoryWidth,
                 left: categoryOffset.left

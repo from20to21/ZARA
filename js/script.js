@@ -181,17 +181,6 @@ xhr.onload = function () {                       // When readystate changes
         function like() { //heart button click event (color change)
             $(this).find('img').toggleClass('pink');
         }
-        function sale() { //for css change in .sale span
-            $('.sale').find('span').css({
-                display: "inline-block",
-                marginLeft: "5px",
-                color: "red",
-                fontSize: "0.8rem",
-                fontWeight: "300",
-                textDecoration: "none"
-            });
-        }
-        sale();
 
         $('.move').on('scroll', function (e) { //for chang indicator bar
             var currentscroll = $(this).scrollLeft();
@@ -387,11 +376,17 @@ xhr.onload = function () {                       // When readystate changes
             var categoryOffset = $(this).find('strong').offset();
             var changeTarget = $(this).index();
             var newImage = responseObject.data[changeTarget].newImage;
+            var newitem0 = [responseObject.data[changeTarget].newitem01, responseObject.data[changeTarget].newitem02, responseObject.data[changeTarget].newitem03, responseObject.data[changeTarget].newitem04, responseObject.data[changeTarget].newitem05];
             var colImage = responseObject.data[changeTarget].colImage;
             var bestImage = responseObject.data[changeTarget].bestImage;
             $('.new__image').css({
                 backgroundImage: `url("${newImage}")`
             });
+            for (var i = 1; i < 6; i++) {
+                $('.new__itemBox.item0' + i).css({
+                    backgroundImage: `url("${newitem0[i - 1]}")`
+                });
+            }
             $('.collection__image').css({
                 backgroundImage: `url("${colImage}")`
             });

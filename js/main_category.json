@@ -1,24 +1,24 @@
 {
   "data": [
     {
-      "newImage": "../img/index/newin/woman/bg_002.jpg",
-      "colImage": "../img/index/collection/woman/bg_003.jpg",
-      "bestImage": "../img/index/bestseller/woman/bg_004.jpg"
+      "newImage": "img/index/newin/woman/bg_002.jpg",
+      "colImage": "img/index/collection/woman/bg_003.jpg",
+      "bestImage": "img/index/bestseller/woman/bg_004.jpg"
     },
     {
-      "newImage": "../img/index/newin/man/4454400406_1_1_1.jpg",
-      "colImage": "../img/index/collection/man/8369404707_2_9_1.jpg",
-      "bestImage": "../img/index/bestseller/man/0706436250_1_1_1.jpg"
+      "newImage": "img/index/newin/man/4454400406_1_1_1.jpg",
+      "colImage": "img/index/collection/man/8369404707_2_9_1.jpg",
+      "bestImage": "img/index/bestseller/man/0706436250_1_1_1.jpg"
     },
     {
-      "newImage": "../img/index/newin/kids/0219614712_2_10_1.jpg",
-      "colImage": "../img/index/collection/kids/1147080020_2_2_1.jpg",
-      "bestImage": "../img/index/bestseller/kids/7901604805_2_10_1.jpg"
+      "newImage": "img/index/newin/kids/0219614712_2_10_1.jpg",
+      "colImage": "img/index/collection/kids/1147080020_2_2_1.jpg",
+      "bestImage": "img/index/bestseller/kids/7901604805_2_10_1.jpg"
     },
     {
-      "newImage": "../img/index/newin/shoes&bag/6706510050_2_15_1.jpg",
-      "colImage": "../img/index/collection/shoes&bag/1602510040_2_15_1.jpg",
-      "bestImage": "../img/index/bestseller/shoes&bag/2362510081_2_15_1.jpg"
+      "newImage": "img/index/newin/shoes&bag/6706510050_2_15_1.jpg",
+      "colImage": "img/index/collection/shoes&bag/1602510040_2_15_1.jpg",
+      "bestImage": "img/index/bestseller/shoes&bag/2362510081_2_15_1.jpg"
     }
   ]
 }

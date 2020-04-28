@@ -116,7 +116,7 @@ button.heart{
     margin-top: 70px;
     width: 70%;
     height: 400px;
-    @include bg_center('../img/background/bg_002.jpg');
+    @include bg_center('../img/index/newin/woman/bg_002.jpg');
     border-top: 5px solid #333;
     position: relative;
         &:after{
@@ -239,7 +239,7 @@ button.heart{
     margin-left: 30%;
     width: 70%;
     height: 500px;
-    @include bg_center('../img/background/bg_003.jpg');
+    @include bg_center('../img/index/collection/woman/bg_003.jpg');
     border-bottom: 5px solid #333;
     position: relative;
         &:after{
@@ -363,7 +363,7 @@ button.heart{
     margin-top: 50px;
     width: 70%;
     height: 500px;
-    @include bg_center('../img/background/bg_004.jpg');
+    @include bg_center('../img/index/bestseller/woman/bg_004.jpg');
     border-top: 5px solid #333;
     position: relative;
         &:after{
@@ -497,7 +497,7 @@ button.heart{
     margin-top: 100px;
     width: 100%;
     height: 400px;
-    @include bg_center('../img/background/bg_005.jpg');
+    @include bg_center('../img/index/stories/bg_005.jpg');
     position: relative;
     & h3{
         position: absolute;

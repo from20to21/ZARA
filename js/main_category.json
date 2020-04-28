@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "newImage": "../img/index/newin/woman/bg_002.jpg",
+      "colImage": "../img/index/newin/woman/bg_003.jpg",
+      "bestImage": "../img/index/newin/woman/bg_004.jpg"
+    },
+    {
+      "newImage": "../img/index/newin/man/4454400406_1_1_1.jpg",
+      "colImage": "../img/index/newin/man/4454400406_1_1_1.jpg",
+      "bestImage": "../img/index/newin/man/4454400406_1_1_1.jpg"
+    },
+    {
+      "newImage": "../img/index/newin/kids/0219614712_2_10_1.jpg",
+      "colImage": "../img/index/newin/man/4454400406_1_1_1.jpg",
+      "bestImage": "../img/index/newin/man/4454400406_1_1_1.jpg"
+    },
+    {
+      "newImage": "../img/index/newin/shoes&bag/6706510050_2_15_1.jpg",
+      "colImage": "../img/index/newin/man/4454400406_1_1_1.jpg",
+      "bestImage": "../img/index/newin/man/4454400406_1_1_1.jpg"
+    }
+  ]
+}

@@ -353,7 +353,7 @@ button.heart {
     margin-top: 70px;
     width: 70%;
     height: 400px;
-    background: url("../img/background/bg_002.jpg") no-repeat center/cover;
+    background: url("../img/index/newin/woman/bg_002.jpg") no-repeat center/cover;
     border-top: 5px solid #333;
     position: relative; }
     .new__image:after {
@@ -478,7 +478,7 @@ button.heart {
     margin-left: 30%;
     width: 70%;
     height: 500px;
-    background: url("../img/background/bg_003.jpg") no-repeat center/cover;
+    background: url("../img/index/collection/woman/bg_003.jpg") no-repeat center/cover;
     border-bottom: 5px solid #333;
     position: relative; }
     .collection__image:after {
@@ -601,7 +601,7 @@ button.heart {
     margin-top: 50px;
     width: 70%;
     height: 500px;
-    background: url("../img/background/bg_004.jpg") no-repeat center/cover;
+    background: url("../img/index/bestseller/woman/bg_004.jpg") no-repeat center/cover;
     border-top: 5px solid #333;
     position: relative; }
     .bestseller__image:after {
@@ -735,7 +735,7 @@ button.heart {
   margin-top: 100px;
   width: 100%;
   height: 400px;
-  background: url("../img/background/bg_005.jpg") no-repeat center/cover;
+  background: url("../img/index/stories/bg_005.jpg") no-repeat center/cover;
   position: relative; }
   .stories h3 {
     position: absolute;

@@ -185,7 +185,7 @@ button.heart{
                 width: 150px;
                 height: 150px;
                 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-              @include bg_center('../img/main/new_00#{$i}.jpg');
+              @include bg_center('../img/main/woman/new_00#{$i}.jpg');
             }
         }
         & .item01 {
@@ -307,7 +307,7 @@ button.heart{
                 width: 150px;
                 height: 150px;
                 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-              @include bg_center('../img/main/col_00#{$i}.jpg');
+              @include bg_center('../img/main/woman/col_00#{$i}.jpg');
             }
         }
         & .item01 {
@@ -431,7 +431,7 @@ button.heart{
                 width: 150px;
                 height: 150px;
                 box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.1), 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-              @include bg_center('../img/main/best_00#{$i}.jpg');
+              @include bg_center('../img/main/woman/best_00#{$i}.jpg');
             }
         }
         & .item01 {

@@ -369,6 +369,7 @@ xhr.onload = function () {                       // When readystate changes
             }
             lastScroll = firstScroll;
         }
+        console.log($('.new__itemBox.item01').next().find('em').text());
         function select() { // move red line under the categroy tab
             $('.category button strong').removeClass('selected');
             $(this).find('strong').addClass('selected');
@@ -376,23 +377,89 @@ xhr.onload = function () {                       // When readystate changes
             var categoryOffset = $(this).find('strong').offset();
             var changeTarget = $(this).index();
             var newImage = responseObject.data[changeTarget].newImage;
-            var newitem0 = [responseObject.data[changeTarget].newitem01, responseObject.data[changeTarget].newitem02, responseObject.data[changeTarget].newitem03, responseObject.data[changeTarget].newitem04, responseObject.data[changeTarget].newitem05];
+            var newitem = [responseObject.data[changeTarget].newitem01, responseObject.data[changeTarget].newitem02, responseObject.data[changeTarget].newitem03, responseObject.data[changeTarget].newitem04, responseObject.data[changeTarget].newitem05];
+            var newitemEm = [responseObject.data[changeTarget].newitem01em, responseObject.data[changeTarget].newitem02em, responseObject.data[changeTarget].newitem03em, responseObject.data[changeTarget].newitem04em, responseObject.data[changeTarget].newitem05em];
+            var newitemStrong = [responseObject.data[changeTarget].newitem01strong, responseObject.data[changeTarget].newitem02strong, responseObject.data[changeTarget].newitem03strong, responseObject.data[changeTarget].newitem04strong, responseObject.data[changeTarget].newitem05strong];
+            var newitemP = [responseObject.data[changeTarget].newitem01p, responseObject.data[changeTarget].newitem02p, responseObject.data[changeTarget].newitem03p, responseObject.data[changeTarget].newitem04p, responseObject.data[changeTarget].newitem05p];
             var colImage = responseObject.data[changeTarget].colImage;
+            var colitem = [responseObject.data[changeTarget].colitem01, responseObject.data[changeTarget].colitem02, responseObject.data[changeTarget].colitem03, responseObject.data[changeTarget].colitem04, responseObject.data[changeTarget].colitem05];
+            var colitemEm = [responseObject.data[changeTarget].colitem01em, responseObject.data[changeTarget].colitem02em, responseObject.data[changeTarget].colitem03em, responseObject.data[changeTarget].colitem04em, responseObject.data[changeTarget].colitem05em];
+            var colitemStrong = [responseObject.data[changeTarget].colitem01strong, responseObject.data[changeTarget].colitem02strong, responseObject.data[changeTarget].colitem03strong, responseObject.data[changeTarget].colitem04strong, responseObject.data[changeTarget].colitem05strong];
+            var colitemP = [responseObject.data[changeTarget].colitem01p, responseObject.data[changeTarget].colitem02p, responseObject.data[changeTarget].colitem03p, responseObject.data[changeTarget].colitem04p, responseObject.data[changeTarget].colitem05p];
             var bestImage = responseObject.data[changeTarget].bestImage;
+            var bestitem = [responseObject.data[changeTarget].bestitem01, responseObject.data[changeTarget].bestitem02, responseObject.data[changeTarget].bestitem03, responseObject.data[changeTarget].bestitem04, responseObject.data[changeTarget].bestitem05];
+            var bestitemEm = [responseObject.data[changeTarget].bestitem01em, responseObject.data[changeTarget].bestitem02em, responseObject.data[changeTarget].bestitem03em, responseObject.data[changeTarget].bestitem04em, responseObject.data[changeTarget].bestitem05em];
+            var bestitemStrong = [responseObject.data[changeTarget].bestitem01strong, responseObject.data[changeTarget].bestitem02strong, responseObject.data[changeTarget].bestitem03strong, responseObject.data[changeTarget].bestitem04strong, responseObject.data[changeTarget].bestitem05strong];
+            var bestitemP = [responseObject.data[changeTarget].bestitem01p, responseObject.data[changeTarget].bestitem02p, responseObject.data[changeTarget].bestitem03p, responseObject.data[changeTarget].bestitem04p, responseObject.data[changeTarget].bestitem05p];
             $('.new__image').css({
                 backgroundImage: `url("${newImage}")`
             });
             for (var i = 1; i < 6; i++) {
                 $('.new__itemBox.item0' + i).css({
-                    backgroundImage: `url("${newitem0[i - 1]}")`
+                    backgroundImage: `url("${newitem[i - 1]}")`
                 });
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.new__itemBox.item0' + i).next().find('em').text(
+                    newitemEm[i - 1]
+                );
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.new__itemBox.item0' + i).next().find('strong').text(
+                    newitemStrong[i - 1]
+                );
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.new__itemBox.item0' + i).next().find('p').text(
+                    newitemP[i - 1]
+                );
             }
             $('.collection__image').css({
                 backgroundImage: `url("${colImage}")`
             });
+            for (var i = 1; i < 6; i++) {
+                $('.col__itemBox.item0' + i).css({
+                    backgroundImage: `url("${colitem[i - 1]}")`
+                });
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.col__itemBox.item0' + i).next().find('em').text(
+                    colitemEm[i - 1]
+                );
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.col__itemBox.item0' + i).next().find('strong').text(
+                    colitemStrong[i - 1]
+                );
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.col__itemBox.item0' + i).next().find('p').text(
+                    colitemP[i - 1]
+                );
+            }
             $('.bestseller__image').css({
                 backgroundImage: `url("${bestImage}")`
             });
+            for (var i = 1; i < 6; i++) {
+                $('.best__itemBox.item0' + i).css({
+                    backgroundImage: `url("${bestitem[i - 1]}")`
+                });
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.best__itemBox.item0' + i).next().find('em').text(
+                    bestitemEm[i - 1]
+                );
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.best__itemBox.item0' + i).next().find('strong').text(
+                    bestitemStrong[i - 1]
+                );
+            }
+            for (var i = 1; i < 6; i++) {
+                $('.best__itemBox.item0' + i).next().find('p').text(
+                    bestitemP[i - 1]
+                );
+            }
             $('.category span').animate({
                 width: categoryWidth,
                 left: categoryOffset.left

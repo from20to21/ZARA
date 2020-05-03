@@ -5,6 +5,8 @@ xhr.onload = function () {                       // When readystate changes
     $(function () {
         responseObject = JSON.parse(xhr.responseText);
 
+
+
         var firstScroll, lastScroll,
             positionVisual, positionText,
             positionNew, positionCollection, positionBest;
@@ -369,7 +371,6 @@ xhr.onload = function () {                       // When readystate changes
             }
             lastScroll = firstScroll;
         }
-        console.log($('.new__itemBox.item01').next().find('em').text());
         function select() { // move red line under the categroy tab
             $('.category button strong').removeClass('selected');
             $(this).find('strong').addClass('selected');

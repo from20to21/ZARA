@@ -138,6 +138,11 @@ $(function () {
         }
         //search menu end
 
+        $('.header__cart button').click(cart);
+        function cart(){
+            location.href = "cart.html"
+        }
+
 
         //drag event...massed up
         $('.visual__img__previous').css({

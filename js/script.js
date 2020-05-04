@@ -155,6 +155,12 @@ xhr.onload = function () {                       // When readystate changes
         }
         //search menu end
 
+        $('.header__cart button').click(cart);
+
+        function cart(){
+            location.href = "sub/cart.html"
+        }
+
 
         $('.new__wrapper').click(function (e) { // new - click event
             e.stopPropagation();

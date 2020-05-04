@@ -132,6 +132,11 @@ $(function () {
         }
         //search menu end
 
+        $('.header__cart button').click(cart);
+        function cart(){
+            location.href = "cart.html"
+        }
+
         $('.category').click(change);
         $('.back').click(back);
         function change() { //category menu open

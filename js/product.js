@@ -132,6 +132,11 @@ $(function () {
         }
         //search menu end
 
+        $('.header__cart button').click(cart);
+        function cart(){
+            location.href = "cart.html"
+        }
+
         $('.visual h2').delay(500).animate({
             opacity: "1",
             bottom: "20px"

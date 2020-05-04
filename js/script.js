@@ -5,8 +5,17 @@ xhr.onload = function () {                       // When readystate changes
     $(function () {
         responseObject = JSON.parse(xhr.responseText);
 
+        window.onload=function()
+        {
+            onloadevent();
+        }
 
-
+        function onloadevent(){
+            $('.loading').css({
+                display:"none"
+            });
+        }
+        
         var firstScroll, lastScroll,
             positionVisual, positionText,
             positionNew, positionCollection, positionBest;

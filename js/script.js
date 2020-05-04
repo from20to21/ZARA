@@ -381,6 +381,15 @@ xhr.onload = function () {                       // When readystate changes
             lastScroll = firstScroll;
         }
         function select() { // move red line under the categroy tab
+            window.onload=function() //문제1. 왜 jquery 형식으로는 안되는지? 문제2. 각 카테고리 선택시에도 로딩기다리게 하고싶은데 적용이 X
+            {
+                onloadevent();
+            }
+            function onloadevent(){
+                $('.loading').css({
+                    display:"none"
+                });
+            }
             $('.category button strong').removeClass('selected');
             $(this).find('strong').addClass('selected');
             var categoryWidth = $(this).find('strong').innerWidth();

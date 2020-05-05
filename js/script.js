@@ -5,7 +5,7 @@ xhr.onload = function () {                       // When readystate changes
     $(function () {
         responseObject = JSON.parse(xhr.responseText);
 
-        $(window).load(function () {
+        $(window).on('load', function () {
             onloadevent();
         });
 
@@ -389,9 +389,7 @@ xhr.onload = function () {                       // When readystate changes
             $('.loading').css({
                 display: "block"
             });
-            $('.wrap').load(function () {
-                onloadevent();
-            });
+
             function onloadevent() {
                 $('.loading').css({
                     display: "none"
@@ -490,6 +488,13 @@ xhr.onload = function () {                       // When readystate changes
                 width: categoryWidth,
                 left: categoryOffset.left
             });
+
+            onloadevent();
+
+            // $('.col__itemBox.item01').on('load', function (e) {
+            //     // onloadevent();
+            //     console.log(e)
+            // });
         }
     });
 }

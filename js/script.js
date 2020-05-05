@@ -5,17 +5,16 @@ xhr.onload = function () {                       // When readystate changes
     $(function () {
         responseObject = JSON.parse(xhr.responseText);
 
-        window.onload=function()
-        {
+        $(window).load(function () {
             onloadevent();
-        }
+        });
 
-        function onloadevent(){
+        function onloadevent() {
             $('.loading').css({
-                display:"none"
+                display: "none"
             });
         }
-        
+
         var firstScroll, lastScroll,
             positionVisual, positionText,
             positionNew, positionCollection, positionBest;
@@ -157,7 +156,7 @@ xhr.onload = function () {                       // When readystate changes
 
         $('.header__cart button').click(cart);
 
-        function cart(){
+        function cart() {
             location.href = "sub/cart.html"
         }
 
@@ -387,13 +386,15 @@ xhr.onload = function () {                       // When readystate changes
             lastScroll = firstScroll;
         }
         function select() { // move red line under the categroy tab
-            window.onload=function() //문제1. 왜 jquery 형식으로는 안되는지? 문제2. 각 카테고리 선택시에도 로딩기다리게 하고싶은데 적용이 X
-            {
+            $('.loading').css({
+                display: "block"
+            });
+            $('.wrap').load(function () {
                 onloadevent();
-            }
-            function onloadevent(){
+            });
+            function onloadevent() {
                 $('.loading').css({
-                    display:"none"
+                    display: "none"
                 });
             }
             $('.category button strong').removeClass('selected');

@@ -488,13 +488,7 @@ xhr.onload = function () {                       // When readystate changes
                 width: categoryWidth,
                 left: categoryOffset.left
             });
-
-            onloadevent();
-
-            // $('.col__itemBox.item01').on('load', function (e) {
-            //     // onloadevent();
-            //     console.log(e)
-            // });
+            setTimeout(onloadevent, 500)
         }
     });
 }

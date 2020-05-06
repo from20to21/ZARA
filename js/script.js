@@ -387,7 +387,7 @@ xhr.onload = function () {                       // When readystate changes
         }
         function select() { // move red line under the categroy tab
             $('.loading').css({
-                display: "block"
+                display: "flex"
             });
 
             function onloadevent() {

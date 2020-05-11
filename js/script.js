@@ -1,9 +1,12 @@
 
 
-window.addEventListener('load', function () {
-    onloadevent();
+window.onload = function () {
+    //onloadevent();
+    $('.loading').css({
+        display: "none"
+    });
     console.log('load');
-});
+};
 
 function onloadevent() {
     $('.loading').css({

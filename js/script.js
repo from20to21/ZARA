@@ -12,11 +12,11 @@ window.onload = function () {
     console.log('load');
 };
 
-function onloadevent() {
-    $('.loading').css({
-        display: "none"
-    });
-}
+// function onloadevent() {
+//     $('.loading').css({
+//         display: "none"
+//     });
+// }
 
 var xhr = new XMLHttpRequest();                 // Create XMLHttpRequest object
 xhr.onload = function () {                       // When readystate changes

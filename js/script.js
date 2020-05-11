@@ -3,6 +3,7 @@ $(function () {
     $('.loading').css({
         display: "flex"
     });
+    console.log('l0000');
 });
 window.onload = function () {
     //onloadevent();

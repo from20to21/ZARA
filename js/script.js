@@ -1,25 +1,27 @@
 
+
+window.addEventListener('load', function () {
+    onloadevent();
+    console.log('load');
+});
+
+function onloadevent() {
+    $('.loading').css({
+        display: "none"
+    });
+}
+
 var xhr = new XMLHttpRequest();                 // Create XMLHttpRequest object
 xhr.onload = function () {                       // When readystate changes
 
     $(function () {
         responseObject = JSON.parse(xhr.responseText);
+
         $('.loading').css({
             display: "flex"
         });
 
-        setTimeout(
-            window.addEventListener('load', function () {
-                onloadevent();
-                console.log('load');
-            }), 1
-        );
 
-        function onloadevent() {
-            $('.loading').css({
-                display: "none"
-            });
-        }
 
         var firstScroll, lastScroll,
             positionVisual, positionText,

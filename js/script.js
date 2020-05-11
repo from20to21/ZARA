@@ -1,5 +1,9 @@
 
-
+$(function () {
+    $('.loading').css({
+        display: "flex"
+    });
+});
 window.onload = function () {
     //onloadevent();
     $('.loading').css({
@@ -19,11 +23,6 @@ xhr.onload = function () {                       // When readystate changes
 
     $(function () {
         responseObject = JSON.parse(xhr.responseText);
-
-        $('.loading').css({
-            display: "flex"
-        });
-
 
 
         var firstScroll, lastScroll,

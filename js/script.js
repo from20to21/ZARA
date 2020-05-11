@@ -4,6 +4,9 @@ xhr.onload = function () {                       // When readystate changes
 
     $(function () {
         responseObject = JSON.parse(xhr.responseText);
+        $('.loading').css({
+            display: "flex"
+        });
 
         $(window).on('load', function () {
             onloadevent();

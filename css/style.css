@@ -267,7 +267,8 @@ header {
   z-index: 1000;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  display: none; }
   .loading .lds-roller {
     display: inline-block;
     position: relative;

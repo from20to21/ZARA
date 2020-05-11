@@ -8,7 +8,7 @@ xhr.onload = function () {                       // When readystate changes
             display: "flex"
         });
 
-        $(window).on('load', function () {
+        window.addEventListener('load', function () {
             onloadevent();
             console.log('load');
         });

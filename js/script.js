@@ -10,6 +10,7 @@ xhr.onload = function () {                       // When readystate changes
 
         $(window).on('load', function () {
             onloadevent();
+            console.log('load');
         });
 
         function onloadevent() {

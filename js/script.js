@@ -5,7 +5,7 @@ $(function () {
     });
     console.log('l0000');
 });
-$(window).onload = function () {
+window.onload = function () {
     //onloadevent();
     $('.loading').css({
         display: "none"

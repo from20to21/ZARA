@@ -3,21 +3,13 @@ $(function () {
     $('.loading').css({
         display: "flex"
     });
-    console.log('l0000');
 });
 window.onload = function () {
     //onloadevent();
     $('.loading').css({
         display: "none"
     });
-    console.log('load');
 };
-
-// function onloadevent() {
-//     $('.loading').css({
-//         display: "none"
-//     });
-// }
 
 var xhr = new XMLHttpRequest();                 // Create XMLHttpRequest object
 xhr.onload = function () {                       // When readystate changes
